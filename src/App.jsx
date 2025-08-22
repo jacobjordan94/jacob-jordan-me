@@ -1,10 +1,8 @@
-import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import HomePage from './pages/Home'
 import StandardLayout from './layouts/StandardLayout'
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
@@ -16,4 +14,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
