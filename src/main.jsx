@@ -5,9 +5,8 @@ import App from './App.jsx'
 
 // todo - environment variable
 const PRODUCTION = false;
+const Root = () => PRODUCTION ? <App /> : <StrictMode><App /></StrictMode>
 
 createRoot(document.getElementById('root')).render(
   <Root />
 )
-
-const Root = () => PRODUCTION ? <App /> : <StrictMode><App /></StrictMode>
