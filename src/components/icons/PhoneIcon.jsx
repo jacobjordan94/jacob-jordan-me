@@ -1,0 +1,21 @@
+export default ({className = ''}) =>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={ 'size-[24px] ' + className }>
+        <g>
+            <path d="M17.715 4.5675h1.1400000000000001v18.285h-1.1400000000000001Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M6.285 22.8525h11.43V24H6.285Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M15.4275 15.997499999999999h1.1475v1.1400000000000001h-1.1475Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M15.4275 13.71h1.1475v1.1400000000000001h-1.1475Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M14.287500000000001 20.565h2.2874999999999996v1.1475h-2.2874999999999996Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M14.287500000000001 18.285h2.2874999999999996v1.1400000000000001h-2.2874999999999996Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M7.4325 5.7075000000000005v6.862500000000001H16.575000000000003V5.7075000000000005Zm5.715 2.2874999999999996H12v1.1475h-1.1400000000000001v1.1400000000000001h-1.1475v1.1400000000000001h-1.1400000000000001V6.855h4.574999999999999Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="m14.287500000000001 14.850000000000001 -1.1400000000000001 0 0 -1.1400000000000001 -2.2874999999999996 0 0 1.1400000000000001 -1.1475 0 0 1.1475 1.1475 0 0 1.1400000000000001 2.2874999999999996 0 0 -1.1400000000000001 1.1400000000000001 0 0 -1.1475z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M10.86 20.565h2.2874999999999996v1.1475h-2.2874999999999996Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M10.86 18.285h2.2874999999999996v1.1400000000000001h-2.2874999999999996Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M7.4325 20.565h2.2800000000000002v1.1475H7.4325Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M7.4325 18.285h2.2800000000000002v1.1400000000000001H7.4325Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M7.4325 15.997499999999999h1.1400000000000001v1.1400000000000001H7.4325Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M7.4325 13.71h1.1400000000000001v1.1400000000000001H7.4325Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="M6.285 0h1.1475v1.1400000000000001H6.285Z" fill="currentColor" stroke-width="0.75"></path>
+            <path d="m6.285 4.5675 11.43 0 0 -1.1400000000000001 -9.1425 0 0 -2.2874999999999996 -1.1400000000000001 0 0 2.2874999999999996 -1.1475 0 0 -2.2874999999999996 -1.1400000000000001 0 0 21.7125 1.1400000000000001 0 0 -18.285z" fill="currentColor" stroke-width="0.75"></path>
+        </g>
+    </svg>;
