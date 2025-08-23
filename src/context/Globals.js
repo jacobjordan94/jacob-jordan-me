@@ -35,6 +35,28 @@ const Globals = {
 
         ]
     },
+    education: {
+        name: 'the university of texas permian basin',
+        city: 'odessa, tx',
+        degree: 'b.s. computer science; minor in mathematics',
+        dates: ['8/12', '12/15'],
+        acc: '',
+        courses: [
+            'introduction to computer science i/ii',
+            'information systems',
+            'digital computer organization',
+            'data structures',
+            'c programming',
+            'discrete mathematics',
+            'programming languages',
+            'database systems',
+            'multimedia and web development',
+            'introduction to game development',
+            'data communications',
+            'software engineering',
+        ],
+    },
+    
 };
 
 export default Globals;
