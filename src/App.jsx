@@ -10,16 +10,20 @@ export const GlobalContext = createContext();
 function App() {
   const [ globals ] = useState(Globals)
   return (
-    <BrowserRouter>
-      <GlobalContext value={ globals }>
-        <Header />
-        <Routes>
-          <Route element={ <StandardLayout /> }>
-            <Route index element={ <HomePage /> }></Route>
-          </Route>
-        </Routes>
-      </GlobalContext>
-    </BrowserRouter>
+    <div className="application-container h-svh flex flex-col">
+      <BrowserRouter>
+        <GlobalContext value={ globals }>
+          <Header />
+          <section className="content flex-1 overflow-scroll">
+            <Routes>
+              <Route element={ <StandardLayout /> }>
+                <Route index element={ <HomePage /> }></Route>
+              </Route>
+            </Routes>
+          </section>
+        </GlobalContext>
+      </BrowserRouter>
+    </div>
   )
 }
 
