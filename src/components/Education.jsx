@@ -16,7 +16,7 @@ export default function Education({}) {
                 </div>
                 <div className="courses-taken mt-4">
                     <div className="title">courses taken:</div>
-                    <div className="courses mt-2 ps-2.5">
+                    <div className="courses mt-2 ps-2.5 text-neutral-500">
                         <CourseContainer courses={courses} />
                     </div>
                 </div>
