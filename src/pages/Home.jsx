@@ -4,10 +4,14 @@ import Skills from "../components/Skills";
 
 export default function HomePage({}) {
     return (
-        <div className="home-page p-4 flex flex-col gap-8">
-            <Projects />
-            <Skills />
-            <Contact />
+        <div className="home-page p-4 *:flex *:flex-col *:gap-8 md:*:flex-row">
+            <div className="projects-wrap">
+                <Projects />
+            </div>
+            <div className="md:*:flex-1/2">
+                <Skills />
+                <Contact />
+            </div>
         </div>
     );
 }
