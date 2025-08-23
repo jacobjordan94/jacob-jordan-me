@@ -1,3 +1,6 @@
+import DotsMenuIcon from "./icons/DotsMenuIcon";
+import MenuIcon from './icons/MenuIcon';
+
 export function Header() {
     return (
         <header>
@@ -13,7 +16,9 @@ export function Header() {
 function Nav() {
     return (
         <div className="nav-button-container">
-            <div className="nav size-6 bg-white inline-flex"></div>
+            <HeaderButton>
+                <MenuIcon size={30} />
+            </HeaderButton>
         </div>
     );
 }
@@ -29,9 +34,17 @@ function Title({children}) {
 function Links() {
     return (
         <div className="links-container">
-            <div className="links float-right">
-                <div className="github-link size-6 bg-white inline-flex text-black items-center justify-center">G</div>
-            </div>
+            <HeaderButton className="float-right">
+                <DotsMenuIcon size={30} />
+            </HeaderButton>
         </div>
+    );
+}
+
+function HeaderButton({ className = '', children }) {
+    return (
+        <button className={"p-0 cursor-pointer hover:animate-pulse " + className}>
+            { children }
+        </button>
     );
 }
