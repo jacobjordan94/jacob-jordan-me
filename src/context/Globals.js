@@ -1,8 +1,18 @@
 const Globals = {
-    emailLink: 'mailto:jacobjordan94@live.com',
-    email: 'jacobjordan94@live.com',
-    phoneNumberLink: 'tel:+14327709334',
-    phoneNumber: '+1 432-770-9334',
+    contact: {
+        phone: {
+            href: 'tel:+14327709334',
+            text: '+1 432-770-9334'
+        },
+        email: {
+            href: 'mailto:jacobjordan94@live.com',
+            text: 'jacobjordan94@live.com',
+        },
+        discord: {
+            href: 'https://discord.com/users/278942049917468684',
+            text: 'jorcob_',
+        }
+    },
     // todo - more skills
     skills: [
         'javascript', 'typescript', 'react', 'angular', 'vue', 'tailwind', 'bash', 'linux', 

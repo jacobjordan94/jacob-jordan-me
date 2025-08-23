@@ -4,14 +4,16 @@ import Section from "./Section";
 import EnvelopeIcon from "./icons/EnvelopeIcon";
 import PhoneIcon from "./icons/PhoneIcon";
 import PaperAirplaneIcon from "./icons/PaperAirplaneIcon";
+import DiscordIcon from "./icons/DiscordIcon";
 
 export default function Contact() {
-    const { phoneNumber, email, phoneNumberLink, emailLink } = useContext(GlobalContext);
+    const { contact } = useContext(GlobalContext);
     return (
         <Section title="Contact">
-            <div className="contact flex flex-col gap-2">
-                <PhoneContact href={phoneNumberLink} linkText={phoneNumber} />
-                <EmailContact href={emailLink} linkText={email} />
+            <div className="contact flex flex-col gap-2 flex-wrap @md:flex-row @md:justify-between">
+                <PhoneContact href={contact.phone.href} linkText={contact.phone.text} />
+                <DiscordContact href={contact.discord.href} linkText={contact.discord.text} />
+                <EmailContact href={contact.email.href} linkText={contact.email.text} />
             </div>
         </Section>
     );
@@ -36,6 +38,7 @@ function ContactSection({ title, href, linkText, Icon, children }) {
     );
 }
 
+const DiscordContact = ({href, linkText}) => <ContactSection title="discord" href={href} linkText={linkText} Icon={() => <DiscordIcon /> } />;
 const PhoneContact = ({ href, linkText }) => <ContactSection title="phone" href={href} linkText={linkText} Icon={() => <PhoneIcon />} />;
 function EmailContact({ href, linkText }) {
     const [ emailBody, setEmailBody ]  = useState();
@@ -62,7 +65,6 @@ function EmailContact({ href, linkText }) {
                     </div>
                 </div>
             </div>
-
         </ContactSection>
     )
 }
