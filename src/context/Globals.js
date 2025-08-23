@@ -40,7 +40,7 @@ const Globals = {
         city: 'odessa, tx',
         degree: 'b.s. computer science; minor in mathematics',
         dates: ['8/12', '12/15'],
-        acc: '',
+        awards: 'dean\'s honor roll x4; president\'s honor roll x1',
         courses: [
             'introduction to computer science i/ii',
             'information systems',
