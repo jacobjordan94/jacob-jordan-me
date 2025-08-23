@@ -10,7 +10,7 @@ export default function Skills() {
                                .map((skill, i) => <Skill key={i} value={skill.value} />)
     return (
         <Section title={'skills'}>
-            <div className="skills flex flex-wrap gap-3 justify-center text-neutral-500">
+            <div className="skills flex flex-wrap gap-3 justify-center">
                 <Skills />
             </div>
         </Section>
@@ -18,5 +18,5 @@ export default function Skills() {
 }
 
 function Skill({ value }) {
-    return <span>{ value }</span>
+    return <span className="text-neutral-500 hover:text-white transition-[colors_scale] cursor-default hover:animate-pulse hover:scale-110">{ value }</span>
 }
