@@ -6,7 +6,7 @@ export default function Projects() {
     const { projects } = useContext(GlobalContext);
 
     return (
-        <Section title="projects">
+        <Section title="projects" link="/projects">
             <div className="projects">
                 
             </div>
