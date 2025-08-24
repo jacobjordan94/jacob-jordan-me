@@ -5,6 +5,7 @@ import { createContext, useState } from 'react';
 import Globals from './context/Globals';
 import HomePage from './pages/home/Home';
 import ExperiencePage from './pages/experience/Experience';
+import ProjectsPage from './pages/projects/Projects';
 
 export const GlobalContext = createContext();
 
@@ -20,6 +21,7 @@ function App() {
               <Route element={ <StandardLayout /> }>
                 <Route index element={ <HomePage /> }></Route>
                 <Route path='experience' element={ <ExperiencePage /> }></Route>
+                <Route path="projects" element={ <ProjectsPage /> }></Route>
               </Route>
             </Routes>
           </section>
