@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { GlobalContext } from '../App';
-import Section from "./Section";
+import { GlobalContext } from '../../App';
+import Section from "../../components/Section";
 
 export default function Projects() {
     const { projects } = useContext(GlobalContext);

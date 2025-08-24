@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import Section from "./Section";
-import { GlobalContext } from "../App";
+import Section from "../../components/Section";
+import { GlobalContext } from "../../App";
 
 export default function About() {
     const { about } = useContext(GlobalContext);

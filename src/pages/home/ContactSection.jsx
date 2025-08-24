@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import { GlobalContext } from "../App";
-import Section from "./Section";
-import EnvelopeIcon from "./icons/EnvelopeIcon";
-import PhoneIcon from "./icons/PhoneIcon";
-import PaperAirplaneIcon from "./icons/PaperAirplaneIcon";
-import DiscordIcon from "./icons/DiscordIcon";
-import LinkedInIcon from "./icons/LinkedInIcon";
+import { GlobalContext } from "../../App";
+import Section from "../../components/Section";
+import EnvelopeIcon from "../../components/icons/EnvelopeIcon";
+import PhoneIcon from "../../components/icons/PhoneIcon";
+import PaperAirplaneIcon from "../../components/icons/PaperAirplaneIcon";
+import DiscordIcon from "../../components/icons/DiscordIcon";
+import LinkedInIcon from "../../components/icons/LinkedInIcon";
 
 export default function Contact() {
     const { contact } = useContext(GlobalContext);

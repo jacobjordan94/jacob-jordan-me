@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
-import HomePage from './pages/Home'
 import StandardLayout from './layouts/StandardLayout'
 import { Header } from './components/Header';
 import { createContext, useState } from 'react';
 import Globals from './context/Globals';
+import HomePage from './pages/home/Home';
 
 export const GlobalContext = createContext();
 
