@@ -4,7 +4,7 @@ export default function Job({ job }) {
     return (
         <div className="job">
             <div className="name text-2xl inline hover:border-b-2">
-                <a className="inline-flex items-center gap-3" href="">
+                <a className="inline-flex items-center gap-3" href={job.href}>
                     <WorldWideWebIcon size="20" />
                     <span className="uppercase flex">{ job.name }</span>
                 </a>

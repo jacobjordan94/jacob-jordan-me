@@ -92,6 +92,7 @@ const Globals = {
             skills: [
                 'angular', 'nativescript', 'safe 5.1'
             ],
+            href: 'https://www.upmchealthplan.com/members/digital-tools/rxwell',
         },
         {
             name: 'iq inc.',
@@ -103,6 +104,7 @@ const Globals = {
             skills: [
                 '', '', ''
             ],
+            href: 'https://www.iq-inc.com/',
         },
         {
             name: 'vertical life llc',
@@ -114,6 +116,7 @@ const Globals = {
             skills: [
                 'cordova', 'ionic', 'angular', 'wikitude', 'ar.js', 'vue'
             ],
+            href: 'https://www.linkedin.com/company/vertical-life-inc.',
         },
         {
             name: 'affiliated foods inc.',
@@ -125,6 +128,7 @@ const Globals = {
             skills: [
                 'c# '
             ],
+            href: 'https://www.amarillohcc.com/members/1073/affiliated-foods-inc-2/',
         },
     ],
 };
