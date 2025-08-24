@@ -7,7 +7,7 @@ import Skills from './SkillsSection';
 
 export default function HomePage({}) {
     return (
-        <div className="home-page p-4 flex flex-col gap-8 *:flex *:flex-col *:gap-8 md:*:flex-row">
+        <div className="home-page flex flex-col gap-8 *:flex *:flex-col *:gap-8 md:*:flex-row">
             <div className="md:*:flex-1/2">
                 <About />
                 <Education />
