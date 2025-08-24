@@ -1,9 +1,9 @@
-import About from "../components/About";
-import Contact from "../components/Contact";
-import Education from "../components/Education";
-import Experience from "../components/Experience";
-import Projects from "../components/Projects";
-import Skills from "../components/Skills";
+import About from "../components/AboutSection";
+import Contact from "../components/ContactSection";
+import Education from "../components/EducationSection";
+import Experience from "../components/ExperienceSection";
+import Projects from "../components/ProjectsSection";
+import Skills from "../components/SkillsSection";
 
 export default function HomePage({}) {
     return (
