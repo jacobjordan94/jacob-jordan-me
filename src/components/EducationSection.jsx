@@ -4,7 +4,6 @@ import { GlobalContext } from "../App";
 
 export default function Education({}) {
     const { education: { name, city, degree, dates, awards, courses } } = useContext(GlobalContext);
-    const Courses = () => courses.map((course, i) => <li key={i}>{ course }</li>);
     return (
         <Section title="education">
             <div className="education">
