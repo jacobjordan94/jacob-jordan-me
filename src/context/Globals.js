@@ -23,7 +23,8 @@ const Globals = {
     skills: [
         'javascript', 'typescript', 'react', 'angular', 'vue', 'tailwind', 'bash', 'linux', 
         'ubuntu', 'macOS', 'windows', 'arch linux', 'portainer', 'docker', 'adobe photoshop', 
-        'adobe premiere', 'gimp', 'paint.net', 'scss', 'vscode',
+        'adobe premiere', 'gimp', 'paint.net', 'scss', 'vscode', 'sql', 'ionic', 'cordova', 'android studio',
+        'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh'
     ],
     projects: {
         react: [
@@ -79,7 +80,53 @@ const Globals = {
         Maecenas egestas mattis euismod. Fusce fermentum enim ut fermentum pulvinar. Donec nec diam in ligula molestie lobortis a quis arcu. 
         Morbi arcu velit, mattis eget ex vel, viverra dictum magna. Maecenas dapibus metus vel sapien consectetur, placerat sollicitudin orci rutrum. 
         Proin pulvinar consectetur libero, et commodo quam. Integer sollicitudin neque nulla, eget egestas ex rhoncus sed. 
-    `
+    `,
+    experience: [
+        {
+            name: 'upmc',
+            location: 'pittsburgh, pa',
+            position: 'sr. software engineer i',
+            dates: ['6/23', '4/24'], 
+            description: '',
+            detailedDescription: '',
+            skills: [
+                'angular', 'nativescript', 'safe 5.1'
+            ],
+        },
+        {
+            name: 'iq inc.',
+            location: 'monroeville, pa',
+            position: 'software engineer iii',
+            dates: ['7/22', '5/23'], 
+            description: '',
+            detailedDescription: '',
+            skills: [
+                '', '', ''
+            ],
+        },
+        {
+            name: 'vertical life llc',
+            location: 'seattle, wa',
+            position: 'front-end developer',
+            dates: ['11/16', '9/20'], 
+            description: '',
+            detailedDescription: '',
+            skills: [
+                'cordova', 'ionic', 'angular', 'wikitude', 'ar.js', 'vue'
+            ],
+        },
+        {
+            name: 'affiliated foods inc.',
+            location: 'amarillo, tx',
+            position: 'database administrator',
+            dates: ['3/16', '11/16'], 
+            description: '',
+            detailedDescription: '',
+            skills: [
+                'c# '
+            ],
+        },
+    ],
 };
 
 export default Globals;
