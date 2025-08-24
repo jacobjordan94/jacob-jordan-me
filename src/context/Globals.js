@@ -1,3 +1,5 @@
+import { href } from "react-router";
+
 const Globals = {
     contact: {
         phone: {
@@ -11,7 +13,11 @@ const Globals = {
         discord: {
             href: 'https://discord.com/users/278942049917468684',
             text: 'jorcob_',
-        }
+        },
+        linkedin: {
+            href: 'https://www.linkedin.com/in/jacob-jordan-0ab56061/',
+            text: 'linkedin',
+        },
     },
     // todo - more skills
     skills: [

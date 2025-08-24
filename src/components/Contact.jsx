@@ -5,15 +5,20 @@ import EnvelopeIcon from "./icons/EnvelopeIcon";
 import PhoneIcon from "./icons/PhoneIcon";
 import PaperAirplaneIcon from "./icons/PaperAirplaneIcon";
 import DiscordIcon from "./icons/DiscordIcon";
+import LinkedInIcon from "./icons/LinkedInIcon";
 
 export default function Contact() {
     const { contact } = useContext(GlobalContext);
     return (
         <Section title="Contact">
-            <div className="contact flex flex-col gap-2 flex-wrap @md:flex-row @md:justify-between">
-                <PhoneContact href={contact.phone.href} linkText={contact.phone.text} />
-                <DiscordContact href={contact.discord.href} linkText={contact.discord.text} />
-                <EmailContact href={contact.email.href} linkText={contact.email.text} />
+            <div className="contact">
+                <div className="@xl:grid @xl:grid-cols-2 *:mb-2">
+                    <PhoneContact href={contact.phone.href} linkText={contact.phone.text} />
+                    <DiscordContact href={contact.discord.href} linkText={contact.discord.text} />
+                    <LinkedInContact href={contact.linkedin.href} linkText={contact.linkedin.text} />
+                    <EmailContact href={contact.email.href} linkText={contact.email.text} />
+                </div>
+                <EmailForm href={contact.email.href} />
             </div>
         </Section>
     );
@@ -39,8 +44,10 @@ function ContactSection({ title, href, linkText, Icon, children }) {
 }
 
 const DiscordContact = ({href, linkText}) => <ContactSection title="discord" href={href} linkText={linkText} Icon={() => <DiscordIcon /> } />;
-const PhoneContact = ({ href, linkText }) => <ContactSection title="phone" href={href} linkText={linkText} Icon={() => <PhoneIcon />} />;
-function EmailContact({ href, linkText }) {
+const PhoneContact = ({ href, linkText }) => <ContactSection title="phone" href={href} linkText={linkText} Icon={() => <PhoneIcon /> } />;
+const EmailContact = ({href, linkText}) => <ContactSection title="email" href={href} linkText={linkText} Icon={() => <EnvelopeIcon size={20} /> } />;
+const LinkedInContact = ({ href, linkText }) => <ContactSection title="linkedin" href={href} linkText={linkText} Icon={() => <LinkedInIcon />} />;
+function EmailForm({ href }) {
     const [ emailBody, setEmailBody ]  = useState();
 
     function bodyOnChange(e) {
@@ -49,23 +56,21 @@ function EmailContact({ href, linkText }) {
     }
 
     return (
-        <ContactSection title="email" href={href} linkText={linkText} Icon={() => <EnvelopeIcon size={20} />}>
-            <div className="email-contact-body ms-[36px]">
-                <div className="email-contact-body-content">
-                    <textarea name="email-body" className="w-full min-h-[112px] p-2 focus-visible:outline-0 resize-none" 
-                              onChange={bodyOnChange} placeholder="Hello, I am writing to say that this is one of the most incredible websites that I have ever visited."
-                    />
-                </div>
-                <div className="email-contact-footer mt-2">
-                    <div className="inline group border-white hover:border-b-2 float-end aria-disabled:pointer-events-none aria-disabled:opacity-50" aria-disabled={!emailBody}>
-                        <a href={href + ((emailBody && emailBody !== '') ? `?body=${emailBody}` : '')} className="inline-flex">
-                            <span className="me-2">Send</span>
-                            <PaperAirplaneIcon size={24} className="scale-x-[-1]" />
-                        </a>
-                    </div>
+        <div className="email-contact-body ms-[36px]">
+            <div className="email-contact-body-content">
+                <textarea name="email-body" className="w-full min-h-[112px] p-2 focus-visible:outline-0 resize-none" 
+                            onChange={bodyOnChange} placeholder="Hello, I am writing to say that this is one of the most incredible websites that I have ever visited."
+                />
+            </div>
+            <div className="email-contact-footer mt-2">
+                <div className="inline group border-white hover:border-b-2 float-end aria-disabled:pointer-events-none aria-disabled:opacity-50" aria-disabled={!emailBody}>
+                    <a href={href + ((emailBody && emailBody !== '') ? `?body=${emailBody}` : '')} className="inline-flex">
+                        <span className="me-2">Send</span>
+                        <PaperAirplaneIcon size={24} className="scale-x-[-1]" />
+                    </a>
                 </div>
             </div>
-        </ContactSection>
+        </div>
     )
 }
  
