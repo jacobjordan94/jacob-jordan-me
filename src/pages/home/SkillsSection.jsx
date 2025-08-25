@@ -10,7 +10,7 @@ export default function Skills() {
                                .map((skill, i) => <Skill key={i} value={skill.value} />)
     return (
         <Section title={'skills'}>
-            <div className="skills flex flex-wrap gap-3 justify-center cursor-none *:cursor-none select-none py-4">
+            <div className="skills flex flex-wrap gap-3 justify-center cursor-default **:cursor-default select-none py-4">
                 <Skills />
             </div>
         </Section>
