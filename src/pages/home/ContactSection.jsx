@@ -33,7 +33,6 @@ function ContactSection({ title, href, linkText, Icon, children }) {
                     <Icon />
                 </div>
                 <span className="text-xl">{ title + ':' }</span>
-                {/* <a href={href} className="underline">{ linkText }</a> */}
                 <AppLink href={href} decoration={false} className="underline">{ linkText }</AppLink>
             </div>
             { children &&

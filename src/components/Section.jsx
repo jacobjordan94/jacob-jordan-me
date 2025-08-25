@@ -16,6 +16,6 @@ export default function Section({ title, children, link }) {
 }
 
 const SectionLink = ({ link }) => link &&
-    <AppLink to={link}>
+    <AppLink decoration={false} to={link}>
         <LinkIcon size={20}></LinkIcon>
     </AppLink>;

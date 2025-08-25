@@ -14,7 +14,7 @@ export default function Experience({}) {
             <div className="experience">
                 <JobsContainer jobs={experience} />
                 <div className="see-more text-center mt-8">
-                    <a className="cursor-pointer hover:underline hover:animate-pulse" onClick={() => navigate('/experience')}>see more</a>
+                    <AppLink to='experience'>see more</AppLink>
                 </div>
             </div>
         </Section>
