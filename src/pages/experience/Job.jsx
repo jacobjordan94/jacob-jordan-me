@@ -7,7 +7,7 @@ export default function Job({ job, children }) {
                 <div className="job-base-wrap">
                     <JobBase className="" job={job}/>
                 </div>
-                <div className="ms-8 description @5xl:m-0 @5xl:ps-5 @5xl:flex @5xl:items-end">
+                <div className="ms-8 my-2 description @5xl:m-0 @5xl:ps-5 @5xl:flex @5xl:items-end">
                     <span className="text-neutral-400">
                         { job.description }
                     </span>
