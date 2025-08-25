@@ -3,6 +3,7 @@ import Section from "../../components/Section";
 import { GlobalContext } from "../../App";
 import { useNavigate } from "react-router";
 import JobWithDescription from "../../components/jobs/JobWithDescription";
+import AppLink from "../../components/AppLink";
 
 export default function Experience({}) {
     const { experience } = useContext(GlobalContext);
@@ -13,7 +14,7 @@ export default function Experience({}) {
             <div className="experience">
                 <JobsContainer jobs={experience} />
                 <div className="see-more text-center mt-8">
-                    <a className="cursor-pointer hover:underline" onClick={() => navigate('/experience')}>see more</a>
+                    <a className="cursor-pointer hover:underline hover:animate-pulse" onClick={() => navigate('/experience')}>see more</a>
                 </div>
             </div>
         </Section>

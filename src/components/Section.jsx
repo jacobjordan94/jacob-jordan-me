@@ -1,8 +1,7 @@
-import { Link, useNavigate } from "react-router";
 import LinkIcon from "./icons/LinkIcon";
+import AppLink from "./AppLink";
 
 export default function Section({ title, children, link }) {
-    const navigate = useNavigate();
     return (
         <div className="section workbench-font lowercase w-full">
             <div className="title text-2xl flex justify-between items-center">
@@ -17,6 +16,6 @@ export default function Section({ title, children, link }) {
 }
 
 const SectionLink = ({ link }) => link &&
-    <Link to={link}>
+    <AppLink to={link}>
         <LinkIcon size={20}></LinkIcon>
-    </Link>;
+    </AppLink>;

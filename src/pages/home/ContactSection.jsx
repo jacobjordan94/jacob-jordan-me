@@ -6,6 +6,7 @@ import PhoneIcon from "../../components/icons/PhoneIcon";
 import PaperAirplaneIcon from "../../components/icons/PaperAirplaneIcon";
 import DiscordIcon from "../../components/icons/DiscordIcon";
 import LinkedInIcon from "../../components/icons/LinkedInIcon";
+import AppLink from "../../components/AppLink";
 
 export default function Contact() {
     const { contact } = useContext(GlobalContext);
@@ -32,7 +33,8 @@ function ContactSection({ title, href, linkText, Icon, children }) {
                     <Icon />
                 </div>
                 <span className="text-xl">{ title + ':' }</span>
-                <a href={href} className="underline">{ linkText }</a>
+                {/* <a href={href} className="underline">{ linkText }</a> */}
+                <AppLink href={href} decoration={false} className="underline">{ linkText }</AppLink>
             </div>
             { children &&
             <div className="contact-body">
@@ -63,11 +65,11 @@ function EmailForm({ href }) {
                 />
             </div>
             <div className="email-contact-footer mt-2">
-                <div className="inline group border-white hover:border-b-2 float-end aria-disabled:pointer-events-none aria-disabled:opacity-50" aria-disabled={!emailBody}>
-                    <a href={href + ((emailBody && emailBody !== '') ? `?body=${emailBody}` : '')} className="inline-flex">
+                <div className="inline float-end aria-disabled:pointer-events-none aria-disabled:opacity-50" aria-disabled={!emailBody}>
+                    <AppLink href={href + ((emailBody && emailBody !== '') ? `?body=${emailBody}` : '')} className="inline-flex">
                         <span className="me-2">Send</span>
                         <PaperAirplaneIcon size={24} className="scale-x-[-1]" />
-                    </a>
+                    </AppLink>
                 </div>
             </div>
         </div>
