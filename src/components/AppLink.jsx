@@ -1,12 +1,11 @@
 import { Link } from "react-router"
 
-export default function AppLink({ href, to, className = '', children }) {
-    const sharedClass = '';
+export default function AppLink({ href, to, className = '', children, animate = true, decoration = true }) {
     return (
-        <div className="inline hover:border-b-2 hover:animate-pulse">
+        <div className={`inline ${decoration ? 'hover:border-b-2' : ''} ${animate ? 'hover:animate-pulse' : ''}`}>
         {
-            href ?  <AppAnchor href={href} className={sharedClass + ' ' + className} >{ children }</AppAnchor> :
-                    <AppRouterLink to={to} className={sharedClass + ' ' + className} >{ children }</AppRouterLink>
+            href ?  <AppAnchor href={href} className={className} >{ children }</AppAnchor> :
+                    <AppRouterLink to={to} className={className} >{ children }</AppRouterLink>
         }
         </div>
     );
