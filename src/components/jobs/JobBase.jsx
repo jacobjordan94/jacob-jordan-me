@@ -10,7 +10,7 @@ export default function JobBase({ job, children, className = '' }) {
                         <span className="uppercase flex">{ job.name }</span>
                     </a>
                 </div>
-                <div className="ms-8">
+                <div className="ms-8 *:before:content-['>'] *:before:me-2 *:before:text-xs *:before:h-full">
                     <div className="position text-neutral-400 text-xl">
                         <span>{ job.position }</span>
                     </div>
