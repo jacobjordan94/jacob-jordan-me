@@ -87,7 +87,7 @@ const Globals = {
             location: 'pittsburgh, pa',
             position: 'sr. software engineer i',
             dates: ['6/23', '4/24'], 
-            description: '',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra.',
             detailedDescription: '',
             skills: [
                 'angular', 'nativescript', 'safe 5.1'
@@ -99,7 +99,7 @@ const Globals = {
             location: 'monroeville, pa',
             position: 'software engineer iii',
             dates: ['7/22', '5/23'], 
-            description: '',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra.',
             detailedDescription: '',
             skills: [
                 '', '', ''
@@ -111,7 +111,7 @@ const Globals = {
             location: 'seattle, wa',
             position: 'front-end developer',
             dates: ['11/16', '9/20'], 
-            description: '',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra.',
             detailedDescription: '',
             skills: [
                 'cordova', 'ionic', 'angular', 'wikitude', 'ar.js', 'vue'
@@ -123,7 +123,7 @@ const Globals = {
             location: 'amarillo, tx',
             position: 'database administrator',
             dates: ['3/16', '11/16'], 
-            description: '',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra.',
             detailedDescription: '',
             skills: [
                 'c# '
