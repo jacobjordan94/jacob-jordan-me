@@ -1,9 +1,9 @@
-import WorldWideWebIcon from "./icons/WorldWideWebIcon";
+import WorldWideWebIcon from "../icons/WorldWideWebIcon";
 
-export default function JobBase({ job, children }) {
+export default function JobBase({ job, children, className }) {
     return (
-        <div className="job">
-            <div className="information">
+        <div className={"job " + className}>
+            <div className="information @lg:min-w-2xs">
                 <div className="name text-2xl inline hover:border-b-2 hover:animate-pulse">
                     <a className="inline-flex items-center gap-3" href={job.href}>
                         <WorldWideWebIcon size="20" />
