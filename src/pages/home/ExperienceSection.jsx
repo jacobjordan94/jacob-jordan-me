@@ -11,16 +11,25 @@ export default function Experience({}) {
     return (
         <Section title="experience" link="/experience">
             <div className="experience">
-                <div className="jobs-container flex flex-col flex-wrap gap-4 @5xl:flex-row @5xl:gap-0">
-                    <JobWithDescription job={experience[0]} />
-                    <JobWithDescription job={experience[1]} />
-                    <JobWithDescription className="hidden @5xl:flex @5xl:mt-4" job={experience[2]} />
-                    <JobWithDescription className="hidden @5xl:flex @5xl:mt-4" job={experience[3]} />
-                </div>
+                <JobsContainer jobs={experience} />
                 <div className="see-more text-center mt-8">
                     <a className="cursor-pointer hover:underline" onClick={() => navigate('/experience')}>see more</a>
                 </div>
             </div>
         </Section>
+    );
+}
+
+function JobsContainer({ jobs }) {
+    return (
+        <div className="jobs-container flex flex-col flex-wrap @2xl:flex-row @2xl:*:flex-1/2 "
+        >
+            <JobWithDescription className="" job={jobs[0]} />
+            <JobWithDescription className="mt-5" job={jobs[1]} />
+            <div className="hidden @2xl:contents @2xl:*:flex-1/2">
+                <JobWithDescription className="mt-5" job={jobs[2]} />
+                <JobWithDescription className="mt-5" job={jobs[3]} />
+            </div>
+        </div>
     );
 }
