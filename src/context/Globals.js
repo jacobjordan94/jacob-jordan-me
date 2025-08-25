@@ -87,7 +87,7 @@ const Globals = {
             location: 'pittsburgh, pa',
             position: 'sr. software engineer i',
             dates: ['6/23', '4/24'], 
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra.',
+            description: 'university of pittsburgh medical center (upmc) is a pennsylvania based health care provider and insurer',
             detailedDescription: `
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
@@ -105,7 +105,7 @@ const Globals = {
             location: 'monroeville, pa',
             position: 'software engineer iii',
             dates: ['7/22', '5/23'], 
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra.',
+            description: 'iq inc. is a software development company and consulting company that specializes in custom software development',
             detailedDescription: `
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
@@ -123,7 +123,7 @@ const Globals = {
             location: 'seattle, wa',
             position: 'front-end developer',
             dates: ['11/16', '9/20'], 
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra.',
+            description: 'vertical life llc is mobile-based startup specializing in augmented reality (ar) technologies',
             detailedDescription: `
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
@@ -141,7 +141,7 @@ const Globals = {
             location: 'amarillo, tx',
             position: 'database administrator',
             dates: ['3/16', '11/16'], 
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra.',
+            description: 'operating in seven states, affiliated foods is a grocery distributor to over 700 stores',
             detailedDescription: `
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
