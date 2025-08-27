@@ -113,7 +113,7 @@ const Globals = {
                  This application is a CMS used by health care specialists to create and manage content for the RxWell mobile application `,
                 `used Azure DevOps as a team to assign tasks and meet sprint goals in CI/CD manner`,
                 `wrote unit tests and worked with testers to ensure that deployed software was up to a high standard and quality`,
-                `worked efficiently and productively in a remote employment setting while also effectively communicating with colleagues though either voice or text`,
+                `worked efficiently and productively in a remote employment setting while also effectively communicating with colleagues through either voice or text`,
             ],
             skills: [
                 '', '', ''
