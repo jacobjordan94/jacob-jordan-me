@@ -1,11 +1,11 @@
 import DotsMenuIcon from "./icons/DotsMenuIcon";
 import MenuIcon from './icons/MenuIcon';
 
-export function Header() {
+export function Header({ setSideNavOpen }) {
     return (
         <header>
             <div className="inner-content flex *:flex-auto p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl items-center">
-                <Nav />
+                <Nav setSideNavOpen={setSideNavOpen} />
                 <Title name="jacob-jordan.me">jacob-jordan.me</Title>
                 <Links />
             </div>
@@ -13,10 +13,10 @@ export function Header() {
     );
 }
 
-function Nav() {
+function Nav({ setSideNavOpen }) {
     return (
         <div className="nav-button-container">
-            <HeaderButton>
+            <HeaderButton onClick={() => setSideNavOpen(true)}>
                 <MenuIcon size={30} />
             </HeaderButton>
         </div>
@@ -41,9 +41,9 @@ function Links() {
     );
 }
 
-function HeaderButton({ className = '', children }) {
+function HeaderButton({ className = '', children, onClick }) {
     return (
-        <button className={"p-0 cursor-pointer hover:animate-pulse " + className}>
+        <button onClick={onClick} className={"p-0 cursor-pointer hover:animate-pulse " + className}>
             { children }
         </button>
     );

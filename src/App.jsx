@@ -6,16 +6,18 @@ import Globals from './context/Globals';
 import HomePage from './pages/home/Home';
 import ExperiencePage from './pages/experience/Experience';
 import ProjectsPage from './pages/projects/Projects';
+import SideNav from './components/SideNav';
 
 export const GlobalContext = createContext();
 
 function App() {
   const [ globals ] = useState(Globals)
+  const [ sideNavOpen, setSideNavOpen ] = useState(false);
   return (
     <div className="application-container h-svh flex flex-col">
       <BrowserRouter>
         <GlobalContext value={ globals }>
-          <Header />
+          <Header setSideNavOpen={setSideNavOpen} />
           <section className="content flex-1 overflow-scroll">
             <Routes>
               <Route element={ <StandardLayout /> }>
@@ -25,6 +27,7 @@ function App() {
               </Route>
             </Routes>
           </section>
+          <SideNav open={sideNavOpen} setSideNavOpen={setSideNavOpen} />
         </GlobalContext>
       </BrowserRouter>
     </div>
