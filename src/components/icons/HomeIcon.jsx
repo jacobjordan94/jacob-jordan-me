@@ -1,0 +1,16 @@
+export default ({ className = '', size = 24 }) =>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} className={'text-white ' + className}>
+        <g>
+            <path d="m6.855 13.71 0 -1.52 1.53 0 0 -1.52 1.52 0 0 -1.53 1.52 0 0 -1.52 1.53 0 0 -1.52 1.52 0 0 -1.53 3.05 0 0 1.53 1.52 0 0 1.52 1.53 0 0 1.52 1.52 0 0 1.53 1.52 0 0 1.52 1.53 0 0 1.52 1.52 0 0 16.77 1.53 0 0 -13.72 1.52 0 0 -1.52 1.52 0 0 -1.53 -1.52 0 0 -1.52 -1.52 0 0 -1.52 -1.53 0 0 -1.53 -1.52 0 0 -1.52 -1.53 0 0 -1.52 -1.52 0 0 -1.53 -1.52 0 0 -1.52 -1.53 0 0 -1.53 -1.52 0 0 -1.52 -3.05 0 0 1.52 -1.52 0 0 1.53 -1.53 0 0 1.52 -1.52 0 0 1.53 -1.52 0 0 1.52 -1.53 0 0 1.52 -1.52 0 0 1.53 -1.52 0 0 1.52 -1.53 0 0 1.52 -1.52 0 0 1.53 1.52 0 0 1.52 1.53 0 0 13.72 1.52 0 0 -16.77 1.52 0z" fill="currentColor" strokeWidth="1"></path>
+            <path d="m26.665 32 0 -1.52 -6.09 0 0 -12.19 -1.53 0 0 12.19 -6.09 0 0 -12.19 -1.53 0 0 12.19 -6.09 0 0 1.52 21.33 0z" fill="currentColor" strokeWidth="1"></path>
+            <path d="M22.095 19.81h3.05v3.05h-3.05Z" fill="currentColor" strokeWidth="1"></path>
+            <path d="M17.525 9.14h1.52v3.05h-1.52Z" fill="currentColor" strokeWidth="1"></path>
+            <path d="M14.475 7.62h3.05v1.52h-3.05Z" fill="currentColor" strokeWidth="1"></path>
+            <path d="M14.475 22.86h1.53v1.52h-1.53Z" fill="currentColor" strokeWidth="1"></path>
+            <path d="M12.955 16.76h6.09v1.53h-6.09Z" fill="currentColor" strokeWidth="1"></path>
+            <path d="M14.475 12.19h3.05v1.52h-3.05Z" fill="currentColor" strokeWidth="1"></path>
+            <path d="M12.955 9.14h1.52v3.05h-1.52Z" fill="currentColor" strokeWidth="1"></path>
+            <path d="M6.855 19.81h3.05v3.05h-3.05Z" fill="currentColor" strokeWidth="1"></path>
+        </g>
+    </svg>
+    
