@@ -88,11 +88,12 @@ const Globals = {
             description: 'university of pittsburgh medical center (upmc) is a pennsylvania based health care provider and insurer',
             detailedDescription: `
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
             `,
+            bullets: [
+                'Became certified in SAFe 5.1 (Scaled Agile Framework)',
+                'Routinely updated Angular codebases to the latest version of Angular; implementing new Angular features when appropriate',
+                'Participated in code reviews for Angular and Nativescript codebases',
+            ],
             skills: [
                 'angular', 'nativescript', 'safe 5.1'
             ],
@@ -128,6 +129,16 @@ const Globals = {
             detailedDescription: `
                 for most of my time at vertical life i was the sole front-end developer of an augmented reality based social media platform
             `,
+            bullets: [
+                `Created multiple Angular components used by other members of the front-end team`,
+                `Wrote pages to be responsive to both mobile and desktop views`,
+                `implemented the Clarifai API for general object-recognition as well as flagging NSFW or inappropriate content`,
+                `forked the Wikitude and AR.js codebases to make modifications needed for the application`,
+                `Helped integrate Google Maps into the desktop version of the application and some parts of the mobile application`,
+                `Worked with the back-end developer to troubleshoot and suggest improvements to the API`,
+                `Used JIRA as a team to assign tasks and meet sprint goals`,
+                `Helped onboard new developers into the project`,
+            ],
             skills: [
                 'cordova', 'ionic', 'angular', 'wikitude', 'ar.js', 'vue'
             ],
@@ -141,8 +152,14 @@ const Globals = {
             description: 'operating in seven states, affiliated foods is a grocery distributor to over 700 stores',
             detailedDescription: `
                 wasn't there too long but in my short time there i was given the responsibility of installing and helping maintain a new company-wide it ticketing / asset tracking system.
-                after this was successfully completed, i wrote software that converted and migrated multiple ms access files into the newly installed asset tracking system
             `,
+            bullets: [
+                `Wrote software to convert and migrate multiple ~20 year-old Microsoft Access files into a new database`,
+                `Routinely added new products and computer equipment to the database to ensure that all company property was properly accounted for`,
+                `responded to it tickets`,
+                `set up computers/e-mail accounts for new employees`,
+                `helped other members of the IT department troubleshoot, fix, or replace servers and other colleague's computers`,
+            ],
             skills: [
                 'c# '
             ],
