@@ -87,7 +87,7 @@ const Globals = {
             dates: ['6/23', '4/24'], 
             description: 'university of pittsburgh medical center (upmc) is a pennsylvania based health care provider and insurer',
             detailedDescription: `
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                in june of 2023 i transferred from iq inc. to upmc where i continued work on the rxwell project
             `,
             bullets: [
                 'Became certified in SAFe 5.1 (Scaled Agile Framework)',
@@ -106,6 +106,7 @@ const Globals = {
             dates: ['7/22', '5/23'], 
             description: 'iq inc. is a software development and consulting company that specializes in custom software development',
             detailedDescription: `
+                for my time at iq, i worked with upmc on the rxwell project
             `,
             bullets: [
                 `front-end developer responsible for maintaining a web-based application used by health care specialists to manage and message RxWell users`,
