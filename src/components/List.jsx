@@ -8,10 +8,10 @@ export default function List({ items, cols = 2, className = '' }) {
         }
     }, [ items ]);
     return ( itemsChunked &&
-        <div className={`list flex flex-col gap-2 @3xl:flex-row @3xl:gap-4` + className}>
+        <div className={`list flex flex-col gap-2 @3xl:flex-row @3xl:gap-4 ` + className}>
         {
             itemsChunked.map((chunk, i) => 
-                <div className="chunk flex flex-col gap-2" key={i + '-chunk'}>
+                <div className="chunk flex flex-col gap-4" key={i + '-chunk'}>
                 {
                     chunk.map((item, j) => 
                         <ListItem item={item} key={j + '-list-item'} />
