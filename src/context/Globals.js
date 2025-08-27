@@ -80,7 +80,7 @@ const Globals = {
         Proin pulvinar consectetur libero, et commodo quam. Integer sollicitudin neque nulla, eget egestas ex rhoncus sed. 
     `,
     experience: [
-        {
+        { /* ........................................................ UPMC ............................................................. */
             name: 'upmc',
             location: 'pittsburgh, pa',
             position: 'sr. software engineer i',
@@ -98,54 +98,50 @@ const Globals = {
             ],
             href: 'https://www.upmchealthplan.com/members/digital-tools/rxwell',
         },
-        {
+        { /* ........................................................ IQ INC ........................................................... */
             name: 'iq inc.',
             location: 'monroeville, pa',
             position: 'software engineer iii',
             dates: ['7/22', '5/23'], 
             description: 'iq inc. is a software development and consulting company that specializes in custom software development',
             detailedDescription: `
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
             `,
+            bullets: [
+                `front-end developer responsible for maintaining a web-based application used by health care specialists to manage and message RxWell users`,
+                `primary front-end developer responsible for rewriting a legacy web application from AngularJS to Angular 14.
+                 This application is a CMS used by health care specialists to create and manage content for the RxWell mobile application `,
+                `used Azure DevOps as a team to assign tasks and meet sprint goals in CI/CD manner`,
+                `wrote unit tests and worked with testers to ensure that deployed software was up to a high standard and quality`,
+                `worked efficiently and productively in a remote employment setting while also effectively communicating with colleagues though either voice or text`,
+            ],
             skills: [
                 '', '', ''
             ],
             href: 'https://www.iq-inc.com/',
         },
-        {
+        { /* ........................................................ VERTICAL LIFE .................................................... */
             name: 'vertical life llc',
             location: 'seattle, wa',
             position: 'front-end developer',
             dates: ['11/16', '9/20'], 
             description: 'vertical life llc is mobile-based startup specializing in augmented reality (ar) technologies',
             detailedDescription: `
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                for most of my time at vertical life i was the sole front-end developer of an augmented reality based social media platform
             `,
             skills: [
                 'cordova', 'ionic', 'angular', 'wikitude', 'ar.js', 'vue'
             ],
             href: 'https://www.linkedin.com/company/vertical-life-inc.',
         },
-        {
+        { /* ........................................................ AFFILIATED FOODS ................................................. */
             name: 'affiliated foods inc.',
             location: 'amarillo, tx',
             position: 'database administrator',
             dates: ['3/16', '11/16'], 
             description: 'operating in seven states, affiliated foods is a grocery distributor to over 700 stores',
             detailedDescription: `
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                wasn't there too long but in my short time there i was given the responsibility of installing and helping maintain a new company-wide it ticketing / asset tracking system.
+                after this was successfully completed, i wrote software that converted and migrated multiple ms access files into the newly installed asset tracking system
             `,
             skills: [
                 'c# '
