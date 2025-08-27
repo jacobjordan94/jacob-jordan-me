@@ -32,7 +32,6 @@ function ListItem({item, className = ''}) {
 }
 
 function chunkArray(arr, chunkSize) {
-    console.log(chunkSize)
     let r = [];
     for(let i = 0, len = arr.length; i < len; i+= chunkSize) {
         r.push(arr.slice(i, i + chunkSize));
