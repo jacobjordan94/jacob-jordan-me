@@ -25,7 +25,7 @@ function Nav({ setSideNavOpen }) {
 
 function Title({children}) {
     return (
-        <div className="title-container uppercase workbench-font text-3xl text-center">
+        <div className="title-container uppercase text-3xl text-center">
             { children }
         </div>
     );

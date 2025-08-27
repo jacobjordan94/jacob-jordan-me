@@ -3,7 +3,7 @@ import AppLink from "./AppLink";
 
 export default function Section({ title, children, link }) {
     return (
-        <div className="section workbench-font lowercase w-full">
+        <div className="section lowercase w-full">
             <div className="title text-2xl flex justify-between items-center">
                 <span>{ title }</span>
                 <SectionLink link={link} />

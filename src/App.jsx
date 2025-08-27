@@ -14,7 +14,7 @@ function App() {
   const [ globals ] = useState(Globals)
   const [ sideNavOpen, setSideNavOpen ] = useState(false);
   return (
-    <div className="application-container h-svh flex flex-col">
+    <div className="application-container h-svh flex flex-col workbench-font">
       <BrowserRouter>
         <GlobalContext value={ globals }>
           <Header setSideNavOpen={setSideNavOpen} />
