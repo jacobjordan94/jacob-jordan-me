@@ -1,4 +1,5 @@
 import JobBase from "../../components/jobs/JobBase";
+import List from "../../components/List";
 
 export default function Job({ job, children }) {
     return (
@@ -14,9 +15,18 @@ export default function Job({ job, children }) {
                 </div>
             </div>
             <hr className="my-2 opacity-50" />
-            <div className="full-description indent-8 mt-2">
-                { job.detailedDescription }
-            </div>
+            {
+                job.detailedDescription &&
+                <div className="full-description indent-8 mt-2">
+                    { job.detailedDescription }
+                </div>
+            }
+            {
+                job.bullets &&
+                <div className="bullet-points">
+                    <List cols={3} items={job.bullets} />
+                </div>
+            }
             <div className="job-body">
                 { children }
             </div>
