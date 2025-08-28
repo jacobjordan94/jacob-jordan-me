@@ -10,6 +10,7 @@ import SideNav from './components/SideNav';
 import ResponsiveLayout from './layouts/ResponsiveLayout';
 import SkillsPage from './pages/skills/SkillsPage';
 import FixedResponsiveLayout from './layouts/FixedResponsiveLayout';
+import AboutPage from './pages/about/AboutPage';
 
 export const GlobalContext = createContext();
 
@@ -32,6 +33,7 @@ function App() {
               </Route>
               <Route element={ <FixedResponsiveLayout /> }>
                 <Route path="skills" element={ <SkillsPage /> } />
+                <Route path="about" element={ <AboutPage /> } />
               </Route>
             </Routes>
           </section>
