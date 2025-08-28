@@ -1,7 +1,11 @@
 import { useLocation } from "react-router";
 import AppLink from "./AppLink";
-import WorldWideWebIcon from "./icons/WorldWideWebIcon";
 import { useEffect } from "react";
+import HomeIcon from "./icons/HomeIcon";
+import InfoIcon from "./icons/InfoIcon";
+import SkillsIcon from "./icons/SkillsIcon";
+import PaintingIcon from "./icons/PaintingIcon";
+import ExperienceIcon from "./icons/ExperienceIcon";
 
 export default function SideNav({ open = false, setSideNavOpen }) {
 
@@ -10,24 +14,41 @@ export default function SideNav({ open = false, setSideNavOpen }) {
     
     const navItems = [
         {
+            to: '/',
+            icon: () => <HomeIcon />,
+            text: 'home',
+        },
+        {
             to: 'experience',
-            icon: () => <WorldWideWebIcon />,
+            icon: () => <ExperienceIcon />,
             text: 'experience',
         },
         {
             to: 'projects',
-            icon: () => <WorldWideWebIcon />,
+            icon: () => <PaintingIcon />,
             text: 'projects',
         },
+        {
+            to: 'skills',
+            icon: () => <SkillsIcon />,
+            text: 'skills'
+        },
+        {
+            to: 'about',
+            icon: () => <InfoIcon />,
+            text: 'about this website'
+        }
     ];
     
     return (
-        <div className={"side-nav h-full w-full fixed z-10 top-0 left-0 flex bg-[rgba(0,0,0,0.5)] transition-[background-color] " + (!open ? 'bg-transparent pointer-events-none' : '')}>
+        <div className={"side-nav h-full w-full fixed z-10 top-0 left-0 flex bg-[rgba(0,0,0,0.5)] transition-[background-color] overflow-x-hidden " + (!open ? 'bg-transparent pointer-events-none' : '')}>
             <div className={"inner-menu w-0 bg-neutral-800 overflow-x-hidden transition-[width] " + (open ? 'w-[256px]' : '')}>
-                <div className="nav-header flex justify-end">
-                    <button className="" onClick={() => setSideNavOpen(false)}>X</button>
+                <div className="px-4">
+                    <div className="nav-header flex justify-end pt-2">
+                        <button className="cursor-pointer" onClick={() => setSideNavOpen(false)}>X</button>
+                    </div>
+                    <NavBody items={navItems} />
                 </div>
-                <NavBody items={navItems} />
             </div>
             <div className="empty-space flex-grow" onClick={() => setSideNavOpen(false)}></div>
         </div>
@@ -36,7 +57,7 @@ export default function SideNav({ open = false, setSideNavOpen }) {
 
 function NavBody({ items }) {
     return (
-        <div className="nav-body">
+        <div className="nav-body flex flex-col gap-2">
         {
             items.map((item, i) => <NavItem key={'nav-' + i} to={item.to} href={item.href} Icon={item.icon}>{ item.text }</NavItem>)
         }
@@ -46,12 +67,12 @@ function NavBody({ items }) {
 
 function NavItem({ to, href, Icon, children }) {
     return (
-        <div className="nav-item">
+        <div className="nav-item whitespace-nowrap">
             <AppLink to={to} href={href} className="flex">
-                <div className="icon">
+                <div className="icon me-3">
                     <Icon />
                 </div>
-                <div className="text">
+                <div className="text text-xl">
                     { children }
                 </div>
             </AppLink>
