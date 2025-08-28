@@ -5,7 +5,7 @@ import { createContext, useState } from 'react';
 import Globals from './context/Globals';
 import HomePage from './pages/home/HomePage';
 import ExperiencePage from './pages/experience/ExperiencePage';
-import ProjectsPage from './pages/projects/Projects';
+import ProjectsPage from './pages/projects/ProjectsPage';
 import SideNav from './components/SideNav';
 import ResponsiveLayout from './layouts/ResponsiveLayout';
 import SkillsPage from './pages/skills/SkillsPage';
