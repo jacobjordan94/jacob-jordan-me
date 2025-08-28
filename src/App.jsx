@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { createContext, useState } from 'react';
 import Globals from './context/Globals';
 import HomePage from './pages/home/Home';
-import ExperiencePage from './pages/experience/Experience';
+import ExperiencePage from './pages/experience/ExperiencePage';
 import ProjectsPage from './pages/projects/Projects';
 import SideNav from './components/SideNav';
 import ResponsiveLayout from './layouts/ResponsiveLayout';
