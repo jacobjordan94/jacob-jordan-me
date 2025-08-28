@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../App";
 import Section from "../../components/Section";
+import Skill from "../../components/Skill";
 
 export default function Skills() {
     const { skills } = useContext(GlobalContext);
@@ -15,8 +16,4 @@ export default function Skills() {
             </div>
         </Section>
     );
-}
-
-function Skill({ value }) {
-    return <span className="text-neutral-500 hover:text-white transition-[colors_scale] hover:animate-pulse hover:scale-110 select-none">{ value }</span>
 }
