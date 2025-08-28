@@ -7,6 +7,9 @@ import HomePage from './pages/home/Home';
 import ExperiencePage from './pages/experience/Experience';
 import ProjectsPage from './pages/projects/Projects';
 import SideNav from './components/SideNav';
+import ResponsiveLayout from './layouts/ResponsiveLayout';
+import SkillsPage from './pages/skills/SkillsPage';
+import FixedResponsiveLayout from './layouts/FixedResponsiveLayout';
 
 export const GlobalContext = createContext();
 
@@ -22,8 +25,13 @@ function App() {
             <Routes>
               <Route element={ <StandardLayout /> }>
                 <Route index element={ <HomePage /> }></Route>
-                <Route path='experience' element={ <ExperiencePage /> }></Route>
                 <Route path="projects" element={ <ProjectsPage /> }></Route>
+              </Route>
+              <Route element={ <ResponsiveLayout/> }>
+                <Route path='experience' element={ <ExperiencePage /> }></Route>
+              </Route>
+              <Route element={ <FixedResponsiveLayout /> }>
+                <Route path="skills" element={ <SkillsPage /> } />
               </Route>
             </Routes>
           </section>
