@@ -3,7 +3,7 @@ import Section from "../../components/Section";
 import { GlobalContext } from "../../App";
 import { useNavigate } from "react-router";
 import JobWithDescription from "../../components/jobs/JobWithDescription";
-import AppLink from "../../components/AppLink";
+import SeeMoreButton from "../../components/SeeMoreButton";
 
 export default function Experience({}) {
     const { experience } = useContext(GlobalContext);
@@ -13,9 +13,7 @@ export default function Experience({}) {
         <Section title="experience" link="/experience">
             <div className="experience">
                 <JobsContainer jobs={experience} />
-                <div className="see-more text-center mt-8">
-                    <AppLink to='experience'>see more</AppLink>
-                </div>
+                <SeeMoreButton to="experience" className="mt-8" />
             </div>
         </Section>
     );
