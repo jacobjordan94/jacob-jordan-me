@@ -25,7 +25,7 @@ export default function ProjectCard({ project, type, className = '', showLink = 
             </div>
             {
                 type &&
-                <div className="badge absolute top-0 text-lg shadow-black shadow-sm right-4 bg-neutral-700 p-1 pt-0 rounded-b-sm">{ type }</div>
+                <div className="badge absolute top-0 text-lg shadow-black shadow-sm right-4 bg-neutral-700 py-1 px-2 pt-0 rounded-b-sm">{ type }</div>
             }
         </div>
     );
