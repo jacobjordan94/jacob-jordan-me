@@ -24,7 +24,7 @@ export default function AboutPage({}) {
                     <div className="flex my-4 justify-center">
                         <SourceCodeHandsIcon className='size-24' />
                     </div>
-                    <div className="text-center">the source code is available to view on <AppLink className='border-b-2 text-neutral-400' href="https://github.com/jacobjordan94/jacob-jordan-me">github</AppLink>.</div>
+                    <div className="text-center">the source code is available to view on <AppLink decoration={false} className='border-b-2 text-neutral-400' href="https://github.com/jacobjordan94/jacob-jordan-me">github</AppLink>.</div>
             </div>
             <div className="ai-is-bad pe-4">
                 <div className="inline-flex scale-[0.75]">

@@ -2,10 +2,10 @@ import { Link } from "react-router"
 
 export default function AppLink({ href, to, className = '', children, animate = true, decoration = true }) {
     return (
-        <div className={`inline ${decoration ? 'hover:border-b-2' : ''} ${animate ? 'hover:animate-pulse' : ''}`}>
+        <div className={`inline border-b-2 border-transparent ${decoration ? 'hover:border-white' : ''} ${animate ? 'hover:animate-pulse' : ''}`}>
         {
-            href ?  <AppAnchor href={href} className={className} >{ children }</AppAnchor> :
-                    <AppRouterLink to={to} className={className} >{ children }</AppRouterLink>
+            href ?  <AppAnchor href={href} className={'inline-flex ' + className} >{ children }</AppAnchor> :
+                    <AppRouterLink to={to} className={'inline-flex ' + className} >{ children }</AppRouterLink>
         }
         </div>
     );
