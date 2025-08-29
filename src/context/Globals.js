@@ -31,13 +31,14 @@ const Globals = {
                 image: './screenshots/jacob-jordan-me.png',
                 description: 'does this website count? i sure hope so.',
                 source: '',
-                type: 'react'
+                type: 'react',
+                url: null,
             },
             {
                 title: 'kexp-react',
                 image: './screenshots/kexp-react.png',
                 description: '',
-                url: 'kexp-react.jacob-jordan.me',
+                url: 'https://kexp-react.jacob-jordan.me',
                 source: '',
                 type: 'react',
             }
