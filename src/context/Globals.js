@@ -28,14 +28,14 @@ const Globals = {
         react: [
             {
                 title: 'jacob-jordan.me',
-                image: '',
+                image: './screenshots/jacob-jordan-me.png',
                 description: 'does this website count? i sure hope so.',
                 source: '',
                 type: 'react'
             },
             {
                 title: 'kexp-react',
-                image: '',
+                image: './screenshots/kexp-react.png',
                 description: '',
                 url: 'kexp-react.jacob-jordan.me',
                 source: '',
