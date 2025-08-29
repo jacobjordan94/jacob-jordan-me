@@ -7,7 +7,6 @@ import SeeMoreButton from "../../components/SeeMoreButton";
 
 export default function Experience({}) {
     const { experience } = useContext(GlobalContext);
-    const navigate = useNavigate();
 
     return (
         <Section title="experience" link="/experience">
