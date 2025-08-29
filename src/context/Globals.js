@@ -29,8 +29,9 @@ const Globals = {
             {
                 title: 'jacob-jordan.me',
                 image: '',
-                description: '',
+                description: 'does this website count? i sure hope so.',
                 source: '',
+                type: 'react'
             },
             {
                 title: 'kexp-react',
@@ -38,10 +39,11 @@ const Globals = {
                 description: '',
                 url: 'kexp-react.jacob-jordan.me',
                 source: '',
+                type: 'react',
             }
         ],
         angular: [
-
+    
         ],
         mobile: [
 
