@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import Section from "../../components/Section";
 import { GlobalContext } from "../../App";
-import { useNavigate } from "react-router";
 import JobWithDescription from "../../components/jobs/JobWithDescription";
 import SeeMoreButton from "../../components/SeeMoreButton";
 
