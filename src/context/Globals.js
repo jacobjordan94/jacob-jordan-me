@@ -70,7 +70,7 @@ const Globals = {
         },
         {
             title: 'utpb ar',
-            image: null,
+            image: './screenshots/utpb-ar.png',
             description: 'senior research project done to complete graduation at utpb. can be used to find locations around campus, contact faculty members, and more!',
             url: '',
             youtube: 'https://youtu.be/wC6-QRTrvJI',
