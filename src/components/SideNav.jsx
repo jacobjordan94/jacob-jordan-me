@@ -14,7 +14,7 @@ export default function SideNav({ open = false, setSideNavOpen }) {
     
     const navItems = [
         {
-            to: '/',
+            to: '',
             icon: () => <HomeIcon />,
             text: 'home',
         },
@@ -47,7 +47,7 @@ export default function SideNav({ open = false, setSideNavOpen }) {
                     <div className="nav-header flex justify-end pt-2">
                         <button className="cursor-pointer" onClick={() => setSideNavOpen(false)}>X</button>
                     </div>
-                    <NavBody items={navItems} />
+                    <NavBody items={navItems} currentPath={loc.pathname} />
                 </div>
             </div>
             <div className="empty-space flex-grow" onClick={() => setSideNavOpen(false)}></div>
@@ -55,19 +55,19 @@ export default function SideNav({ open = false, setSideNavOpen }) {
     );
 }
 
-function NavBody({ items }) {
+function NavBody({ items, currentPath }) {
     return (
         <div className="nav-body flex flex-col gap-2">
         {
-            items.map((item, i) => <NavItem key={'nav-' + i} to={item.to} href={item.href} Icon={item.icon}>{ item.text }</NavItem>)
+            items.map((item, i) => <NavItem key={'nav-' + i} to={item.to} href={item.href} Icon={item.icon} currentPath={currentPath}>{ item.text }</NavItem>)
         }
         </div>
     );
 }
 
-function NavItem({ to, href, Icon, children }) {
+function NavItem({ to, href, Icon, children, currentPath }) {
     return (
-        <div className="nav-item whitespace-nowrap">
+        <div data-active={('/' + to) === currentPath} className="nav-item whitespace-nowrap data-[active=true]:opacity-50 data-[active=true]:pointer-events-none">
             <AppLink to={to} href={href} className="flex">
                 <div className="icon me-3">
                     <Icon />
