@@ -34,7 +34,7 @@ function MobileNav({ setSideNavOpen }) {
 
 function Title({children}) {
     return (
-        <div className="title-container uppercase text-3xl pointer-coarse:text-center pointer-fine:ps-2">
+        <div className="title-container uppercase text-3xl pointer-coarse:text-center">
             { children }
         </div>
     );
