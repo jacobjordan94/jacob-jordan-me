@@ -11,5 +11,5 @@ export default function AppLink({ href, to, className = '', children, animate = 
     );
 }
 
-const AppAnchor = ({ href, className, children }) => <a target="_blank" rel="noopener noreferrer" className={className} href={href}>{ children }</a>;
-const AppRouterLink = ({ to, className, children }) => <Link className={className} to={to}>{ children }</Link>
+export const AppAnchor = ({ href, className, children }) => <a target="_blank" rel="noopener noreferrer" className={className} href={href}>{ children }</a>;
+export const AppRouterLink = ({ to, className, children }) => <Link className={className} to={to}>{ children }</Link>
