@@ -46,6 +46,7 @@ const Globals = {
             image: './screenshots/rxwell.png',
             description: 'health tool used to manage weight loss, anxiety, depression, nicotine cessation, and much more. rxwell matches you with a health specialist to help you in your journey. as seen on the today show!',
             url: 'https://youtu.be/ZaaYOwyecPA',
+            youtube: 'https://youtu.be/ZaaYOwyecPA',
             source: null,
             type: 'mobile'
         },
@@ -54,6 +55,7 @@ const Globals = {
             image: './screenshots/upmc.png',
             description: 'coach-buddi is a web application used by health specialists to manage, interact with, and message rxwell users',
             url: 'https://youtu.be/hapeY6k6jC8',
+            youtube: 'https://youtu.be/hapeY6k6jC8',
             source: null,
             type: 'angular'
         },
@@ -62,8 +64,18 @@ const Globals = {
             image: './screenshots/upmc.png',
             description: 'cms (content management service) for rxwell; originally written in angularjs, my primary responsibility at upmc was to rewrite cartographer into the latest version of angular',
             url: 'https://youtu.be/tQ-r6KKAuj4',
+            youtube: 'https://youtu.be/tQ-r6KKAuj4',
             source: null,
             type: 'angular'
+        },
+        {
+            title: 'utpb ar',
+            image: null,
+            description: 'senior research project done to complete graduation at utpb. can be used to find locations around campus, contact faculty members, and more!',
+            url: '',
+            youtube: 'https://youtu.be/wC6-QRTrvJI',
+            source: null,
+            type: 'mobile',
         }
     ],
     education: {
