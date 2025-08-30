@@ -26,9 +26,9 @@ function App() {
             <Routes>
               <Route element={ <StandardLayout /> }>
                 <Route index element={ <HomePage /> }></Route>
-                <Route path="projects" element={ <ProjectsPage /> }></Route>
               </Route>
               <Route element={ <ResponsiveLayout/> }>
+                <Route path="projects" element={ <ProjectsPage /> }></Route>
                 <Route path='experience' element={ <ExperiencePage /> }></Route>
               </Route>
               <Route element={ <FixedResponsiveLayout /> }>
