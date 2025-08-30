@@ -9,7 +9,7 @@ import { useLocation } from "react-router";
 export function Header({ setSideNavOpen }) {
     return (
         <header>
-            <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-1">
+            <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-2">
                 <div className="mobile-nav-container inline float-start pointer-fine:hidden">
                     <MobileNav setSideNavOpen={setSideNavOpen} />
                 </div>
@@ -34,7 +34,7 @@ function MobileNav({ setSideNavOpen }) {
 
 function Title({children}) {
     return (
-        <div className="title-container uppercase text-3xl text-center">
+        <div className="title-container uppercase text-3xl pointer-coarse:text-center pointer-fine:ps-2">
             { children }
         </div>
     );
@@ -43,7 +43,7 @@ function Title({children}) {
 function DesktopNav() {
     const loc = useLocation();
     const links = [
-        { to: 'home', text: 'home' },
+        { to: '', text: 'home' },
         { to: 'experience', text: 'experience' },
         { to: 'projects', text: 'projects' },
         { to: 'skills', text: 'skills' },
@@ -54,7 +54,7 @@ function DesktopNav() {
         <div className="desktop-nav flex gap-4">
         {
             links.map((link, i) => 
-                <div key={i} data-active={('/' + link.to) === loc.pathname} className="group data-[active=false]:opacity-50 data-[active=false]:hover:opacity-100">
+                <div key={i} data-active={('/' + link.to) === loc.pathname} className="group data-[active=false]:opacity-40 data-[active=false]:hover:opacity-100">
                     <AppLink decoration={false} to={link.to}>
                         <div className="desktop-nav-link-inner-content flex items-center gap-1.5 group-data-[active=false]:text-transparent group-data-[active=false]:hover:text-white duration-300 transition-colors">
                             <span className="text-xs mt-1">{ '>' }</span>
