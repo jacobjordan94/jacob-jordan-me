@@ -32,6 +32,7 @@ const Globals = {
             url: null,
             source: '',
             type: 'react',
+            tags: ['react', 'tailwind'],
         },
         {
             title: 'kexp-react',
@@ -40,15 +41,17 @@ const Globals = {
             url: 'https://kexp-react.jacob-jordan.me',
             source: '',
             type: 'react',
+            tags: ['react', 'tailwind'],
         },
         {
-            title: 'rxwell',
+            title: 'rxwell - upmc',
             image: './screenshots/rxwell.png',
             description: 'health tool used to manage weight loss, anxiety, depression, nicotine cessation, and much more. rxwell matches you with a health specialist to help you in your journey. as seen on the today show!',
             url: 'https://youtu.be/ZaaYOwyecPA',
             youtube: 'https://youtu.be/ZaaYOwyecPA',
             source: null,
-            type: 'mobile'
+            type: 'mobile',
+            tags: ['angular', 'nativescript', 'scss', 'jasmine', 'karma'],
         },
         {
             title: 'coach-buddi (rxwell)',
@@ -57,7 +60,8 @@ const Globals = {
             url: 'https://youtu.be/hapeY6k6jC8',
             youtube: 'https://youtu.be/hapeY6k6jC8',
             source: null,
-            type: 'angular'
+            type: 'angular',
+            tags: ['angular', 'material', 'angular cdk', 'scss', 'jasmine', 'karma'],
         },
         {
             title: 'cartographer (rxwell)',
@@ -66,7 +70,8 @@ const Globals = {
             url: 'https://youtu.be/tQ-r6KKAuj4',
             youtube: 'https://youtu.be/tQ-r6KKAuj4',
             source: null,
-            type: 'angular'
+            type: 'angular',
+            tags: ['angular', 'material', 'angular cdk', 'scss', 'jasmine', 'karma'],
         },
         {
             title: 'utpb ar',
@@ -76,6 +81,37 @@ const Globals = {
             youtube: 'https://youtu.be/wC6-QRTrvJI',
             source: null,
             type: 'mobile',
+            tags: ['wikitude', 'java', 'android', 'augmented reality']
+        },
+        {
+            title: 'ar mobile app - vertical life llc',
+            image: './screenshots/remake.png',
+            description: '',
+            url: '',
+            youtube: '',
+            source: null,
+            type: 'mobile',
+            tags: ['angular', 'ionic', 'cordova', 'wikitude', 'vue', 'google maps'],
+        },
+        {
+            title: 'ar web app - vertical life llc',
+            image: './screenshots/remake.png',
+            description: '',
+            url: '',
+            youtube: null,
+            source: null,
+            type: 'web',
+            tags: ['angular', 'ionic', 'ar.js', 'vue', 'google maps'],
+        },
+        {
+            title: 'the quaking floor',
+            image: './screenshots/tqf.png',
+            description: 'portmanteau of \'quake\' and \'killing floor\'; in this game you (princess peach) shoot wolves & ponies and collect chocolate and coins!',
+            url: 'https://youtu.be/Icrw35PHQxg',
+            youtube: 'https://youtu.be/Icrw35PHQxg',
+            source: '',
+            type: 'games',
+            tags: ['pc', 'java']
         }
     ],
     education: {
