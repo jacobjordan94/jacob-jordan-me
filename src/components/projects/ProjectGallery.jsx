@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../App";
 import ProjectCard from "./ProjectCard";
+import AppLink, { AppAnchor } from "../AppLink";
 
 export default function ProjectGallery({}) {
     const { projects } = useContext(GlobalContext);
@@ -32,7 +33,7 @@ export default function ProjectGallery({}) {
                     <button key={i} 
                             onClick={() => setCurrentProjectType(pt)} 
                             data-active={pt === currentProjectType}
-                            className="rounded-lg cursor-pointer data-[active=false]:opacity-50 text-lg"
+                            className="rounded-lg cursor-pointer transition-opacity data-[active=false]:opacity-50 text-lg"
                     >{ pt }</button>
                 )
             }
@@ -40,8 +41,11 @@ export default function ProjectGallery({}) {
             <hr className="bg-white mb-6 h-[1px] opacity-50" />
             <div className="project-gallery-content flex flex-col gap-8 @2xl:grid @2xl:grid-cols-2 @ @4xl:grid-cols-3 6xl:grid-cols-4">
             {
-                visibleProjects.map((vp, i) => <ProjectCard key={i} project={vp} type={currentProjectType === 'all' ? vp.type : ''} className="cursor-pointer" />)
-            }
+                visibleProjects.map((vp, i) =>
+                    vp.url ? <AppAnchor key={i} href={vp.url} className="contents">
+                                <ProjectCard project={vp} type={currentProjectType === 'all' ? vp.type : ''} />
+                            </AppAnchor> : <ProjectCard key={i} project={vp} type={currentProjectType === 'all' ? vp.type : ''} />
+)}
             </div>
         </div>
     );
