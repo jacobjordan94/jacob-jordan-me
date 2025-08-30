@@ -1,7 +1,8 @@
 import AppLink from "../AppLink";
 import LinkIcon from "../icons/LinkIcon";
+import YouTubeIcon from "../icons/YouTubeIcon";
 
-export default function ProjectCard({ project, type, className = '', showLink = false, detailed = false }) {
+export default function ProjectCard({ project, type, className = '', showLink = false, detailed = false, showYoutube = false }) {
     return (
         <div className={"projects-card relative group shadow-black rounded-md overflow-hidden transition-[transform_shadow] hover:transform-[scale(1.025)] shadow-md hover:shadow-lg " + className}>
             <div className={`image overflow-hidden h-[256px] border-b-1 border-[rgba(255,255,255,0.25)]`}>
@@ -19,6 +20,10 @@ export default function ProjectCard({ project, type, className = '', showLink = 
                         <AppLink href={project.url} decoration={false}>
                             <LinkIcon />
                         </AppLink>
+                    }
+                    {
+                        showYoutube && project.youtube &&
+                        <YouTubeIcon />
                     }
                 </div>
                 <div className="description text-neutral-400">{ project.description }</div>
