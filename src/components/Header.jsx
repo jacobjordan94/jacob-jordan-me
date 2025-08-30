@@ -4,20 +4,25 @@ import DropdownButton from "./DropdownButton";
 import SourceCodeMagnifyingGlassIcon from "./icons/SourceCodeMagnifyingGlassIcon";
 import AppLink from "./AppLink";
 import GithubIcon from "./icons/GithubIcon";
+import { useLocation } from "react-router";
 
 export function Header({ setSideNavOpen }) {
     return (
         <header>
-            <div className="inner-content flex *:flex-auto p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl items-center">
-                <Nav setSideNavOpen={setSideNavOpen} />
+            <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-1">
+                <div className="mobile-nav-container inline float-start pointer-fine:hidden">
+                    <MobileNav setSideNavOpen={setSideNavOpen} />
+                </div>
                 <Title name="jacob-jordan.me">jacob-jordan.me</Title>
-                <Links />
+                <div className="desktop-nav-container pointer-coarse:hidden mt-4">
+                    <DesktopNav />
+                </div>
             </div>
         </header>
     );
 }
 
-function Nav({ setSideNavOpen }) {
+function MobileNav({ setSideNavOpen }) {
     return (
         <div className="nav-button-container">
             <HeaderButton onClick={() => setSideNavOpen(true)}>
@@ -35,33 +40,30 @@ function Title({children}) {
     );
 }
 
-function Links() {
+function DesktopNav() {
+    const loc = useLocation();
     const links = [
-        { href: 'https://github.com/jacobjordan94/jacob-jordan-me', text: 'source code', icon: () => <SourceCodeMagnifyingGlassIcon /> },
-        { href: 'https://github.com/jacobjordan94/', text: 'github', icon: () => <GithubIcon />},
+        { to: 'home', text: 'home' },
+        { to: 'experience', text: 'experience' },
+        { to: 'projects', text: 'projects' },
+        { to: 'skills', text: 'skills' },
+        { to: 'about', text: 'about_this_website' },
+
     ];
     return (
-        <div className="links-container">
-            <DropdownButton className="float-right" dropdownContentClassName={'right-0'}>
-                <div className="bg-neutral-800 p-2 shadow-black shadow-lg rounded-md flex flex-col gap-2">
-                {
-                    links.map((link, i) => (
-                        <div key={i} className="link-wrap">
-                            <AppLink href={link.href} className="float-right">
-                                <div className="link flex justify-end gap-2">
-                                    <div className="text text-nowrap">
-                                        { link.text }
-                                    </div>
-                                    <div className="icon">
-                                        <link.icon />
-                                    </div>
-                                </div>
-                            </AppLink>
+        <div className="desktop-nav flex gap-4">
+        {
+            links.map((link, i) => 
+                <div key={i} data-active={('/' + link.to) === loc.pathname} className="group data-[active=false]:opacity-50 data-[active=false]:hover:opacity-100">
+                    <AppLink decoration={false} to={link.to}>
+                        <div className="desktop-nav-link-inner-content flex items-center gap-1.5 group-data-[active=false]:text-transparent group-data-[active=false]:hover:text-white duration-300 transition-colors">
+                            <span className="text-xs mt-1">{ '>' }</span>
+                            <span className="text-white">{link.text}</span>
+                            <span className="text-xs mt-1">{ '<' }</span>
                         </div>
-                    ))
-                }
+                    </AppLink>
                 </div>
-            </DropdownButton>
+        )}
         </div>
     );
 }
