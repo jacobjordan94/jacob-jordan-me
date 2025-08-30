@@ -1,27 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../App";
 import ProjectCard from "./ProjectCard";
-import AppLink, { AppAnchor } from "../AppLink";
+import { AppAnchor } from "../AppLink";
 
 export default function ProjectGallery({}) {
     const { projects } = useContext(GlobalContext);
-    const getAllProjects = () => Object.values(projects).flatMap(val => [...val]);
     const [ currentProjectType, setCurrentProjectType ] = useState('all');
-    const [ visibleProjects, setVisibleProjects ] = useState(getAllProjects());
-    const projectTypes = Object.keys(projects);
+    const [ visibleProjects, setVisibleProjects ] = useState([...projects]);
+    const projectTypes = [...new Set(projects.map(project => project.type))]
     projectTypes.unshift('all');
 
-
-    function setAllProjects() {
-        setVisibleProjects(
-            getAllProjects()
-        );
-    }
-
     useEffect(() => {
-        if(currentProjectType === 'all') { setAllProjects(); return; }
         setVisibleProjects(
-            projects[currentProjectType]
+            currentProjectType === 'all' ? [...projects] : [...projects].filter(project => project.type === currentProjectType)
         );
     }, [ currentProjectType ]);
 

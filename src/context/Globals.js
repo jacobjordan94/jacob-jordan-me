@@ -24,35 +24,24 @@ const Globals = {
         'adobe premiere', 'gimp', 'paint.net', 'scss', 'vscode', 'sql', 'ionic', 'cordova', 'android studio',
         'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh'
     ],
-    projects: {
-        react: [
-            {
-                title: 'jacob-jordan.me',
-                image: './screenshots/jacob-jordan-me.png',
-                description: 'does this website count? i sure hope so.',
-                source: '',
-                type: 'react',
-                url: null,
-            },
-            {
-                title: 'kexp-react',
-                image: './screenshots/kexp-react.png',
-                description: '',
-                url: 'https://kexp-react.jacob-jordan.me',
-                source: '',
-                type: 'react',
-            }
-        ],
-        angular: [
-    
-        ],
-        mobile: [
-
-        ],
-        other: [
-
-        ]
-    },
+    projects: [
+        {
+            title: 'jacob-jordan.me',
+            image: './screenshots/jacob-jordan-me.png',
+            description: 'does this website count? i sure hope so.',
+            url: null,
+            source: '',
+            type: 'react',
+        },
+        {
+            title: 'kexp-react',
+            image: './screenshots/kexp-react.png',
+            description: '',
+            url: 'https://kexp-react.jacob-jordan.me',
+            source: '',
+            type: 'react',
+        },
+    ],
     education: {
         name: 'the university of texas permian basin',
         city: 'odessa, tx',
