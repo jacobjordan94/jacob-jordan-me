@@ -106,7 +106,7 @@ const Globals = {
         {
             title: 'the quaking floor',
             image: './screenshots/tqf.png',
-            description: 'portmanteau of \'quake\' and \'killing floor\'; in this game you (princess peach) shoot wolves & ponies and collect chocolate and coins!',
+            description: 'portmanteau of \'quake\' and \'killing floor\'; in this game you (princess peach, naturally) shoot wolves & ponies while collecting chocolate and coins!',
             url: 'https://youtu.be/Icrw35PHQxg',
             youtube: 'https://youtu.be/Icrw35PHQxg',
             source: '',
