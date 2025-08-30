@@ -45,16 +45,14 @@ export default function SideNav({ open = false, setSideNavOpen }) {
     return (
         <div className={"side-nav h-full w-full fixed z-10 top-0 left-0 flex bg-[rgba(0,0,0,0.5)] transition-[background-color] overflow-x-hidden " + (!open ? 'bg-transparent pointer-events-none' : '')}>
             <div className={"inner-menu w-0 bg-neutral-800 overflow-x-hidden transition-[width] " + (open ? 'w-[256px]' : '')}>
-                <div className="px-4 flex flex-col h-full">
-                    <div className="nav-header flex justify-end pt-2">
-                        <button className="cursor-pointer" onClick={() => setSideNavOpen(false)}>X</button>
-                    </div>
-                    <div className="navbody flex flex-col flex-grow justify-between">
+                <div className="p-4 h-full relative">
+                    <button className="absolute py-3 px-5 top-0 right-0 cursor-pointer text-4xl" onClick={() => setSideNavOpen(false)}>&times;</button>
+                    <div className="navbody h-full flex flex-col flex-grow justify-between">
                         <div className="top-navbody">
                             <NavBody items={navItems} currentPath={loc.pathname} />
                         </div>
                         <div className="bottom-navbody">
-                            <div className="bottom-navbody-text text-center text-sm mb-4 flex items-center opacity-50">
+                            <div className="bottom-navbody-text text-center text-md mb-4 flex items-center opacity-50">
                                 <hr className="flex-grow" />
                                 <span className="mx-4 tracking-widest">more</span>
                                 <hr className="flex-grow"/>
