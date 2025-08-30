@@ -36,11 +36,35 @@ const Globals = {
         {
             title: 'kexp-react',
             image: './screenshots/kexp-react.png',
-            description: '',
+            description: 'fan project for kexp-fm, a non-commercial radio station based in seattle, wa',
             url: 'https://kexp-react.jacob-jordan.me',
             source: '',
             type: 'react',
         },
+        {
+            title: 'rxwell',
+            image: './screenshots/rxwell.png',
+            description: 'health tool used to manage weight loss, anxiety, depression, nicotine cessation, and much more. rxwell matches you with a health specialist to help you in your journey. as seen on the today show!',
+            url: 'https://youtu.be/ZaaYOwyecPA',
+            source: null,
+            type: 'mobile'
+        },
+        {
+            title: 'coach-buddi (rxwell)',
+            image: './screenshots/upmc.png',
+            description: 'coach-buddi is a web application used by health specialists to manage, interact with, and message rxwell users',
+            url: 'https://youtu.be/hapeY6k6jC8',
+            source: null,
+            type: 'angular'
+        },
+        {
+            title: 'cartographer (rxwell)',
+            image: './screenshots/upmc.png',
+            description: 'cms (content management service) for rxwell; originally written in angularjs, my primary responsibility at upmc was to rewrite cartographer into the latest version of angular',
+            url: 'https://youtu.be/tQ-r6KKAuj4',
+            source: null,
+            type: 'angular'
+        }
     ],
     education: {
         name: 'the university of texas permian basin',
