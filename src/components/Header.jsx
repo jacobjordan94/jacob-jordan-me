@@ -62,8 +62,8 @@ function DesktopNav() {
         }
     ];
     return (
-        <div className="desktop-nav flex gap-4 justify-between">
-            <div className="nav-links flex">
+        <div className="desktop-nav flex justify-between">
+            <div className="nav-links flex gap-2">
             {
                 links.map((link, i) => 
                     <div key={i} data-active={('/' + link.to) === loc.pathname} className="group data-[active=false]:opacity-40 data-[active=false]:hover:opacity-100">
