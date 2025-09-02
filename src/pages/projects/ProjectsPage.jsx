@@ -7,7 +7,7 @@ export default function ProjectsPage({}) {
     const ProjectTypes = () => [...new Set([...projects].map(project => project.type))]
         .map((type, i) => <ProjectTypeSection key={i} type={type} projects={[...projects].filter(project => project.type === type)} />)
     return (
-        <div className="projects-page flex flex-col gap-6">
+        <div className="projects-page flex flex-col gap-6 @6xl:py-5">
         {
            <ProjectTypes />
         }
