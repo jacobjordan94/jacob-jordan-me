@@ -15,7 +15,7 @@ export default function Job({ job, children }) {
                 </div>
             </div>
             <hr className="my-2 opacity-50" />
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-6">
                 {   job.detailedDescription &&
                     <div className="full-description indent-8 mt-2 text-white">
                         { job.detailedDescription }
