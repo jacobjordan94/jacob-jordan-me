@@ -13,7 +13,7 @@ export function Header({ setSideNavOpen }) {
         <header className='z-10'>
             <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-2">
                 <div className="mobile-nav-container inline float-start pointer-fine:hidden">
-                    <MobileNav setSideNavOpen={setSideNavOpen} />
+                    <MobileNavButton setSideNavOpen={setSideNavOpen} />
                 </div>
                 <div className="flex justify-between not-pointer-fine:contents">
                     <Title name="jacob-jordan.me">jacob-jordan.me</Title>
@@ -27,7 +27,7 @@ export function Header({ setSideNavOpen }) {
     );
 }
 
-function MobileNav({ setSideNavOpen }) {
+function MobileNavButton({ setSideNavOpen }) {
     return (
         <div className="nav-button-container">
             <HeaderButton onClick={() => setSideNavOpen(true)}>
