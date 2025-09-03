@@ -16,7 +16,7 @@ export default function Education({}) {
                 <div className="awards text-xs mt-0.5 text-neutral-500">{ awards }</div>
                 <div className="courses-taken mt-4">
                     <div className="title">courses taken:</div>
-                    <div className="courses mt-2 ps-2.5 text-neutral-400">
+                    <div className="courses mt-2 ps-2.5">
                         <CourseContainer courses={courses} />
                     </div>
                 </div>
@@ -37,7 +37,7 @@ function CourseContainer({ courses }) {
 
 function Course({ children }) {
     return (
-        <div className="course flex gap-2">
+        <div className="course flex gap-2 text-neutral-300 odd:text-neutral-500">
             <div className="before text-xs inline-flex items-start mt-1">{ '>' }</div>
             <div className="course-name flex-grow pe-4">{ children }</div>
         </div>
