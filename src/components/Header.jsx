@@ -4,6 +4,9 @@ import SourceCodeMagnifyingGlassIcon from "./icons/SourceCodeMagnifyingGlassIcon
 import AppLink from "./AppLink";
 import GithubIcon from "./icons/GithubIcon";
 import { useLocation } from "react-router";
+import OldPCIcon from './icons/OldPCIcon';
+import DPadIcon from './icons/DPadIcon';
+import HeathcliffIcon from './icons/HeathcliffIcon';
 
 export function Header({ setSideNavOpen }) {
     return (
@@ -12,7 +15,10 @@ export function Header({ setSideNavOpen }) {
                 <div className="mobile-nav-container inline float-start pointer-fine:hidden">
                     <MobileNav setSideNavOpen={setSideNavOpen} />
                 </div>
-                <Title name="jacob-jordan.me">jacob-jordan.me</Title>
+                <div className="flex justify-between not-pointer-fine:contents">
+                    <Title name="jacob-jordan.me">jacob-jordan.me</Title>
+                    <HeaderIcons />
+                </div>
                 <div className="desktop-nav-container pointer-coarse:hidden mt-4">
                     <DesktopNav />
                 </div>
@@ -105,6 +111,16 @@ function HeaderButton({ className = '', children, onClick }) {
         <button onClick={onClick} className={"p-0 cursor-pointer hover:animate-pulse " + className}>
             { children }
         </button>
+    );
+}
+
+function HeaderIcons({}) {
+    return (
+        <span className='pointer-coarse:hidden flex gap-4 *:text-neutral-200 *:size-[34px]'>
+            <OldPCIcon/>
+            <DPadIcon />
+            <HeathcliffIcon />
+        </span>
     );
 }
 
