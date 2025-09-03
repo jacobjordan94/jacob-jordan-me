@@ -10,14 +10,14 @@ import HeathcliffIcon from './icons/HeathcliffIcon';
 
 export function Header({ setSideNavOpen }) {
     return (
-        <header>
+        <header className='z-10'>
             <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-2">
                 <div className="mobile-nav-container inline float-start pointer-fine:hidden">
                     <MobileNav setSideNavOpen={setSideNavOpen} />
                 </div>
                 <div className="flex justify-between not-pointer-fine:contents">
                     <Title name="jacob-jordan.me">jacob-jordan.me</Title>
-                    <HeaderIcons />
+                    <HeaderIcons className="pointer-coarse:hidden" />
                 </div>
                 <div className="desktop-nav-container pointer-coarse:hidden mt-4">
                     <DesktopNav />
@@ -114,9 +114,9 @@ function HeaderButton({ className = '', children, onClick }) {
     );
 }
 
-function HeaderIcons({}) {
+export function HeaderIcons({ className }) {
     return (
-        <span className='pointer-coarse:hidden flex gap-4 *:text-neutral-200 *:size-[34px]'>
+        <span className={'flex gap-4 *:text-neutral-200 *:size-[34px] ' + className}>
             <OldPCIcon/>
             <DPadIcon />
             <HeathcliffIcon />
