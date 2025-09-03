@@ -29,8 +29,8 @@ const Globals = {
             title: 'jacob-jordan.me',
             image: './screenshots/jacob-jordan-me.png',
             description: 'does this website count? i sure hope so.',
-            url: null,
-            source: '',
+            url: 'https://github.com/jacobjordan94/jacob-jordan-me',
+            source: 'https://github.com/jacobjordan94/jacob-jordan-me',
             type: 'react',
             tags: ['react', 'tailwind'],
         },
@@ -39,7 +39,7 @@ const Globals = {
             image: './screenshots/kexp-react.png',
             description: 'fan project for kexp-fm, a non-commercial radio station based in seattle, wa',
             url: 'https://kexp-react.jacob-jordan.me',
-            source: '',
+            source: 'https://github.com/jacobjordan94/kexp-react',
             type: 'react',
             tags: ['react', 'tailwind'],
         },
@@ -79,7 +79,7 @@ const Globals = {
             description: 'senior research project done to complete graduation at utpb. can be used to find locations around campus, contact faculty members, and more!',
             url: 'https://youtu.be/wC6-QRTrvJI',
             youtube: 'https://youtu.be/wC6-QRTrvJI',
-            source: null,
+            source: 'https://github.com/jacobjordan94/UTPB-Augmented-Reality',
             type: 'mobile',
             tags: ['wikitude', 'java', 'android', 'augmented reality']
         },
@@ -109,7 +109,7 @@ const Globals = {
             description: 'portmanteau of \'quake\' and \'killing floor\'; in this game you (princess peach, naturally) shoot wolves & ponies while collecting chocolate and coins!',
             url: 'https://youtu.be/Icrw35PHQxg',
             youtube: 'https://youtu.be/Icrw35PHQxg',
-            source: '',
+            source: null,
             type: 'games',
             tags: ['pc', 'java']
         }
