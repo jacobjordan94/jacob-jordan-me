@@ -24,13 +24,15 @@ function App() {
           <Header setSideNavOpen={setSideNavOpen} />
           <section className="content flex-1 overflow-scroll">
             <Routes>
-              <Route element={ <StandardLayout /> }>
-                <Route index element={ <HomePage /> }></Route>
-              </Route>
+              {/* Standard Layout */}
+              <Route element={ <StandardLayout /> }></Route>
+              {/* Responsive Layout */}
               <Route element={ <ResponsiveLayout/> }>
-                <Route path="projects" element={ <ProjectsPage /> }></Route>
-                <Route path='experience' element={ <ExperiencePage /> }></Route>
+                <Route index element={ <HomePage /> } />
+                <Route path="projects" element={ <ProjectsPage /> } />
+                <Route path='experience' element={ <ExperiencePage /> } />
               </Route>
+              {/* Fixed Responsive Layout */}
               <Route element={ <FixedResponsiveLayout /> }>
                 <Route path="skills" element={ <SkillsPage /> } />
                 <Route path="about" element={ <AboutPage /> } />
