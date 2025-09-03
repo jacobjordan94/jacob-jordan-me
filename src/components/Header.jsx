@@ -64,7 +64,7 @@ function DesktopNav() {
         {
             href: 'https://github.com/jacobjordan94/jacob-jordan-me',
             icon: () => <SourceCodeMagnifyingGlassIcon />,
-            text: 'source_code'
+            text: 'source'
         }
     ];
     return (
@@ -85,19 +85,19 @@ function DesktopNav() {
             </div>
             <div className="external-links">
                 <DropdownButton ButtonContent={() => <span className="ps-4 hover:ps-12">more</span>} dropdownContentClassName={'right-[10px]'}>
-                    <div className="external-links-dropdown bg-neutral-800 shadow-black shadow-md p-3 rounded-md gap-2 flex flex-col">
+                    <div className="external-links-dropdown bg-neutral-700 shadow-black shadow-md rounded-md overflow-hidden">
                     {
-                        externalLinks.map((el, i) => 
-                            <AppLink key={i} href={el.href}>
-                                <div className="external-link-content flex gap-2">
-                                    <div className="icon">
-                                        <el.icon />
+                        externalLinks.map((el, i) =>
+                            <div key={i} className="external-link-container duration-700 transition-colors border-b-neutral-500 border-b-1 last-of-type:border-0 p-2 hover:bg-neutral-800 cursor-pointer">
+                                <AppLink href={el.href} decoration={false} animate={false} className='w-full'>
+                                    <div className="external-link-content flex w-full gap-2">
+                                        <div className="text flex-1 text-end">
+                                            {el.text}
+                                        </div>
+                                        <el.icon className />
                                     </div>
-                                    <div className="text">
-                                        {el.text}
-                                    </div>
-                                </div>
-                            </AppLink>
+                                </AppLink>
+                            </div>
                     )}
                     </div>
                 </DropdownButton>
