@@ -136,12 +136,9 @@ const Globals = {
         ],
     },
     about: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sit amet velit semper pharetra. Maecenas ac purus tempus massa facilisis porta eu nec tellus. 
-        Nam congue dolor arcu, a hendrerit nisl molestie et. Etiam accumsan, lorem quis tincidunt condimentum, nunc lorem placerat enim, eu pretium quam nunc vel lectus. 
-        In pellentesque rhoncus viverra. Nulla in nibh mauris. Aliquam ullamcorper varius dolor, eget auctor libero venenatis vitae. Vivamus vulputate nulla erat. 
-        Maecenas egestas mattis euismod. Fusce fermentum enim ut fermentum pulvinar. Donec nec diam in ligula molestie lobortis a quis arcu. 
-        Morbi arcu velit, mattis eget ex vel, viverra dictum magna. Maecenas dapibus metus vel sapien consectetur, placerat sollicitudin orci rutrum. 
-        Proin pulvinar consectetur libero, et commodo quam. Integer sollicitudin neque nulla, eget egestas ex rhoncus sed. 
+        hello my name is jacob jordan and this is my personal website. i was born, raised, and currently live in odessa, tx. a bit about me, i'm a big fan of computers, video games, movies, good music, cats, and a lot of other stuff!
+        my interest in computers and video games led me to pursue a degree in computer science, which i obtained from the university of texas permian basin in the winter of 2015. for the past ~10 years I have mostly worked as a front-end developer using angular, though I have recently come to learn react.
+        if you are interested in in reaching out, my contact information is at the bottom of this page
     `,
     experience: [
         { /* ........................................................ UPMC ............................................................. */
