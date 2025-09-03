@@ -86,7 +86,7 @@ const Globals = {
         {
             title: 'ar mobile app - vertical life llc',
             image: './screenshots/remake.png',
-            description: '',
+            description: 'augmented-reality based android and ios social media application. developed using cordova/ionic and wikitude',
             url: '',
             youtube: '',
             source: null,
@@ -96,7 +96,7 @@ const Globals = {
         {
             title: 'ar web app - vertical life llc',
             image: './screenshots/remake.png',
-            description: '',
+            description: 'basically a stripped down version of the mobile application. uses ar.js instead of wikitude',
             url: '',
             youtube: null,
             source: null,
