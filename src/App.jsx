@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
 import StandardLayout from './layouts/StandardLayout'
 import { Header } from './components/Header';
 import { createContext, useState } from 'react';
@@ -11,6 +11,7 @@ import ResponsiveLayout from './layouts/ResponsiveLayout';
 import SkillsPage from './pages/skills/SkillsPage';
 import FixedResponsiveLayout from './layouts/FixedResponsiveLayout';
 import AboutPage from './pages/about/AboutPage';
+import NotFoundIcon from './components/icons/404Icon';
 
 export const GlobalContext = createContext();
 
@@ -25,6 +26,7 @@ function App() {
           <section className="content flex-1 overflow-scroll">
             <Routes>
               {/* Standard Layout */}
+              <Route path="/*" element={ <Navigate replace to="/404" /> }></Route>
               <Route element={ <StandardLayout /> }></Route>
               {/* Responsive Layout */}
               <Route element={ <ResponsiveLayout/> }>
@@ -36,6 +38,14 @@ function App() {
               <Route element={ <FixedResponsiveLayout /> }>
                 <Route path="skills" element={ <SkillsPage /> } />
                 <Route path="about" element={ <AboutPage /> } />
+                <Route path='404' element={
+                    <div className='404-page size-full flex items-center'>
+                      <div className="404-content w-full flex flex-col items-center opacity-50 gap-8">
+                        <NotFoundIcon className='aspect-square w-full h-fit p-4 @lg:w-3/4 @lg:p-0 @2xl:w-1/2 @4xl:w-[512px]' />
+                        <div className="404-text @lg:text-lg @2xl:text-xl @4xl:text-2xl">nothing here but this guy...</div>
+                      </div>
+                    </div>
+                } />
               </Route>
             </Routes>
           </section>
