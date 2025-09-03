@@ -78,7 +78,7 @@ function DesktopNav() {
             )}
             </div>
             <div className="external-links">
-                <DropdownButton ButtonContent={() => <span className="ps-12">more</span>} dropdownContentClassName={'right-[10px]'}>
+                <DropdownButton ButtonContent={() => <span className="ps-4 hover:ps-12">more</span>} dropdownContentClassName={'right-[10px]'}>
                     <div className="external-links-dropdown bg-neutral-800 shadow-black shadow-md p-3 rounded-md gap-2 flex flex-col">
                     {
                         externalLinks.map((el, i) => 
