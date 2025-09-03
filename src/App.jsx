@@ -1,30 +1,55 @@
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
 import StandardLayout from './layouts/StandardLayout'
 import { Header } from './components/Header';
 import { createContext, useState } from 'react';
 import Globals from './context/Globals';
-import HomePage from './pages/home/Home';
-import ExperiencePage from './pages/experience/Experience';
-import ProjectsPage from './pages/projects/Projects';
+import HomePage from './pages/home/HomePage';
+import ExperiencePage from './pages/experience/ExperiencePage';
+import ProjectsPage from './pages/projects/ProjectsPage';
+import SideNav from './components/SideNav';
+import ResponsiveLayout from './layouts/ResponsiveLayout';
+import SkillsPage from './pages/skills/SkillsPage';
+import FixedResponsiveLayout from './layouts/FixedResponsiveLayout';
+import AboutPage from './pages/about/AboutPage';
+import NotFoundIcon from './components/icons/404Icon';
 
 export const GlobalContext = createContext();
 
 function App() {
   const [ globals ] = useState(Globals)
+  const [ sideNavOpen, setSideNavOpen ] = useState(false);
   return (
-    <div className="application-container h-svh flex flex-col">
+    <div className="application-container h-svh flex flex-col workbench-font">
       <BrowserRouter>
         <GlobalContext value={ globals }>
-          <Header />
+          <Header setSideNavOpen={setSideNavOpen} />
           <section className="content flex-1 overflow-scroll">
             <Routes>
-              <Route element={ <StandardLayout /> }>
-                <Route index element={ <HomePage /> }></Route>
-                <Route path='experience' element={ <ExperiencePage /> }></Route>
-                <Route path="projects" element={ <ProjectsPage /> }></Route>
+              {/* Standard Layout */}
+              <Route path="/*" element={ <Navigate replace to="/404" /> }></Route>
+              <Route element={ <StandardLayout /> }></Route>
+              {/* Responsive Layout */}
+              <Route element={ <ResponsiveLayout/> }>
+                <Route index element={ <HomePage /> } />
+                <Route path="projects" element={ <ProjectsPage /> } />
+                <Route path='experience' element={ <ExperiencePage /> } />
+              </Route>
+              {/* Fixed Responsive Layout */}
+              <Route element={ <FixedResponsiveLayout /> }>
+                <Route path="skills" element={ <SkillsPage /> } />
+                <Route path="about" element={ <AboutPage /> } />
+                <Route path='404' element={
+                    <div className='404-page size-full flex items-center'>
+                      <div className="404-content w-full flex flex-col items-center opacity-50 gap-8">
+                        <NotFoundIcon className='aspect-square w-full h-fit p-4 @lg:w-3/4 @lg:p-0 @2xl:w-1/2 @4xl:w-[512px]' />
+                        <div className="404-text @lg:text-lg @2xl:text-xl @4xl:text-2xl">nothing here but this guy...</div>
+                      </div>
+                    </div>
+                } />
               </Route>
             </Routes>
           </section>
+          <SideNav open={sideNavOpen} setSideNavOpen={setSideNavOpen} />
         </GlobalContext>
       </BrowserRouter>
     </div>
