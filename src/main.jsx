@@ -3,8 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-// todo - environment variable
-const PRODUCTION = false;
+const PRODUCTION = import.meta.env.PROD;
 const Root = () => PRODUCTION ? <App /> : <StrictMode><App /></StrictMode>
 
 createRoot(document.getElementById('root')).render(
