@@ -22,7 +22,8 @@ const Globals = {
         'javascript', 'typescript', 'react', 'angular', 'vue', 'tailwind', 'bash', 'linux', 
         'ubuntu', 'macOS', 'windows', 'arch linux', 'portainer', 'docker', 'adobe photoshop', 
         'adobe premiere', 'gimp', 'paint.net', 'scss', 'vscode', 'sql', 'ionic', 'cordova', 'android studio',
-        'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh', 'java', 'cloudflare', 'nginx-proxy-manager'
+        'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh', 'java', 'cloudflare', 'nginx-proxy-manager',
+        'ffmpeg', 'c#'
     ],
     projects: [
         {
@@ -109,7 +110,7 @@ const Globals = {
             description: 'portmanteau of \'quake\' and \'killing floor\'; in this game you (princess peach, naturally) shoot wolves & ponies while collecting chocolate and coins!',
             url: 'https://youtu.be/Icrw35PHQxg',
             youtube: 'https://youtu.be/Icrw35PHQxg',
-            source: null,
+            source: 'https://github.com/jacobjordan94/the-quaking-floor',
             type: 'games',
             tags: ['pc', 'java']
         }
