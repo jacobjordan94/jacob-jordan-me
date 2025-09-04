@@ -22,7 +22,7 @@ const Globals = {
         'javascript', 'typescript', 'react', 'angular', 'vue', 'tailwind', 'bash', 'linux', 
         'ubuntu', 'macOS', 'windows', 'arch linux', 'portainer', 'docker', 'adobe photoshop', 
         'adobe premiere', 'gimp', 'paint.net', 'scss', 'vscode', 'sql', 'ionic', 'cordova', 'android studio',
-        'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh'
+        'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh', 'java', 'cloudflare', 'nginx-proxy-manager'
     ],
     projects: [
         {
