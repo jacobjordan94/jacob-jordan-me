@@ -10,6 +10,7 @@ export default function SkillsPage({}) {
                                    .map((skill, i) => <Skill key={i} value={skill.value} className="text-xl" />)
     return (
         <div className="skills-page flex flex-wrap items-center justify-evenly gap-8 min-h-full">
+            <title>jacob-jordan.me - skills</title>
             <Skills />
         </div>
     );
