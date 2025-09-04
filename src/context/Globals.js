@@ -22,7 +22,7 @@ const Globals = {
         'javascript', 'typescript', 'react', 'angular', 'vue', 'tailwind', 'bash', 'linux', 
         'ubuntu', 'macOS', 'windows', 'arch linux', 'portainer', 'docker', 'adobe photoshop', 
         'adobe premiere', 'gimp', 'paint.net', 'scss', 'vscode', 'sql', 'ionic', 'cordova', 'android studio',
-        'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh'
+        'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh', 'java', 'cloudflare', 'nginx-proxy-manager'
     ],
     projects: [
         {
@@ -154,6 +154,8 @@ const Globals = {
                 'Became certified in SAFe 5.1 (Scaled Agile Framework)',
                 'Routinely updated Angular codebases to the latest version of Angular; implementing new Angular features when appropriate',
                 'Participated in code reviews for Angular and Nativescript codebases',
+                `primary front-end developer responsible for rewriting a legacy web application from AngularJS to Angular 14.
+                 This application is a CMS used by health care specialists to create and manage content for the RxWell mobile application `,
             ],
             skills: [
                 'angular', 'nativescript', 'safe 5.1'
@@ -171,9 +173,7 @@ const Globals = {
             `,
             bullets: [
                 `front-end developer responsible for maintaining a web-based application used by health care specialists to manage and message RxWell users`,
-                `primary front-end developer responsible for rewriting a legacy web application from AngularJS to Angular 14.
-                 This application is a CMS used by health care specialists to create and manage content for the RxWell mobile application `,
-                `used Azure DevOps as a team to assign tasks and meet sprint goals in CI/CD manner`,
+                `used Azure DevOps as a team to assign tasks and meet sprint goals in a CI/CD manner`,
                 `wrote unit tests and worked with testers to ensure that deployed software was up to a high standard and quality`,
                 `worked efficiently and productively in a remote employment setting while also effectively communicating with colleagues through either voice or text`,
             ],

@@ -6,12 +6,12 @@ import SiteBadge from '../../components/SiteBadge';
 export default function AboutPage({}) {
     return (
         <div className="about-page h-full flex flex-col items-center justify-between text-center text-neutral-300">
+            <title>jacob-jordan.me - about</title>
             <div className="text-welcome text-xl gap-4 mt-4">
-                hello, this website was made using react and tailwind. it was created in q3 of 2025. <br />
-                thank you for visiting it.
+                hello, this website was made using react and tailwind. <br/>it was created in august of 2025, and is currently hosted through cloudflare
             </div>
             <div className="responsive-message">
-                <div className="desktop pointer-coarse:hidden">looks like you're on a desktop! check out this website on mobile, as well</div>
+                <div className="desktop pointer-coarse:hidden">looks like you're on a desktop! check out this website on mobile as well</div>
                 <div className="mobile pointer-fine:hidden">you seem to be on a mobile device! be sure to check out the desktop version of this website too</div>
             </div>
             <div className="source-code">
