@@ -1,6 +1,6 @@
-# jacob-jordan.me
+# [jacob-jordan.me](https://jacob-jordan.me)
 
-![jacob-jordan.me Screenshot](/public/screenshots/jacob-jordan-me.png)
+[![jacob-jordan.me Screenshot](/public/screenshots/jacob-jordan-me.png)](https://jacob-jordan.me)
 My personal website. Created using React + Tailwind. 
 
 ## Installation
