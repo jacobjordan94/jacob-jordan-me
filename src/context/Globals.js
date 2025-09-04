@@ -23,7 +23,7 @@ const Globals = {
         'ubuntu', 'macOS', 'windows', 'arch linux', 'portainer', 'docker', 'adobe photoshop', 
         'adobe premiere', 'gimp', 'paint.net', 'scss', 'vscode', 'sql', 'ionic', 'cordova', 'android studio',
         'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh', 'java', 'cloudflare', 'nginx-proxy-manager',
-        'ffmpeg', 'c#'
+        'ffmpeg', 'c#', 'git', 'ci/cd',
     ],
     projects: [
         {
@@ -33,7 +33,7 @@ const Globals = {
             url: 'https://github.com/jacobjordan94/jacob-jordan-me',
             source: 'https://github.com/jacobjordan94/jacob-jordan-me',
             type: 'react',
-            tags: ['react', 'tailwind'],
+            tags: ['react', 'tailwind', 'cloudflare'],
         },
         {
             title: 'kexp-react',
@@ -42,7 +42,7 @@ const Globals = {
             url: 'https://kexp-react.jacob-jordan.me',
             source: 'https://github.com/jacobjordan94/kexp-react',
             type: 'react',
-            tags: ['react', 'tailwind'],
+            tags: ['react', 'tailwind', 'cloudflare'],
         },
         {
             title: 'rxwell - upmc',
@@ -82,7 +82,7 @@ const Globals = {
             youtube: 'https://youtu.be/wC6-QRTrvJI',
             source: 'https://github.com/jacobjordan94/UTPB-Augmented-Reality',
             type: 'mobile',
-            tags: ['wikitude', 'java', 'android', 'augmented reality']
+            tags: ['wikitude', 'java', 'android', 'augmented reality', 'javascript']
         },
         {
             title: 'ar mobile app - vertical life llc',
@@ -112,7 +112,7 @@ const Globals = {
             youtube: 'https://youtu.be/Icrw35PHQxg',
             source: 'https://github.com/jacobjordan94/the-quaking-floor',
             type: 'games',
-            tags: ['pc', 'java']
+            tags: ['pc', 'java'],
         }
     ],
     education: {
