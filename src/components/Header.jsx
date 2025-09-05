@@ -10,7 +10,7 @@ import HeathcliffIcon from './icons/HeathcliffIcon';
 
 export function Header({ setSideNavOpen }) {
     return (
-        <header className='z-10'>
+        <header className='z-10 print:hidden'>
             <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-2">
                 <div className="mobile-nav-container inline float-start pointer-fine:hidden">
                     <MobileNavButton setSideNavOpen={setSideNavOpen} />
