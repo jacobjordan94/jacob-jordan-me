@@ -24,3 +24,15 @@
     "BLED" 0,
     "SCAN" 0;
 }
+
+@media print {
+  .printable-page[size="letter"] {
+    size: letter;
+  }
+  .printable-page[size="a4"] {
+    size: a4;
+  }
+  :root {
+    background-color: white;
+  }
+}
