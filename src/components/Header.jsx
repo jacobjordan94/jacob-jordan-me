@@ -53,6 +53,7 @@ function DesktopNav() {
         { to: 'projects', text: 'projects' },
         { to: 'skills', text: 'skills' },
         { to: 'about', text: 'about_this_website' },
+        { to: 'resume', text: 'resumé' }
 
     ];
     const externalLinks = [
