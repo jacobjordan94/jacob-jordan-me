@@ -26,13 +26,13 @@ export default function ResumePage({}) {
                                 <HeathcliffIcon />
                             </span>
                         </div>
-                        <ResumeDisclaimer />
+                        <ResumeDisclaimer>this resumé was created using react + tailwind</ResumeDisclaimer>
                     </div>
                     <div className="contact **:text-black text-md flex justify-around border-b-2 border-dashed pb-2">
-                        <ContactLink Icon={() => <WorldWideWebIcon />}  text={'jacob-jordan.me'} />
-                        <ContactLink Icon={() => <PhoneIcon />}         text={contact.phone.text} />
-                        <ContactLink Icon={() => <EnvelopeIcon />}      text={contact.email.text} />
-                        <ContactLink Icon={() => <GithubIcon /> }       text={'github.com/jacobjordan94'} />
+                        <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
+                        <ContactLink Icon={() => <PhoneIcon        size={18}/>}  text={contact.phone.text} />
+                        <ContactLink Icon={() => <EnvelopeIcon     size={18}/>}  text={contact.email.text} />
+                        <ContactLink Icon={() => <GithubIcon       size={18}/>}  text={'github.com/jacobjordan94'} />
                     </div>
                 </div>
                 <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between">
@@ -67,7 +67,7 @@ function ContactLink({ Icon, text }) {
     return (
         <div className="contact-link flex gap-2 items-center">
             <Icon />
-            <span>{ text }</span>
+            <span className="text-sm">{ text }</span>
         </div>
     );
 }
@@ -166,10 +166,10 @@ function ResumeProjects({ projects }) {
     );
 }
 
-function ResumeDisclaimer() {
+function ResumeDisclaimer({ children }) {
     return (
         <div className="resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm">
-            this resumé was created using react + tailwind
+            { children }
         </div>
     );
 }
