@@ -17,13 +17,15 @@ export default function ResumePage({}) {
         <div data-page-size={pageSize} className="resume-page relative">
             <Page size={pageSize} className="flex flex-col">
                 <div className="header">
-                    <div className="name-icons flex items-start gap-4 p-2">
-                        <span className="text-3xl">JACOB A. JORDAN</span>
-                        <span className="icons *:text-black flex *:size-[30px] gap-2">
-                            <OldPCIcon />
-                            <DPadIcon />
-                            <HeathcliffIcon />
-                        </span>
+                    <div className="name-icons flex items-center justify-evenly">
+                        <div className="flex gap-4 py-2">
+                            <span className="text-3xl">JACOB A. JORDAN</span>
+                            <span className="icons *:text-black flex *:size-[30px] gap-2">
+                                <OldPCIcon />
+                                <DPadIcon />
+                                <HeathcliffIcon />
+                            </span>
+                        </div>
                         <ResumeDisclaimer />
                     </div>
                     <div className="contact **:text-black text-md flex justify-around border-b-2 border-dashed pb-2">
@@ -97,7 +99,7 @@ function ResumeExperience({ experience, className }) {
     }
     return (
         <ResumeSection title="experience" className={className}>
-            <div className="resume-experience-content flex flex-col gap-2.5 lowercase">
+            <div className="resume-experience-content flex flex-col gap-4 lowercase">
                 <ResumeJob job={experience[0]} bullets={[experience[0].bullets[0], experience[0].bullets[1], experience[0].bullets[2], experience[1].bullets[3]]} />
                 <ResumeJob job={experience[1]} bullets={[experience[1].bullets[0], experience[1].bullets[1], experience[1].bullets[2]]} />
                 <ResumeJob job={experience[2]} bullets={[experience[2].bullets[0], experience[2].bullets[1], experience[2].bullets[3], experience[2].bullets[4]]} />
@@ -166,8 +168,8 @@ function ResumeProjects({ projects }) {
 
 function ResumeDisclaimer() {
     return (
-        <div className="resume-disclaimer text-center text-xs">
-            <span className="">this resumé was created using react + tailwind</span>
+        <div className="resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm">
+            this resumé was created using react + tailwind
         </div>
     );
 }
