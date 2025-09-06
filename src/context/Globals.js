@@ -197,7 +197,7 @@ const Globals = {
                 `Wrote pages to be responsive to both mobile and desktop views`,
                 `implemented the Clarifai API for general object-recognition as well as flagging NSFW or inappropriate content`,
                 `forked the Wikitude and AR.js codebases to make modifications needed for the application`,
-                `Helped integrate Google Maps into the desktop version of the application and some parts of the mobile application`,
+                `Helped integrate Google Maps into the web version of the application and some parts of the mobile application`,
                 `Worked with the back-end developer to troubleshoot and suggest improvements to the API`,
                 `Used JIRA as a team to assign tasks and meet sprint goals`,
                 `Helped onboard new developers into the project`,
@@ -214,7 +214,7 @@ const Globals = {
             dates: ['3/16', '11/16'], 
             description: 'operating in seven states, affiliated foods is a grocery distributor to over 700 stores',
             detailedDescription: `
-                wasn't there too long but in my short time there i was given the responsibility of installing and helping maintain a new company-wide it ticketing / asset tracking system.
+                wasn't there too long but in my short time there i was given the responsibility of installing and helping maintain a new company-wide it ticketing / asset tracking system
             `,
             bullets: [
                 `Wrote software to convert and migrate multiple ~20 year-old Microsoft Access files into a new database`,
