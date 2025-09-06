@@ -145,7 +145,7 @@ function ResumeProjects({ projects }) {
         return (
             <div className="resume-project flex flex-col">
                 <div className="resume-project-name before:content-['>'] before:pe-2">{project.title}</div>
-                <div className="resume-project-description text-sm">{project.description}</div>
+                <div className="resume-project-description text-[13px]">{project.description}</div>
                 <div className="external text-xs flex-grow flex flex-col justify-end *:first-of-type:mt-2 text-center">
                     <div className="url">{ project.url }</div>
                     <div className="github">{ project.source }</div>
@@ -176,7 +176,7 @@ function ResumeSection({ title, children, className = '' }) {
     return (
         <div className={"resume-section resume-section-" + title + ` ${className}`}>
             <div className="resume-section-title uppercase text-[20px]">&mdash; { title }</div>
-            <div className="resume-section-content ps-6">
+            <div className="resume-section-content ps-5">
                 { children }
             </div>
         </div>
