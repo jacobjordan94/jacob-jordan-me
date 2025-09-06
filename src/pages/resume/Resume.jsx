@@ -24,6 +24,7 @@ export default function ResumePage({}) {
                             <DPadIcon />
                             <HeathcliffIcon />
                         </span>
+                        <ResumeDisclaimer />
                     </div>
                     <div className="contact **:text-black text-md flex justify-around border-b-2 border-dashed pb-2">
                         <ContactLink Icon={() => <WorldWideWebIcon />}  text={'jacob-jordan.me'} />
@@ -35,11 +36,10 @@ export default function ResumePage({}) {
                 <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between">
                     <ResumeExperience experience={experience} />
                     <ResumeProjects projects={projects} />
-                    <div className="flex">
+                    <div className="flex pb-1">
                         <ResumeEducation className="flex-2/5" education={education} />
                         <ResumeSkills className="flex-3/5" skills={skills} />
                     </div>
-                    <ResumeDisclaimer />
                 </div>
             </Page>
             <LayoutSwitch pageSize={pageSize} setPageSize={setPageSize} className="absolute top-0 left-0" />
@@ -71,34 +71,38 @@ function ContactLink({ Icon, text }) {
 }
 
 function ResumeExperience({ experience, className }) {
-    function ResumeJob({ job }) {
+    function ResumeJob({ job, bullets }) {
         return (
-            <tr className="job flex items-start">
-                <td className="job-start pe-2">
-                    {'>'}
-                </td>
-                <td className="job-info min-w-[180px]">
-                    <div className="name uppercase">{ job.name }</div>
-                    <div className="location text-sm">{ job.location }</div>
-                    <div className="dates text-sm">{ job.dates[0] } &mdash; { job.dates[1] }</div>
-                </td>
-                <td className="description-bullets">
-                    <div className="description text-[14px]">{ job.description }</div>
-                    <div className="detailed text-[12px]">{ job.detailedDescription }</div>
-                </td>
-            </tr>
+            <div className="job">
+                <div className="job-header flex">
+                    <div className="job-start pe-2">
+                        {'>'}
+                    </div>
+                    <div className="job-info min-w-[180px]">
+                        <div className="name uppercase">{ job.name }</div>
+                        <div className="location text-sm">{ job.location }</div>
+                        <div className="dates text-sm">{ job.dates[0] } &mdash; { job.dates[1] }</div>
+                    </div>
+                    <div className="description">
+                        <div className="description text-[14px]">{ job.description }</div>
+                        <div className="detailed text-[12px]">{ job.detailedDescription }</div>
+                    </div>
+                </div>
+                <div className="job-content ps-[16px]">
+                    <hr />
+                    <p className="mt-2 text-xs text-center" dangerouslySetInnerHTML={{__html: bullets.join('<span class="mx-2">&bull;</span>')}} />
+                </div>
+            </div>
         );
     }
     return (
         <ResumeSection title="experience" className={className}>
-            <table className="resume-experience-content">
-                <tbody className="flex flex-col gap-2.5">
-                    <ResumeJob job={experience[0]} />
-                    <ResumeJob job={experience[1]} />
-                    <ResumeJob job={experience[2]} />
-                    <ResumeJob job={experience[3]} />
-                </tbody>
-            </table>
+            <div className="resume-experience-content flex flex-col gap-2.5 lowercase">
+                <ResumeJob job={experience[0]} bullets={[experience[0].bullets[0], experience[0].bullets[1], experience[0].bullets[2]]} />
+                <ResumeJob job={experience[1]} bullets={[experience[1].bullets[0], experience[1].bullets[1], experience[1].bullets[2]]} />
+                <ResumeJob job={experience[2]} bullets={[experience[2].bullets[0], experience[2].bullets[1], experience[2].bullets[2]]} />
+                <ResumeJob job={experience[3]} bullets={[experience[3].bullets[0], experience[3].bullets[1], experience[3].bullets[2]]} />
+            </div>
         </ResumeSection>
     )
 }
@@ -162,8 +166,8 @@ function ResumeProjects({ projects }) {
 
 function ResumeDisclaimer() {
     return (
-        <div className="resume-disclaimer text-center text-sm mb-4">
-            <span className="border-2 border-dashed p-2">this resumé was created using react + tailwind</span>
+        <div className="resume-disclaimer text-center text-xs">
+            <span className="">this resumé was created using react + tailwind</span>
         </div>
     );
 }
