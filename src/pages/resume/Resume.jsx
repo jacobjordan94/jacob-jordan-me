@@ -26,7 +26,7 @@ export default function ResumePage({}) {
                                 <HeathcliffIcon />
                             </span>
                         </div>
-                        <ResumeDisclaimer>this resumé was created using react + tailwind</ResumeDisclaimer>
+                        <ResumeDisclaimer>this resumé was created using react + tailwind!</ResumeDisclaimer>
                     </div>
                     <div className="contact **:text-black text-md flex justify-around border-b-0 border-dashed pb-2">
                         <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
