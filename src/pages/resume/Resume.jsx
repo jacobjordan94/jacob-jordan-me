@@ -28,7 +28,7 @@ export default function ResumePage({}) {
                         </div>
                         <ResumeDisclaimer>this resumé was created using react + tailwind</ResumeDisclaimer>
                     </div>
-                    <div className="contact **:text-black text-md flex justify-around border-b-2 border-dashed pb-2">
+                    <div className="contact **:text-black text-md flex justify-around border-b-0 border-dashed pb-2">
                         <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
                         <ContactLink Icon={() => <PhoneIcon        size={18}/>}  text={contact.phone.text} />
                         <ContactLink Icon={() => <EnvelopeIcon     size={18}/>}  text={contact.email.text} />
@@ -98,7 +98,7 @@ function ResumeExperience({ experience, className }) {
         );
     }
     return (
-        <ResumeSection title="experience" className={className}>
+        <ResumeSection title="experience" className={className} showDivider>
             <div className="resume-experience-content flex flex-col gap-4 lowercase">
                 <ResumeJob job={experience[0]} bullets={[experience[0].bullets[0], experience[0].bullets[1], experience[0].bullets[2], experience[1].bullets[3]]} />
                 <ResumeJob job={experience[1]} bullets={[experience[1].bullets[0], experience[1].bullets[1], experience[1].bullets[2]]} />
@@ -112,7 +112,7 @@ function ResumeExperience({ experience, className }) {
 
 function ResumeEducation({ education, className }) {
     return (
-        <ResumeSection title="education" className={className}>
+        <ResumeSection title="education" className={className} showDivider>
             <div className="name-location">
                 <span className="education-name">{education.name}</span>
                 <span className="mx-2 text-sm">&bull;</span>
@@ -132,7 +132,7 @@ function ResumeEducation({ education, className }) {
 
 function ResumeSkills({ skills, className }) {
     return (
-        <ResumeSection title="skills" className={className}>
+        <ResumeSection title="skills" className={className} showDivider>
             <div className="skills-container flex flex-wrap gap-2.5 justify-center text-xs">
             {
                 skills.map(skill => skill.split(' ').join('_')).map((skill, i) => <span key={i}>{ skill }</span>)
@@ -156,7 +156,7 @@ function ResumeProjects({ projects }) {
         );
     }
     return (
-        <ResumeSection title="projects">
+        <ResumeSection title="projects" showDivider>
             <div className="resume-projects-content flex *:flex-1/3 gap-3">
                 <ResumeProject project={projects[1]} />
                 <ResumeProject project={projects[4]} />
@@ -174,10 +174,17 @@ function ResumeDisclaimer({ children }) {
     );
 }
 
-function ResumeSection({ title, children, className = '' }) {
+function ResumeSection({ title, children, className = '', showDivider = false }) {
     return (
         <div className={"resume-section resume-section-" + title + ` ${className}`}>
-            <div className="resume-section-title uppercase text-[20px]">&mdash; { title }</div>
+            <div className="resume-section-title uppercase text-[20px] ps-1 flex items-center">
+                <div className="title-text">
+                    { title }
+                </div>
+                <div data-show-divider={showDivider} className="hidden data-[show-divider=true]:block divider flex-grow ms-3 me-1.5">
+                    <hr className="border-1 border-dashed" />
+                </div>
+            </div>
             <div className="resume-section-content ps-5">
                 { children }
             </div>
