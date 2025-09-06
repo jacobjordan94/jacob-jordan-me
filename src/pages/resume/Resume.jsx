@@ -11,11 +11,11 @@ import WorldWideWebIcon from "../../components/icons/WorldWideWebIcon";
 
 export default function ResumePage({}) {
     const [ pageSize, setPageSize ] = useState('letter');
-    const { contact, experience, skills, education } = useContext(GlobalContext);
+    const { contact, experience, skills, education, projects } = useContext(GlobalContext);
 
     return (
         <div data-page-size={pageSize} className="resume-page relative">
-            <Page size={pageSize} className="w-full">
+            <Page size={pageSize} className="flex flex-col">
                 <div className="header">
                     <div className="name-icons flex items-start gap-4 p-2">
                         <span className="text-3xl">JACOB A. JORDAN</span>
@@ -32,12 +32,14 @@ export default function ResumePage({}) {
                         <ContactLink Icon={() => <GithubIcon /> }       text={'github.com/jacobjordan94'} />
                     </div>
                 </div>
-                <div className="resume-body px-3 pt-2 flex flex-col gap-2">
+                <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between">
                     <ResumeExperience experience={experience} />
+                    <ResumeProjects projects={projects} />
                     <div className="flex">
                         <ResumeEducation className="flex-2/5" education={education} />
                         <ResumeSkills className="flex-3/5" skills={skills} />
                     </div>
+                    <ResumeDisclaimer />
                 </div>
             </Page>
             <LayoutSwitch pageSize={pageSize} setPageSize={setPageSize} className="absolute top-0 left-0" />
@@ -127,10 +129,42 @@ function ResumeSkills({ skills, className }) {
         <ResumeSection title="skills" className={className}>
             <div className="skills-container flex flex-wrap gap-2.5 justify-center text-xs">
             {
-                skills.map((skill, i) => <span key={i}>{ skill }</span>)
+                skills.map(skill => skill.split(' ').join('_')).map((skill, i) => <span key={i}>{ skill }</span>)
             }
             </div>
         </ResumeSection>
+    );
+}
+
+function ResumeProjects({ projects }) {
+    function ResumeProject({project}) {
+        return (
+            <div className="resume-project flex flex-col">
+                <div className="resume-project-name before:content-['>'] before:pe-2">{project.title}</div>
+                <div className="resume-project-description text-sm">{project.description}</div>
+                <div className="external text-xs flex-grow flex flex-col justify-end *:first-of-type:mt-2 text-center">
+                    <div className="url">{ project.url }</div>
+                    <div className="github">{ project.source }</div>
+                </div>
+            </div>
+        );
+    }
+    return (
+        <ResumeSection title="projects">
+            <div className="resume-projects-content flex *:flex-1/3 gap-3">
+                <ResumeProject project={projects[1]} />
+                <ResumeProject project={projects[4]} />
+                <ResumeProject project={projects[6]} />
+            </div>
+        </ResumeSection>
+    );
+}
+
+function ResumeDisclaimer() {
+    return (
+        <div className="resume-disclaimer text-center text-sm mb-4">
+            <span className="border-2 border-dashed p-2">this resumé was created using react + tailwind</span>
+        </div>
     );
 }
 
