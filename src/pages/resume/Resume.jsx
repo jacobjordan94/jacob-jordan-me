@@ -98,10 +98,10 @@ function ResumeExperience({ experience, className }) {
     return (
         <ResumeSection title="experience" className={className}>
             <div className="resume-experience-content flex flex-col gap-2.5 lowercase">
-                <ResumeJob job={experience[0]} bullets={[experience[0].bullets[0], experience[0].bullets[1], experience[0].bullets[2]]} />
+                <ResumeJob job={experience[0]} bullets={[experience[0].bullets[0], experience[0].bullets[1], experience[0].bullets[2], experience[1].bullets[3]]} />
                 <ResumeJob job={experience[1]} bullets={[experience[1].bullets[0], experience[1].bullets[1], experience[1].bullets[2]]} />
-                <ResumeJob job={experience[2]} bullets={[experience[2].bullets[0], experience[2].bullets[1], experience[2].bullets[2]]} />
-                <ResumeJob job={experience[3]} bullets={[experience[3].bullets[0], experience[3].bullets[1], experience[3].bullets[2]]} />
+                <ResumeJob job={experience[2]} bullets={[experience[2].bullets[0], experience[2].bullets[1], experience[2].bullets[3], experience[2].bullets[4]]} />
+                <ResumeJob job={experience[3]} bullets={[experience[3].bullets[0], experience[3].bullets[2], experience[3].bullets[3], experience[3].bullets[4]]} />
             </div>
         </ResumeSection>
     )
