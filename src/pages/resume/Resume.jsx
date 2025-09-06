@@ -14,8 +14,8 @@ export default function ResumePage({}) {
     const { contact, experience, skills, education, projects } = useContext(GlobalContext);
 
     return (
-        <div data-page-size={pageSize} className="resume-page relative">
-            <Page size={pageSize} className="flex flex-col">
+        <div data-page-size={pageSize} className="resume-page relative py-10 bg-neutral-300">
+            <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg">
                 <div className="header">
                     <div className="name-icons flex items-center justify-evenly">
                         <div className="flex gap-4 py-2">
@@ -52,7 +52,7 @@ export default function ResumePage({}) {
 function LayoutSwitch({ pageSize, setPageSize, className }) {
 
     function LayoutButton({ size, buttonClassName }) {
-        return <button data-active={pageSize === size} className={"text-white duration-1000 data-[active=true]:underline data-[active=false]:text-neutral-400 cursor-pointer hover:animate-pulse " + buttonClassName} onClick={() => setPageSize(size)}>{ size }</button>;
+        return <button data-active={pageSize === size} className={"text-white duration-1000 data-[active=true]:underline data-[active=false]:text-black data-[active=false]:opacity-50 cursor-pointer hover:animate-pulse " + buttonClassName} onClick={() => setPageSize(size)}>{ size }</button>;
     }
 
     return (
