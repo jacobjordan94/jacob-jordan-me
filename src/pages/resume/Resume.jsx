@@ -14,7 +14,7 @@ export default function ResumePage({}) {
     const { contact, experience, skills, education, projects } = useContext(GlobalContext);
 
     return (
-        <div data-page-size={pageSize} className="resume-page relative py-10 bg-neutral-300">
+        <div data-page-size={pageSize} className="resume-page relative py-10 print:p-0 bg-neutral-300">
             <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg">
                 <div className="header">
                     <div className="name-icons flex items-center justify-evenly">
