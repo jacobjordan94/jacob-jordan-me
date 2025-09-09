@@ -32,6 +32,9 @@
   .printable-page[size="a4"] {
     size: a4;
   }
+  .printable-page[size="business"] {
+    size: 8.89cm 5.08cm;
+  }
   :root {
     background-color: white;
   }

@@ -9,6 +9,7 @@ import EnvelopeIcon from "../../components/icons/EnvelopeIcon";
 import GithubIcon from "../../components/icons/GithubIcon";
 import WorldWideWebIcon from "../../components/icons/WorldWideWebIcon";
 import ResumePDF from "./ResumePDF";
+import './Resume.css';
 
 export default function ResumePage({}) {
     const [ pageSize, setPageSize ] = useState('letter');
@@ -16,21 +17,28 @@ export default function ResumePage({}) {
 
     return (
         <>
-            <div data-page-size={pageSize} className="resume-page relative py-10 print:p-0 bg-neutral-300 hidden pointer-fine:block">
+            <div data-page-size={pageSize} className="resume-page group relative py-10 print:p-0 bg-neutral-300 hidden pointer-fine:block">
                 <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg">
-                    <div className="header">
-                        <div className="name-icons flex items-center justify-evenly">
-                            <div className="flex gap-4 py-2">
-                                <span className="text-3xl">JACOB A. JORDAN</span>
-                                <span className="icons *:text-black flex *:size-[30px] gap-2">
-                                    <OldPCIcon />
-                                    <DPadIcon />
-                                    <HeathcliffIcon />
-                                </span>
+                    <div className="header flex flex-col group-data-[page-size=business]:h-full">
+                        <div className="header-inner flex items-center justify-evenly group-data-[page-size=business]:p-1 group-data-[page-size=business]:px-3">
+                            <div className="flex name-icons gap-4 py-2">
+                                <span className="name text-3xl">JACOB A. JORDAN</span>
+                                <div className="icons-business-card-disclaimer">
+                                    <span className="icons *:text-black flex *:size-[30px] gap-2 group-data-[page-size=business]:pt-2">
+                                        <OldPCIcon />
+                                        <DPadIcon />
+                                        <HeathcliffIcon />
+                                    </span>
+                                    <ResumeDisclaimer className="business-card hidden group-data-[page-size=business]:block group-data-[page-size=business]:p-0 mt-2 group-data-[page-size=business]:py-1">
+                                        this business card was created using react + tailwind!
+                                    </ResumeDisclaimer>
+                                </div>
                             </div>
-                            <ResumeDisclaimer>this resumé was created using react + tailwind!</ResumeDisclaimer>
+                            <ResumeDisclaimer className="default group-data-[page-size=business]:hidden">
+                                this resumé was created using react + tailwind!
+                            </ResumeDisclaimer>
                         </div>
-                        <div className="contact **:text-black text-md flex justify-around border-b-0 border-dashed pb-2">
+                        <div className="contact **:text-black text-md flex justify-around border-b-0 border-dashed pb-2 group-data-[page-size=business]:pb-2 group-data-[page-size=business]:flex-wrap group-data-[page-size=business]:flex-grow">
                             <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
                             <ContactLink Icon={() => <PhoneIcon        size={18}/>}  text={contact.phone.text} />
                             <ContactLink Icon={() => <EnvelopeIcon     size={18}/>}  text={contact.email.text} />
@@ -55,14 +63,22 @@ export default function ResumePage({}) {
 
 function LayoutSwitch({ pageSize, setPageSize, className }) {
 
-    function LayoutButton({ size, buttonClassName }) {
-        return <button data-active={pageSize === size} className={"text-white duration-1000 data-[active=true]:underline data-[active=false]:text-black data-[active=false]:opacity-50 cursor-pointer hover:animate-pulse " + buttonClassName} onClick={() => setPageSize(size)}>{ size }</button>;
+    function LayoutButton({ size, buttonClassName, text }) {
+        return  <button 
+                    data-active={pageSize === size} 
+                    className={"text-white duration-1000 data-[active=true]:underline data-[active=false]:text-black data-[active=false]:opacity-50 cursor-pointer hover:animate-pulse " + buttonClassName} 
+                    onClick={() => setPageSize(size)}>
+                        { text || size }
+                </button>;
     }
 
     return (
-        <div className={"layout-switch inline-flex gap-2 ps-6 pt-6 print:hidden " + className}>
-            <LayoutButton size="letter" />
-            <LayoutButton size="a4"/>
+        <div className={"layout-switch ps-6 pt-6 print:hidden " + className}>
+            <div className="flex gap-2">
+                <LayoutButton size="letter" />
+                <LayoutButton size="a4"/>
+            </div>
+            <LayoutButton size="business" text="business card"/>
         </div>
     );
 }
@@ -170,9 +186,9 @@ function ResumeProjects({ projects }) {
     );
 }
 
-function ResumeDisclaimer({ children }) {
+function ResumeDisclaimer({ children, className = '' }) {
     return (
-        <div className="resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm">
+        <div className={"resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm" + className}>
             { children }
         </div>
     );

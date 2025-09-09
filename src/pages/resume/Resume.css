@@ -1,0 +1,29 @@
+div.resume-page[data-page-size=business] div.header > div.header-inner {
+    flex-direction: column;
+}
+
+div.resume-page[data-page-size=business] div.header > div.header-inner > div.name-icons {
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+div.resume-page[data-page-size=business] div.header > div.header-inner > div.name-icons > span.name {
+    text-align: center;
+}
+
+div.resume-page[data-page-size=business] div.header > div.header-inner > div.name-icons > div.icons-business-card-disclaimer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+div.resume-page[data-page-size=business] div.resume-body {
+    display: none;
+}
+
+/* div.resume-page[data-page-size=business] div.header > div.header-inner > div.resume-disclaimer.default {
+    display: none;
+} */
