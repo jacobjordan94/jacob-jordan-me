@@ -17,19 +17,28 @@ export default function ResumePage({}) {
 
     return (
         <>
-            <div data-page-size={pageSize} className="resume-page group relative py-10 print:p-0 bg-neutral-300 hidden pointer-fine:block">
-                <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg">
+            <div data-page-size={pageSize} className="resume-page group relative py-10 print:p-0 hidden pointer-fine:block 
+                                            data-[page-size=business]:h-full data-[page-size=business]:flex
+                                            data-[page-size=business]:items-center data-[page-size=business]:justify-center
+                                            "
+            >
+                <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg 
+                                                print:shadow-none outline-black group-data-[page-size=business]:print:outline-2
+                                                "
+                >
                     <div className="header flex flex-col group-data-[page-size=business]:h-full">
-                        <div className="header-inner flex items-center justify-evenly group-data-[page-size=business]:p-1 group-data-[page-size=business]:px-3">
-                            <div className="flex name-icons gap-4 py-2">
-                                <span className="name text-3xl">JACOB A. JORDAN</span>
+                        <div className="header-inner flex items-center justify-evenly 
+                                        group-data-[page-size=business]:p-1 group-data-[page-size=business]:px-3 
+                                        group-data-[page-size=business]:pt-3">
+                            <div className="flex name-icons gap-4 py-2 group-data-[page-size=business]:*:flex-1/2">
+                                <span className="name text-3xl group-data-[page-size=business]:h-full">JACOB A. JORDAN</span>
                                 <div className="icons-business-card-disclaimer">
-                                    <span className="icons *:text-black flex *:size-[30px] gap-2 group-data-[page-size=business]:pt-2">
+                                    <div className="icons *:text-black flex *:size-[30px] group-data-[page-size=business]:w-full gap-2 group-data-[page-size=business]:gap-0 group-data-[page-size=business]:justify-around">
                                         <OldPCIcon />
                                         <DPadIcon />
                                         <HeathcliffIcon />
-                                    </span>
-                                    <ResumeDisclaimer className="business-card hidden group-data-[page-size=business]:block group-data-[page-size=business]:p-0 mt-2 group-data-[page-size=business]:py-1">
+                                    </div>
+                                    <ResumeDisclaimer className="business-card hidden group-data-[page-size=business]:block p-0 mt-2 py-1 text-[8px]">
                                         this business card was created using react + tailwind!
                                     </ResumeDisclaimer>
                                 </div>
@@ -38,7 +47,13 @@ export default function ResumePage({}) {
                                 this resumé was created using react + tailwind!
                             </ResumeDisclaimer>
                         </div>
-                        <div className="contact **:text-black text-md flex justify-around border-b-0 border-dashed pb-2 group-data-[page-size=business]:pb-2 group-data-[page-size=business]:flex-wrap group-data-[page-size=business]:flex-grow">
+                        <div className="
+                                contact **:text-black text-md flex justify-around 
+                                border-b-0 border-dashed pb-2 
+                                group-data-[page-size=business]:flex-wrap group-data-[page-size=business]:pb-0
+                                group-data-[page-size=business]:flex-grow group-data-[page-size=business]:**:text-[14px]
+                                "
+                            >
                             <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
                             <ContactLink Icon={() => <PhoneIcon        size={18}/>}  text={contact.phone.text} />
                             <ContactLink Icon={() => <EnvelopeIcon     size={18}/>}  text={contact.email.text} />
@@ -188,7 +203,7 @@ function ResumeProjects({ projects }) {
 
 function ResumeDisclaimer({ children, className = '' }) {
     return (
-        <div className={"resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm" + className}>
+        <div className={"resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm " + className}>
             { children }
         </div>
     );

@@ -10,6 +10,9 @@ div.resume-page[data-page-size=business] div.header > div.header-inner > div.nam
 
 div.resume-page[data-page-size=business] div.header > div.header-inner > div.name-icons > span.name {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.resume-page[data-page-size=business] div.header > div.header-inner > div.name-icons > div.icons-business-card-disclaimer {

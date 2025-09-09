@@ -14,7 +14,7 @@ export default function Page({ size = 'letter', children, className = '' }) {
     }
     useEffect(determinePageStyle, [size])
     return (
-        <div className={"page printable-page m-auto transition-[width_height] bg-white text-black " + pageStyle + ` ${className}`} size={size}>
+        <div className={"page printable-page m-auto transition-[width_height] ease-initial duration-[400ms] bg-white text-black overflow-hidden " + pageStyle + ` ${className}`} size={size}>
             { children }
         </div>
     )
