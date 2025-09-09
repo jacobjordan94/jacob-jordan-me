@@ -16,7 +16,7 @@ export default function PrintLayout() {
                 <Outlet />
             </div>
             <div className="absolute-container absolute top-0 left-0 right-0">
-                <div className="layout-switch-container print:hidden mt-5 flex justify-center">
+                <div className="layout-switch-container print:hidden mt-5 flex justify-center pointer-coarse:hidden">
                     <LayoutSwitch pageSize={pageSize} setPageSize={setPageSize} />
                 </div>
             </div>
@@ -36,8 +36,8 @@ function LayoutSwitch({ pageSize, setPageSize, className }) {
     return (
         <div className={"layout-switch inline-flex print:hidden gap-4 bg-neutral-800 p-2 px-4 rounded-s-full rounded-e-full shadow-black shadow-md " + className}>
             <LayoutButton size="letter" />
-            <LayoutButton size="a4"/>
-            <LayoutButton size="business" text="business_card"/>
+            <LayoutButton size="a4" />
+            <LayoutButton size="business" text="business_card" />
         </div>
     );
 }
