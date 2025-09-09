@@ -9,6 +9,7 @@ import ExperienceIcon from "./icons/ExperienceIcon";
 import GithubIcon from './icons/GithubIcon';
 import SourceCddeMagnifyingGlassIcon from './icons/SourceCodeMagnifyingGlassIcon';
 import { HeaderIcons } from "./Header";
+import ResumeIcon from "./icons/ResumeIcon";
 
 export default function SideNav({ open = false, setSideNavOpen }) {
 
@@ -40,6 +41,11 @@ export default function SideNav({ open = false, setSideNavOpen }) {
             to: 'about',
             icon: () => <InfoIcon />,
             text: 'about this website'
+        },
+        {
+            to: 'resume',
+            icon: () => <ResumeIcon />,
+            text: 'resume'
         }
     ];
     
