@@ -8,44 +8,48 @@ import PhoneIcon from "../../components/icons/PhoneIcon";
 import EnvelopeIcon from "../../components/icons/EnvelopeIcon";
 import GithubIcon from "../../components/icons/GithubIcon";
 import WorldWideWebIcon from "../../components/icons/WorldWideWebIcon";
+import ResumePDF from "./ResumePDF";
 
 export default function ResumePage({}) {
     const [ pageSize, setPageSize ] = useState('letter');
     const { contact, experience, skills, education, projects } = useContext(GlobalContext);
 
     return (
-        <div data-page-size={pageSize} className="resume-page relative py-10 print:p-0 bg-neutral-300">
-            <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg">
-                <div className="header">
-                    <div className="name-icons flex items-center justify-evenly">
-                        <div className="flex gap-4 py-2">
-                            <span className="text-3xl">JACOB A. JORDAN</span>
-                            <span className="icons *:text-black flex *:size-[30px] gap-2">
-                                <OldPCIcon />
-                                <DPadIcon />
-                                <HeathcliffIcon />
-                            </span>
+        <>
+            <div data-page-size={pageSize} className="resume-page relative py-10 print:p-0 bg-neutral-300 hidden pointer-fine:block">
+                <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg">
+                    <div className="header">
+                        <div className="name-icons flex items-center justify-evenly">
+                            <div className="flex gap-4 py-2">
+                                <span className="text-3xl">JACOB A. JORDAN</span>
+                                <span className="icons *:text-black flex *:size-[30px] gap-2">
+                                    <OldPCIcon />
+                                    <DPadIcon />
+                                    <HeathcliffIcon />
+                                </span>
+                            </div>
+                            <ResumeDisclaimer>this resumé was created using react + tailwind!</ResumeDisclaimer>
                         </div>
-                        <ResumeDisclaimer>this resumé was created using react + tailwind!</ResumeDisclaimer>
+                        <div className="contact **:text-black text-md flex justify-around border-b-0 border-dashed pb-2">
+                            <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
+                            <ContactLink Icon={() => <PhoneIcon        size={18}/>}  text={contact.phone.text} />
+                            <ContactLink Icon={() => <EnvelopeIcon     size={18}/>}  text={contact.email.text} />
+                            <ContactLink Icon={() => <GithubIcon       size={18}/>}  text={'github.com/jacobjordan94'} />
+                        </div>
                     </div>
-                    <div className="contact **:text-black text-md flex justify-around border-b-0 border-dashed pb-2">
-                        <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
-                        <ContactLink Icon={() => <PhoneIcon        size={18}/>}  text={contact.phone.text} />
-                        <ContactLink Icon={() => <EnvelopeIcon     size={18}/>}  text={contact.email.text} />
-                        <ContactLink Icon={() => <GithubIcon       size={18}/>}  text={'github.com/jacobjordan94'} />
+                    <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between">
+                        <ResumeExperience experience={experience} />
+                        <ResumeProjects projects={projects} />
+                        <div className="flex pb-1">
+                            <ResumeEducation className="flex-2/5" education={education} />
+                            <ResumeSkills className="flex-3/5" skills={skills} />
+                        </div>
                     </div>
-                </div>
-                <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between">
-                    <ResumeExperience experience={experience} />
-                    <ResumeProjects projects={projects} />
-                    <div className="flex pb-1">
-                        <ResumeEducation className="flex-2/5" education={education} />
-                        <ResumeSkills className="flex-3/5" skills={skills} />
-                    </div>
-                </div>
-            </Page>
-            <LayoutSwitch pageSize={pageSize} setPageSize={setPageSize} className="absolute top-0 left-0" />
-        </div>
+                </Page>
+                <LayoutSwitch pageSize={pageSize} setPageSize={setPageSize} className="absolute top-0 left-0" />
+            </div>
+            <ResumePDF />
+        </>
     );
 }
 
