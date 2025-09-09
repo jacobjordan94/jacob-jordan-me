@@ -11,7 +11,7 @@ export default function PrintLayout() {
     }
 
     return (
-        <div className="print-layout h-full max-h-full bg-neutral-300 relative">
+        <div className="print-layout h-full max-h-full bg-neutral-300 print:bg-white relative">
             <div className="overflow-scroll h-full">
                 <Outlet />
             </div>

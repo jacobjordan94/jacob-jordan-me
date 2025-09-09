@@ -26,7 +26,7 @@ export default function ResumePage({}) {
         <>
             <title>jacob-jordan.me - resume</title>
             <div data-page-size={pageSize} className="resume-page group relative py-20 print:p-0 hidden pointer-fine:block 
-                                            data-[page-size=business]:h-full data-[page-size=business]:flex
+                                            data-[page-size=business]:h-full data-[page-size=business]:pointer-fine:flex
                                             data-[page-size=business]:items-center data-[page-size=business]:justify-center
                                             "
             >
@@ -78,7 +78,7 @@ export default function ResumePage({}) {
                     </div>
                 </Page>
             </div>
-            <ResumePDF />
+            <ResumePDF pageSize={pageSize} />
         </>
     );
 }
