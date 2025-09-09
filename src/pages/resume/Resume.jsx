@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Page from "./Page";
 import OldPCIcon from '../../components/icons/OldPCIcon';
 import DPadIcon from '../../components/icons/DPadIcon';
@@ -10,14 +10,22 @@ import GithubIcon from "../../components/icons/GithubIcon";
 import WorldWideWebIcon from "../../components/icons/WorldWideWebIcon";
 import ResumePDF from "./ResumePDF";
 import './Resume.css';
+import { useSearchParams } from "react-router";
 
 export default function ResumePage({}) {
-    const [ pageSize, setPageSize ] = useState('letter');
+    const [ searchParams ] = useSearchParams();
+    const [ pageSize, setPageSize ] = useState(searchParams.get('size') || 'letter');
+    useEffect(() => {
+        if(searchParams.get('size')) {
+            setPageSize(searchParams.get('size'));
+        }
+    }, [searchParams])
     const { contact, experience, skills, education, projects } = useContext(GlobalContext);
 
     return (
         <>
-            <div data-page-size={pageSize} className="resume-page group relative py-10 print:p-0 hidden pointer-fine:block 
+            <title>jacob-jordan.me - resume</title>
+            <div data-page-size={pageSize} className="resume-page group relative py-20 print:p-0 hidden pointer-fine:block 
                                             data-[page-size=business]:h-full data-[page-size=business]:flex
                                             data-[page-size=business]:items-center data-[page-size=business]:justify-center
                                             "
@@ -69,32 +77,9 @@ export default function ResumePage({}) {
                         </div>
                     </div>
                 </Page>
-                <LayoutSwitch pageSize={pageSize} setPageSize={setPageSize} className="absolute top-0 left-0" />
             </div>
             <ResumePDF />
         </>
-    );
-}
-
-function LayoutSwitch({ pageSize, setPageSize, className }) {
-
-    function LayoutButton({ size, buttonClassName, text }) {
-        return  <button 
-                    data-active={pageSize === size} 
-                    className={"text-white duration-1000 data-[active=true]:underline data-[active=false]:text-black data-[active=false]:opacity-50 cursor-pointer hover:animate-pulse " + buttonClassName} 
-                    onClick={() => setPageSize(size)}>
-                        { text || size }
-                </button>;
-    }
-
-    return (
-        <div className={"layout-switch ps-6 pt-6 print:hidden " + className}>
-            <div className="flex gap-2">
-                <LayoutButton size="letter" />
-                <LayoutButton size="a4"/>
-            </div>
-            <LayoutButton size="business" text="business card"/>
-        </div>
     );
 }
 
