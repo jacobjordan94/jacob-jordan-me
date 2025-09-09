@@ -15,8 +15,8 @@ export default function PrintLayout() {
             <div className="overflow-scroll h-full">
                 <Outlet />
             </div>
-            <div className="absolute-container absolute top-0 left-0 right-0">
-                <div className="layout-switch-container print:hidden mt-5 flex justify-center pointer-coarse:hidden">
+            <div className="absolute-container absolute left-0 right-0 pointer-fine:top-0 pointer-coarse:bottom-0">
+                <div className="layout-switch-container print:hidden my-5 flex justify-center">
                     <LayoutSwitch pageSize={pageSize} setPageSize={setPageSize} />
                 </div>
             </div>
@@ -36,7 +36,7 @@ function LayoutSwitch({ pageSize, setPageSize, className }) {
     return (
         <div className={"layout-switch inline-flex print:hidden gap-4 bg-neutral-800 p-2 px-4 rounded-s-full rounded-e-full shadow-black shadow-md " + className}>
             <LayoutButton size="letter" />
-            <LayoutButton size="a4" />
+            <LayoutButton buttonClassName="pointer-coarse:hidden" size="a4" />
             <LayoutButton size="business" text="business_card" />
         </div>
     );
