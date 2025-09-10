@@ -12,6 +12,8 @@ import SkillsPage from './pages/skills/SkillsPage';
 import FixedResponsiveLayout from './layouts/FixedResponsiveLayout';
 import AboutPage from './pages/about/AboutPage';
 import NotFoundIcon from './components/icons/404Icon';
+import ResumePage from './pages/resume/Resume';
+import PrintLayout from './layouts/PrintLayout';
 
 export const GlobalContext = createContext();
 
@@ -49,6 +51,9 @@ function App() {
                     </div>
                   </>
                 } />
+              </Route>
+              <Route element={ <PrintLayout /> }>
+                <Route path="resume" element={ <ResumePage /> }/>
               </Route>
             </Routes>
           </section>
