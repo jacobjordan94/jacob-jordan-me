@@ -36,7 +36,7 @@ function LayoutSwitch({ pageSize, setPageSize, className }) {
     return (
         <div className={"layout-switch inline-flex print:hidden gap-4 bg-neutral-800 p-2 px-4 rounded-s-full rounded-e-full shadow-black shadow-md " + className}>
             <LayoutButton size="letter" />
-            <LayoutButton buttonClassName="pointer-coarse:hidden" size="a4" />
+            <LayoutButton size="a4" />
             <LayoutButton size="business" text="business_card" />
         </div>
     );
