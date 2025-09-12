@@ -169,8 +169,8 @@ function ResumeProjects({ projects }) {
                 <div className="resume-project-name before:content-['>'] before:pe-2">{project.title}</div>
                 <div className="resume-project-description text-[13px]">{project.description}</div>
                 <div className="external text-xs flex-grow flex flex-col justify-end *:first-of-type:mt-2 text-center">
-                    <div className="url">{ project.url }</div>
-                    <div className="github">{ project.source }</div>
+                    <div className="url">{ project.displayUrl }</div>
+                    <div className="github">{ project.displaySource }</div>
                 </div>
             </div>
         );
