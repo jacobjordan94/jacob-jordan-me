@@ -32,6 +32,7 @@ export default function ResumePage({}) {
             >
                 <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg 
                                                 print:shadow-none outline-black group-data-[page-size=business]:print:outline-2
+                                                group-data-[page-size=business]:print:outline-dashed
                                                 "
                 >
                     <div className="header flex flex-col group-data-[page-size=business]:h-full">

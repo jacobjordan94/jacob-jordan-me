@@ -17,7 +17,9 @@
 
 @font-face {
   font-family: 'MisterPixel';
-  src: url('./fonts/MisterPixel.otf');
+  src: url('/fonts/MisterPixel.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .workbench-font {
