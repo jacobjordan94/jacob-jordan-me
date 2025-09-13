@@ -41,12 +41,14 @@ export default function ResumePage({}) {
                             <div className="flex name-icons gap-4 py-2 group-data-[page-size=business]:*:flex-1/2">
                                 <span className="name text-3xl group-data-[page-size=business]:h-full">JACOB A. JORDAN</span>
                                 <div className="icons-business-card-disclaimer">
-                                    <div className="icons *:text-black flex *:size-[30px] group-data-[page-size=business]:w-full gap-2 group-data-[page-size=business]:gap-0 group-data-[page-size=business]:justify-around">
+                                    <div className="icons *:text-black flex *:size-[30px] 
+                                                    group-data-[page-size=business]:w-full gap-2 group-data-[page-size=business]:gap-0 
+                                                    group-data-[page-size=business]:justify-around group-data-[page-size=business]:*:size-[24px]">
                                         <OldPCIcon />
                                         <DPadIcon />
                                         <HeathcliffIcon />
                                     </div>
-                                    <ResumeDisclaimer className="business-card hidden group-data-[page-size=business]:block p-0 mt-2 py-1 text-[8px]">
+                                    <ResumeDisclaimer className="business-card hidden group-data-[page-size=business]:block p-0 mt-2 py-1 text-[11px]">
                                         this business card was created using react + tailwind!
                                     </ResumeDisclaimer>
                                 </div>
@@ -58,7 +60,7 @@ export default function ResumePage({}) {
                         <div className="
                                 contact **:text-black text-md flex justify-around 
                                 border-b-0 border-dashed pb-2 
-                                group-data-[page-size=business]:flex-wrap group-data-[page-size=business]:pb-0
+                                group-data-[page-size=business]:flex-wrap group-data-[page-size=business]:pb-2
                                 group-data-[page-size=business]:flex-grow group-data-[page-size=business]:**:text-[14px]
                                 "
                             >
@@ -68,10 +70,10 @@ export default function ResumePage({}) {
                             <ContactLink Icon={() => <GithubIcon       size={18}/>}  text={'github.com/jacobjordan94'} />
                         </div>
                     </div>
-                    <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between">
+                    <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between font-[MisterPixel]">
                         <ResumeExperience experience={experience} />
                         <ResumeProjects projects={projects} />
-                        <div className="flex pb-1">
+                        <div className="flex pb-4">
                             <ResumeEducation className="flex-2/5" education={education} />
                             <ResumeSkills className="flex-3/5" skills={skills} />
                         </div>
@@ -107,12 +109,12 @@ function ResumeExperience({ experience, className }) {
                     </div>
                     <div className="description">
                         <div className="description text-[14px]">{ job.description }</div>
-                        <div className="detailed text-[12px]">{ job.detailedDescription }</div>
+                        <div className="detailed text-[13px] opacity-70">{ job.detailedDescription }</div>
                     </div>
                 </div>
                 <div className="job-content ps-[16px]">
                     <hr />
-                    <p className="mt-2 text-xs text-center" dangerouslySetInnerHTML={{__html: bullets.join('<span class="mx-2">&bull;</span>')}} />
+                    <p className="mt-2 text-[13px]/5 text-center opacity-85" dangerouslySetInnerHTML={{__html: bullets.join('<span class="mx-2">&bull;</span>')}} />
                 </div>
             </div>
         );
@@ -132,18 +134,18 @@ function ResumeExperience({ experience, className }) {
 
 function ResumeEducation({ education, className }) {
     return (
-        <ResumeSection title="education" className={className} showDivider>
+        <ResumeSection title="education" className={className} contentClassName="flex flex-grow flex-col justify-between" showDivider>
             <div className="name-location">
                 <span className="education-name">{education.name}</span>
                 <span className="mx-2 text-sm">&bull;</span>
                 <span className="education-location">{ education.city }</span>
             </div>
-            <div className="degree-dates text-sm text-neutral-800">
+            <div className="degree-dates text-sm text-neutral-800 opacity-80">
                 <span className="degree">{ education.degree }</span>
                 <span className="mx-2 text-xs">&bull;</span>
                 <span className="dates">{education.dates[0]} &mdash; {education.dates[1]}</span>
             </div>
-            <div className="awards text-xs">
+            <div className="awards text-xs opacity-50">
                 { education.awards }
             </div>
         </ResumeSection>
@@ -153,7 +155,7 @@ function ResumeEducation({ education, className }) {
 function ResumeSkills({ skills, className }) {
     return (
         <ResumeSection title="skills" className={className} showDivider>
-            <div className="skills-container flex flex-wrap gap-2.5 justify-center text-xs">
+            <div className="skills-container flex flex-wrap gap-2.5 justify-center text-xs opacity-75">
             {
                 skills.map(skill => skill.split(' ').join('_')).map((skill, i) => <span key={i}>{ skill }</span>)
             }
@@ -168,7 +170,7 @@ function ResumeProjects({ projects }) {
             <div className="resume-project flex flex-col">
                 <div className="resume-project-name before:content-['>'] before:pe-2">{project.title}</div>
                 <div className="resume-project-description text-[13px]">{project.description}</div>
-                <div className="external text-xs flex-grow flex flex-col justify-end *:first-of-type:mt-2 text-center">
+                <div className="external text-xs flex-grow flex flex-col justify-end  text-center opacity-50 pb-1.5">
                     <div className="url">{ project.displayUrl }</div>
                     <div className="github">{ project.displaySource }</div>
                 </div>
@@ -188,15 +190,15 @@ function ResumeProjects({ projects }) {
 
 function ResumeDisclaimer({ children, className = '' }) {
     return (
-        <div className={"resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm " + className}>
+        <div className={"resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm font-[MisterPixel] opacity-50 " + className}>
             { children }
         </div>
     );
 }
 
-function ResumeSection({ title, children, className = '', showDivider = false }) {
+function ResumeSection({ title, children, className = '', showDivider = false, contentClassName = '' }) {
     return (
-        <div className={"resume-section resume-section-" + title + ` ${className}`}>
+        <div className={"resume-section flex flex-col resume-section-" + title + ` ${className}`}>
             <div className="resume-section-title uppercase text-[20px] ps-1 flex items-center">
                 <div className="title-text">
                     { title }
@@ -205,7 +207,7 @@ function ResumeSection({ title, children, className = '', showDivider = false })
                     <hr className="border-1 border-dashed" />
                 </div>
             </div>
-            <div className="resume-section-content ps-5">
+            <div className={"resume-section-content ps-5 " + contentClassName}>
                 { children }
             </div>
         </div>

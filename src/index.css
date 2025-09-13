@@ -15,6 +15,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'MisterPixel';
+  src: url('./fonts/MisterPixel.otf');
+}
+
 .workbench-font {
   font-family: "Workbench", sans-serif;
   font-optical-sizing: auto;
