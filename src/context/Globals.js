@@ -48,6 +48,7 @@ const Globals = {
             displaySource: 'github.com/jacobjordan94/kexp-react',
             type: 'react',
             tags: ['react', 'tailwind', 'cloudflare'],
+            wip: true,
         },
         {
             title: 'rxwell - upmc',

@@ -13,7 +13,7 @@ export default function ProjectTypeSection({ type, projects }) {
                 projects.map((project, i) =>
                     project.url ? 
                     <AppAnchor key={i} className={'contents'} href={project.url}>
-                        <ProjectCard project={project} showYoutube={true} />
+                        <ProjectCard project={project} />
                     </AppAnchor> :
                     <ProjectCard key={i} project={project} />
             )}
