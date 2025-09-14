@@ -1,17 +1,18 @@
-import AppLink from "../AppLink";
-import LinkIcon from "../icons/LinkIcon";
-import YouTubeIcon from "../icons/YouTubeIcon";
 import GithubIcon from "../icons/GithubIcon";
+import UnderConstructionBanner from "../UnderConstructionBanner";
 
-export default function ProjectCard({ project, type, className = '', showLink = false, detailed = false, showYoutube = false }) {
+export default function ProjectCard({ project, type, className = '' }) {
     return (
-        <div className={"projects-card relative shadow-black rounded-md overflow-hidden transition-[transform_shadow] hover:transform-[scale(1.025)] shadow-md hover:shadow-lg " + className}>
-            <div className={`image overflow-hidden h-[256px] border-b-1 border-[rgba(255,255,255,0.25)]`}>
-                <img 
-                    src={ project.image === '' ? 'https://placehold.co/600x400' : project.image } 
-                    alt={`project image for ${project.title}`} 
-                    className="w-full h-full transition-[width_height] object-cover object-center"
-                />
+        <div data-wip={project.wip} className={"projects-card group/projectCard relative shadow-black rounded-md overflow-hidden transition-[transform_shadow] hover:transform-[scale(1.025)] shadow-md hover:shadow-lg " + className}>
+            <div className="group-data-[wip=true]/projectCard:relative">    
+                <div className={`image overflow-hidden h-[256px] border-b-1 border-[rgba(255,255,255,0.25)]`}>
+                    <img 
+                        src={ project.image === '' ? 'https://placehold.co/600x400' : project.image } 
+                        alt={`project image for ${project.title}`} 
+                        className="w-full h-full transition-[width_height] object-cover object-center"
+                        />
+                </div>
+                <UnderConstructionBanner className="hidden group-data-[wip=true]/projectCard:block absolute bottom-2 left-0 w-full" />
             </div>
             <div className="information px-4 py-3">
                 <div className="title-row flex justify-between">
