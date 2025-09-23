@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../App";
 import Skill from "../../components/Skill";
+import Seo from "../../components/Seo";
 
 export default function SkillsPage({}) {
     const { skills } = useContext(GlobalContext);
@@ -9,9 +10,15 @@ export default function SkillsPage({}) {
                                    .sort((a, b) => a.sort - b.sort)
                                    .map((skill, i) => <Skill key={i} value={skill.value} className="text-xl" />)
     return (
-        <div className="skills-page flex flex-wrap items-center justify-evenly gap-8 min-h-full">
-            <title>jacob-jordan.me - skills</title>
-            <Skills />
-        </div>
+        <>
+            <Seo
+                title="jacob-jordan.me - skills"
+                description="Jack of all, master of none"
+                pathname="/skills"
+            />
+            <div className="skills-page flex flex-wrap items-center justify-evenly gap-8 min-h-full">
+                <Skills />
+            </div>
+        </>
     );
 }
