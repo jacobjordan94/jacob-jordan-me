@@ -8,7 +8,7 @@ export default function ContentPolicy() {
     return (
         <>
             <Seo
-                title="Content Usage Policy – Jacob Jordan"
+                title="jacob-jordan.me - content usage policy"
                 description="Read the official content usage policy for jacob-jordan.me."
                 pathname="/content-policy"
                 schema={{
