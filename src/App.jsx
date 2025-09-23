@@ -14,6 +14,7 @@ import AboutPage from './pages/about/AboutPage';
 import NotFoundIcon from './components/icons/404Icon';
 import ResumePage from './pages/resume/Resume';
 import PrintLayout from './layouts/PrintLayout';
+import ContentPolicyPage from './pages/content-policy/ContentPolicyPage';
 
 export const GlobalContext = createContext();
 
@@ -29,7 +30,9 @@ function App() {
             <Routes>
               {/* Standard Layout */}
               <Route path="/*" element={ <Navigate replace to="/404" /> }></Route>
-              <Route element={ <StandardLayout /> }></Route>
+              <Route element={ <StandardLayout /> }>
+                <Route path='/content-policy' element={ <ContentPolicyPage /> } />
+              </Route>
               {/* Responsive Layout */}
               <Route element={ <ResponsiveLayout/> }>
                 <Route index element={ <HomePage /> } />

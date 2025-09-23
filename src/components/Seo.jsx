@@ -72,6 +72,7 @@ export default function Seo({
       <title>{title}</title>
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />
+      <meta name="robots" content="index, follow, noai" />
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
