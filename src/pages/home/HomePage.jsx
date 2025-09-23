@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import About from './AboutSection';
 import Contact from './ContactSection';
 import Education from './EducationSection';
