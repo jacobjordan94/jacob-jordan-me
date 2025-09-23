@@ -15,7 +15,15 @@ export default defineConfig({
         '/projects',
         '/experience',
         '/skills',
-        '/resume'
+        '/resume',
+        '/content-policy',
+      ],
+      generateRobotsTxt: true,
+      robots: [
+        {
+          userAgent: '*',
+          allow: ['/'],
+        }
       ],
     })
   ],
@@ -24,5 +32,8 @@ export default defineConfig({
     strictPort: true,
     host: true,
     origin: 'https://0.0.0.0:3000'
+  },
+  define: {
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   }
 })
