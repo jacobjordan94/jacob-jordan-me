@@ -11,6 +11,7 @@ import WorldWideWebIcon from "../../components/icons/WorldWideWebIcon";
 import ResumePDF from "./ResumePDF";
 import './Resume.css';
 import { useSearchParams } from "react-router";
+import Seo from "../../components/Seo";
 
 export default function ResumePage({}) {
     const [ searchParams ] = useSearchParams();
@@ -24,7 +25,11 @@ export default function ResumePage({}) {
 
     return (
         <>
-            <title>jacob-jordan.me - resume</title>
+            <Seo
+                title="jacob-jordan.me - resumé/cv"
+                description="Resumé or business card? Letter or A4? I got you convered."
+                pathname="/resume"
+            />
             <div data-page-size={pageSize} className="resume-page group relative py-20 print:p-0 hidden pointer-fine:block 
                                             data-[page-size=business]:h-full data-[page-size=business]:pointer-fine:flex
                                             data-[page-size=business]:items-center data-[page-size=business]:justify-center
