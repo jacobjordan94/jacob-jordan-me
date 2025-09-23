@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useMemo } from "react";
 import Page from "./Page";
 import OldPCIcon from '../../components/icons/OldPCIcon';
 import DPadIcon from '../../components/icons/DPadIcon';
@@ -15,12 +15,9 @@ import Seo from "../../components/Seo";
 
 export default function ResumePage({}) {
     const [ searchParams ] = useSearchParams();
-    const [ pageSize, setPageSize ] = useState(searchParams.get('size') || 'letter');
-    useEffect(() => {
-        if(searchParams.get('size')) {
-            setPageSize(searchParams.get('size'));
-        }
-    }, [searchParams])
+    const pageSize = useMemo(() => {
+        return searchParams.get('size') || 'letter';
+    }, [ searchParams ]);
     const { contact, experience, skills, education, projects } = useContext(GlobalContext);
 
     return (

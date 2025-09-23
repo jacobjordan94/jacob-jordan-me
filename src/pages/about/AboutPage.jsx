@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 import SourceCodeHandsIcon from '../../components/icons/SourceCodeHandsIcon';
 import AppLink from '../../components/AppLink';
 import SiteBadge from '../../components/SiteBadge';
@@ -36,12 +36,7 @@ export default function AboutPage({}) {
 }
 
 const TextRing = ({ text, className, deg = 6, start = -45, upsideDown, spokeLength = 'h-full' }) => {
-    const [ splitText, setSplitText ] = useState();
-    useEffect(() => {
-        if(text) {
-            setSplitText(text.split(''));
-        }
-    }, [ text ])
+    const splitText = useMemo(() => text.split(''), [ text ]);
     return ( splitText &&
         <div className={`relative text-center ${upsideDown ? 'scale-[1_-1] ' : ''}` + className}>
         {

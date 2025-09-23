@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import { GlobalContext } from "../../App";
 import ProjectCard from "./ProjectCard";
 import { AppAnchor } from "../AppLink";
@@ -6,15 +6,13 @@ import { AppAnchor } from "../AppLink";
 export default function ProjectGallery({}) {
     const { projects } = useContext(GlobalContext);
     const [ currentProjectType, setCurrentProjectType ] = useState('all');
-    const [ visibleProjects, setVisibleProjects ] = useState([...projects]);
     const projectTypes = [...new Set(projects.map(project => project.type))]
     projectTypes.unshift('all');
 
-    useEffect(() => {
-        setVisibleProjects(
-            currentProjectType === 'all' ? [...projects] : [...projects].filter(project => project.type === currentProjectType)
-        );
-    }, [ currentProjectType ]);
+    const visibleProjects = useMemo(() => 
+        currentProjectType === 'all' ? [...projects] : [...projects].filter(project => project.type === currentProjectType)
+        , [ currentProjectType ]
+    );
 
     return (
         <div className="projects-gallery">
