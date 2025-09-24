@@ -1,56 +1,58 @@
-import { useEffect, useState } from 'react';
 import SourceCodeHandsIcon from '../../components/icons/SourceCodeHandsIcon';
 import AppLink from '../../components/AppLink';
 import SiteBadge from '../../components/SiteBadge';
 import Seo from '../../components/Seo';
 
-export default function AboutPage({}) {
+export default function AboutPage() {
     return (
         <>
             <Seo
-                title='jacob-jordan.me - about'
-                description=''
-                pathname='/about'
+                title="jacob-jordan.me - about"
+                description="Learn about how this website was built, where it's hosted, and explore the open-source code on GitHub."
+                pathname="/about"
             />
-            <div className="about-page h-full flex flex-col items-center justify-between text-center text-neutral-300">
-                <div className="text-welcome text-xl gap-4 mt-4">
-                    hello, this website was made using react and tailwind. <br/>it was created in august of 2025, and is currently hosted through cloudflare
-                </div>
-                <div className="responsive-message">
-                    <div className="desktop pointer-coarse:hidden">looks like you're on a desktop! check out this website on mobile as well</div>
-                    <div className="mobile pointer-fine:hidden">you seem to be on a mobile device! be sure to check out the desktop version of this website too</div>
-                </div>
-                <div className="source-code">
-                        <div className='text-center'>i'm open source!</div>
-                        <div className="flex my-4 justify-center">
-                            <SourceCodeHandsIcon className='size-24' />
-                        </div>
-                        <div className="text-center">the source code is available to view on <AppLink decoration={false} className='border-b-2 text-neutral-400' href="https://github.com/jacobjordan94/jacob-jordan-me">github</AppLink>.</div>
-                </div>
-                <div className="ai-is-bad mb-4 text-sm">
-                    <SiteBadge />
-                </div>
-            </div>
-        </>
-    );
-}
+            <main className="about-page min-h-full w-full flex flex-col text-neutral-300 p-6 text-center gap-20 items-stretch justify-center">
+                <header className="content-header w-full flex flex-col justify-center items-center">
+                    <h1 className="text-3xl font-bold tracking-wide mb-2">
+                        about this website
+                    </h1>
+                    <p className="text-lg text-neutral-400 max-w-lg font-[MisterPixel]">
+                        built with <strong className="text-white">React</strong> and <strong className="text-white">Tailwind CSS</strong>, hosted via <strong className="text-white">Cloudflare Pages</strong>. launched in <strong className="text-white">august 2025</strong>.
+                    </p>
+                </header>
 
-const TextRing = ({ text, className, deg = 6, start = -45, upsideDown, spokeLength = 'h-full' }) => {
-    const [ splitText, setSplitText ] = useState();
-    useEffect(() => {
-        if(text) {
-            setSplitText(text.split(''));
-        }
-    }, [ text ])
-    return ( splitText &&
-        <div className={`relative text-center ${upsideDown ? 'scale-[1_-1] ' : ''}` + className}>
-        {
-            splitText.map((text, i) => <span key={i} className={`spoke absolute ${spokeLength}`} style={{ transform: `rotate(${start + (deg * i)}deg)`, transformOrigin: 'bottom center' }}>
-                <span className={ upsideDown ? 'inline-block scale-[1_-1]' : '' }>
-                    {text}
-                </span>
-            </span>)
-        }
-        </div>
+                <section
+                    aria-labelledby="source-code"
+                    className="
+                        bg-neutral-700/30  border-neutral-700 p-6 
+                        rounded-2xl shadow-lg hover:shadow-xl shadow-neutral-800/30
+                        md:w-md self-center transition-all hover:scale-105 origin-bottom
+                    "
+                >
+                    <h2 id="source-code" className="text-2xl font-semibold mb-4 text-white">
+                        open source code
+                    </h2>
+
+                    <div className="flex justify-center my-6">
+                        <SourceCodeHandsIcon className="size-24 opacity-80 hover:opacity-100 transition-opacity" />
+                    </div>
+
+                    <div className="text-md text-neutral-400 text-center space-y-2 font-[MisterPixel]">
+                        <p>this website is open source.</p>
+                        <AppLink
+                            decoration={false}
+                            className="inline-block underline hover:text-white text-neutral-300 transition-colors"
+                            href="https://github.com/jacobjordan94/jacob-jordan-me"
+                        >
+                            view the source code on github
+                        </AppLink>
+                    </div>
+                </section>
+                <section aria-labelledby="made-in-usa" className="text-sm text-neutral-500 flex-grow flex items-end justify-center">
+                    <h2 id="made-in-usa-badge" className="sr-only">Site disclaimer</h2>
+                    <SiteBadge />
+                </section>
+            </main>
+        </>
     );
 }

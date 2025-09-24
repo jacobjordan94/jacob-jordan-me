@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 export default function List({ items, cols = 2, className = '' }) {
-    const [ itemsChunked, setItemsChunked ] = useState();
-    useEffect(() => {
-        if(items) {
-            setItemsChunked(chunkArray(items, Math.ceil(items.length / cols)))
-        }
-    }, [ items ]);
+    const itemsChunked = useMemo(() => 
+        chunkArray(items, Math.ceil(items.length / cols))
+    , [ items, cols ]);
     return ( itemsChunked &&
         <div className={`list flex flex-col gap-2 @3xl:flex-row @3xl:gap-4 ` + className}>
         {

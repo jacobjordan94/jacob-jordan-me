@@ -1,5 +1,5 @@
-export default ({size = 24, className = ''}) =>
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className}>
+export default ({size = 24, className = '',  ...props}) =>
+    <svg { ...props} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className}>
         <g>
             <rect fill="none" fillOpacity="null" height="23" stroke="currentColor" strokeOpacity="null" transform="matrix(1, 0, 0, 1, 0, 0)" width="17" x="3.5" y="0.5"/>
             <line fill="none" fillOpacity="null" stroke="currentColor" strokeDasharray="null" strokeLinecap="null" strokeLinejoin="null" strokeOpacity="null" x1="9.5" x2="14.5" y1="3" y2="3"/>

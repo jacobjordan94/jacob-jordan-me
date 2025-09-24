@@ -7,5 +7,5 @@ const PRODUCTION = import.meta.env.PROD;
 const Root = () => PRODUCTION ? <App /> : <StrictMode><App /></StrictMode>
 
 createRoot(document.getElementById('root')).render(
-  <Root />
+    <Root />
 )

@@ -1,5 +1,5 @@
-export default ({className = '', size = 24}) =>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} className={'textWhite ' + className}>
+export default ({ className = '', size = 24,  ...props }) =>
+    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} className={'textWhite ' + className}>
         <g>
             <path d="M30.48 16.005H32v7.62h-1.52Z" fill="currentColor" strokeWidth="1"></path>
             <path d="M28.95 23.625h1.53v3.04h-1.53Z" fill="currentColor" strokeWidth="1"></path>
