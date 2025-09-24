@@ -19,52 +19,52 @@ import ContentPolicyPage from './pages/content-policy/ContentPolicyPage';
 export const GlobalContext = createContext();
 
 function App() {
-  const [ globals ] = useState(Globals)
-  const [ sideNavOpen, setSideNavOpen ] = useState(false);
-  return (
-    <div className="application-container h-svh flex flex-col workbench-font">
-      <BrowserRouter>
-        <GlobalContext value={ globals }>
-          <Header setSideNavOpen={setSideNavOpen} />
-          <section className="content flex-1 overflow-scroll">
-            <Routes>
-              {/* Standard Layout */}
-              <Route path="/*" element={ <Navigate replace to="/404" /> }></Route>
-              <Route element={ <StandardLayout /> }>
-                <Route path='/content-policy' element={ <ContentPolicyPage /> } />
-              </Route>
-              {/* Responsive Layout */}
-              <Route element={ <ResponsiveLayout/> }>
-                <Route index element={ <HomePage /> } />
-                <Route path="projects" element={ <ProjectsPage /> } />
-                <Route path='experience' element={ <ExperiencePage /> } />
-              </Route>
-              {/* Fixed Responsive Layout */}
-              <Route element={ <FixedResponsiveLayout /> }>
-                <Route path="skills" element={ <SkillsPage /> } />
-                <Route path="about" element={ <AboutPage /> } />
-                <Route path='404' element={
-                  <>
-                    <title>jacob-jordan.me - 404</title>
-                    <div className='404-page size-full flex items-center'>
-                      <div className="404-content w-full flex flex-col items-center opacity-50 gap-8">
-                        <NotFoundIcon className='aspect-square w-full h-fit p-4 @lg:w-3/4 @lg:p-0 @2xl:w-1/2 @4xl:w-[512px]' />
-                        <div className="404-text @lg:text-lg @2xl:text-xl @4xl:text-2xl">nothing here but this guy...</div>
-                      </div>
-                    </div>
-                  </>
-                } />
-              </Route>
-              <Route element={ <PrintLayout /> }>
-                <Route path="resume" element={ <ResumePage /> }/>
-              </Route>
-            </Routes>
-          </section>
-          <SideNav open={sideNavOpen} setSideNavOpen={setSideNavOpen} />
-        </GlobalContext>
-      </BrowserRouter>
-    </div>
-  )
+    const [globals] = useState(Globals)
+    const [sideNavOpen, setSideNavOpen] = useState(false);
+    return (
+        <div className="application-container h-svh flex flex-col workbench-font">
+            <BrowserRouter>
+                <GlobalContext value={globals}>
+                    <Header setSideNavOpen={setSideNavOpen} />
+                    <section className="content flex-1 overflow-scroll">
+                        <Routes>
+                            {/* Standard Layout */}
+                            <Route path="/*" element={<Navigate replace to="/404" />} />
+                            <Route element={<StandardLayout />}>
+                                <Route path='/content-policy' element={<ContentPolicyPage />} />
+                            </Route>
+                            {/* Responsive Layout */}
+                            <Route element={<ResponsiveLayout />}>
+                                <Route index element={<HomePage />} />
+                                <Route path="projects" element={<ProjectsPage />} />
+                                <Route path='experience' element={<ExperiencePage />} />
+                            </Route>
+                            {/* Fixed Responsive Layout */}
+                            <Route element={<FixedResponsiveLayout />}>
+                                <Route path="skills" element={<SkillsPage />} />
+                                <Route path="about" element={<AboutPage />} />
+                                <Route path='404' element={
+                                    <>
+                                        <title>jacob-jordan.me - 404</title>
+                                        <div className='404-page size-full flex items-center'>
+                                            <div className="404-content w-full flex flex-col items-center opacity-50 gap-8">
+                                                <NotFoundIcon className='aspect-square w-full h-fit p-4 @lg:w-3/4 @lg:p-0 @2xl:w-1/2 @4xl:w-[512px]' />
+                                                <div className="404-text @lg:text-lg @2xl:text-xl @4xl:text-2xl">nothing here but this guy...</div>
+                                            </div>
+                                        </div>
+                                    </>
+                                } />
+                            </Route>
+                            <Route element={<PrintLayout />}>
+                                <Route path="resume" element={<ResumePage />} />
+                            </Route>
+                        </Routes>
+                    </section>
+                    <SideNav open={sideNavOpen} setSideNavOpen={setSideNavOpen} />
+                </GlobalContext>
+            </BrowserRouter>
+        </div>
+    )
 }
 
 export default App;

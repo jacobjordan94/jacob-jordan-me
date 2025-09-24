@@ -1,15 +1,19 @@
 import StarIcon from "./icons/StarIcon";
 
-export default function SiteBadge ({ ...props  }) {
+export default function SiteBadge({ className = '' }) {
     return (
-        <div className={"badge items-center flex gap-3 " + props.className}>
-            <StarIcon size={14} />
-            <div className="badge-text text-center">
-                <span>made in u.s.a.</span>
-                <StarIcon className="inline mx-2.5" size={14} />
-                <span>no a.i. or llms used</span>
-            </div>
-            <StarIcon size={14} />
+        <div
+            className={`
+                badge inline-flex items-center gap-2 px-3 py-1 
+                rounded-full border-1 border-neutral-600 
+                bg-gradient-to-b from-neutral-800 via-neutral-500 to-neutral-800 
+                text-sm tracking-widest uppercase shadow-black/30 ${className}
+                font-[MisterPixel] text-neutral-300
+            `}
+        >
+            <StarIcon size={16} />
+            <span>made in u.s.a.</span>
+            <StarIcon size={16} />
         </div>
     );
 }

@@ -1,5 +1,5 @@
 export default function ResumePDF({ pageSize }) {
-
+    
     const PDFs = () => [
         {
             size: 'letter',
@@ -21,7 +21,7 @@ export default function ResumePDF({ pageSize }) {
 
     return (
         <div className="resume-pdf hidden pointer-coarse:contents">
-            <PDFs />
+            { PDFs() }
         </div>
     );
 }

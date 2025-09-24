@@ -1,4 +1,4 @@
-import { useContext, useMemo } from "react";
+import { useContext } from "react";
 import Page from "./Page";
 import OldPCIcon from '../../components/icons/OldPCIcon';
 import DPadIcon from '../../components/icons/DPadIcon';
@@ -12,25 +12,24 @@ import ResumePDF from "./ResumePDF";
 import './Resume.css';
 import { useSearchParams } from "react-router";
 import Seo from "../../components/Seo";
+import clsx from "clsx";
 
 export default function ResumePage({}) {
     const [ searchParams ] = useSearchParams();
-    const pageSize = useMemo(() => {
-        return searchParams.get('size') || 'letter';
-    }, [ searchParams ]);
+    const pageSize = searchParams.get('size') || 'letter';
     const { contact, experience, skills, education, projects } = useContext(GlobalContext);
 
     return (
         <>
             <Seo
                 title="jacob-jordan.me - resumé/cv"
-                description="Resumé or business card? Letter or A4? I got you convered."
+                description="Resumé or business card? Letter or A4? I got you covered."
                 pathname="/resume"
             />
-            <div data-page-size={pageSize} className="resume-page group relative py-20 print:p-0 hidden pointer-fine:block 
-                                            data-[page-size=business]:h-full data-[page-size=business]:pointer-fine:flex
-                                            data-[page-size=business]:items-center data-[page-size=business]:justify-center
-                                            "
+            <main role="document" data-page-size={pageSize} className="resume-page group relative py-20 print:p-0 hidden pointer-fine:block 
+                                                                       data-[page-size=business]:h-full data-[page-size=business]:pointer-fine:flex
+                                                                       data-[page-size=business]:items-center data-[page-size=business]:justify-center
+                                                                       "
             >
                 <Page size={pageSize} className="flex flex-col rounded-md shadow-black shadow-lg 
                                                 print:shadow-none outline-black group-data-[page-size=business]:print:outline-2
@@ -42,7 +41,7 @@ export default function ResumePage({}) {
                                         group-data-[page-size=business]:p-1 group-data-[page-size=business]:px-3 
                                         group-data-[page-size=business]:pt-3">
                             <div className="flex name-icons gap-4 py-2 group-data-[page-size=business]:*:flex-1/2">
-                                <span className="name text-3xl group-data-[page-size=business]:h-full">JACOB A. JORDAN</span>
+                                <span className="name text-3xl group-data-[page-size=business]:h-full text-center">JACOB A. JORDAN</span>
                                 <div className="icons-business-card-disclaimer">
                                     <div className="icons *:text-black flex *:size-[30px] 
                                                     group-data-[page-size=business]:w-full gap-2 group-data-[page-size=business]:gap-0 
@@ -61,10 +60,10 @@ export default function ResumePage({}) {
                             </ResumeDisclaimer>
                         </div>
                         <div className="
-                                contact **:text-black text-md flex justify-around 
+                                contact [&_*]:text-black text-md flex justify-around 
                                 border-b-0 border-dashed pb-2 
                                 group-data-[page-size=business]:flex-wrap group-data-[page-size=business]:pb-2
-                                group-data-[page-size=business]:flex-grow group-data-[page-size=business]:**:text-[14px]
+                                group-data-[page-size=business]:flex-grow group-data-[page-size=business]:[&_*]:text-[14px]
                                 "
                             >
                             <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
@@ -73,7 +72,7 @@ export default function ResumePage({}) {
                             <ContactLink Icon={() => <GithubIcon       size={18}/>}  text={'github.com/jacobjordan94'} />
                         </div>
                     </div>
-                    <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between font-[MisterPixel]">
+                    <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between font-[MisterPixel,monospace]">
                         <ResumeExperience experience={experience} />
                         <ResumeProjects projects={projects} />
                         <div className="flex pb-4">
@@ -82,7 +81,7 @@ export default function ResumePage({}) {
                         </div>
                     </div>
                 </Page>
-            </div>
+            </main>
             <ResumePDF pageSize={pageSize} />
         </>
     );
@@ -97,31 +96,32 @@ function ContactLink({ Icon, text }) {
     );
 }
 
-function ResumeExperience({ experience, className }) {
-    function ResumeJob({ job, bullets }) {
-        return (
-            <div className="job">
-                <div className="job-header flex">
-                    <div className="job-start pe-2">
-                        {'>'}
-                    </div>
-                    <div className="job-info min-w-[180px]">
-                        <div className="name uppercase">{ job.name }</div>
-                        <div className="location text-sm">{ job.location }</div>
-                        <div className="dates text-sm">{ job.dates[0] } &mdash; { job.dates[1] }</div>
-                    </div>
-                    <div className="description">
-                        <div className="description text-[14px]">{ job.description }</div>
-                        <div className="detailed text-[13px] opacity-70">{ job.detailedDescription }</div>
-                    </div>
+function ResumeJob({ job, bullets }) {
+    return (
+        <div className="job">
+            <div className="job-header flex">
+                <div className="job-start pe-2">
+                    {'>'}
                 </div>
-                <div className="job-content ps-[16px]">
-                    <hr />
-                    <p className="mt-2 text-[13px]/5 text-center opacity-85" dangerouslySetInnerHTML={{__html: bullets.join('<span class="mx-2">&bull;</span>')}} />
+                <div className="job-info min-w-[180px]">
+                    <div className="name uppercase">{ job.name }</div>
+                    <div className="location text-sm">{ job.location }</div>
+                    <div className="dates text-sm">{ job.dates[0] } &mdash; { job.dates[1] }</div>
+                </div>
+                <div className="description">
+                    <div className="description text-[14px]">{ job.description }</div>
+                    <div className="detailed text-[13px] opacity-70">{ job.detailedDescription }</div>
                 </div>
             </div>
-        );
-    }
+            <div className="job-content ps-[16px]">
+                <hr />
+                <p className="mt-2 text-[13px]/5 text-center opacity-85" dangerouslySetInnerHTML={{__html: bullets.join('<span class="mx-2">&bull;</span>')}} />
+            </div>
+        </div>
+    );
+}
+
+function ResumeExperience({ experience, className }) {
     return (
         <ResumeSection title="experience" className={className} showDivider>
             <div className="resume-experience-content flex flex-col gap-4 lowercase">
@@ -193,26 +193,30 @@ function ResumeProjects({ projects }) {
 
 function ResumeDisclaimer({ children, className = '' }) {
     return (
-        <div className={"resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm font-[MisterPixel] opacity-50 " + className}>
+        <div className={"resume-disclaimer text-center text-xs border-1 border-dashed py-1 px-2 rounded-sm font-[MisterPixel,monospace] opacity-50 " + className}>
             { children }
         </div>
     );
 }
 
 function ResumeSection({ title, children, className = '', showDivider = false, contentClassName = '' }) {
+    const sectionId = `${title}-heading`;
     return (
-        <div className={"resume-section flex flex-col resume-section-" + title + ` ${className}`}>
-            <div className="resume-section-title uppercase text-[20px] ps-1 flex items-center">
-                <div className="title-text">
+        <section 
+            aria-labelledby={sectionId} 
+            className={clsx("resume-section flex flex-col", `resume-section-${title}`, className)}
+        >
+            <div className="resume-section-title ps-1 flex items-center">
+                <h2 id={sectionId} className="title-text text-[20px] uppercase">
                     { title }
-                </div>
+                </h2>
                 <div data-show-divider={showDivider} className="hidden data-[show-divider=true]:block divider flex-grow ms-3 me-1.5">
                     <hr className="border-1 border-dashed" />
                 </div>
             </div>
-            <div className={"resume-section-content ps-5 " + contentClassName}>
+            <div className={clsx("resume-section-content ps-5", contentClassName)}>
                 { children }
             </div>
-        </div>
+        </section>
     ); 
 }

@@ -1,4 +1,4 @@
-import { AppAnchor } from "../../components/AppLink";
+import AppLink from "../../components/AppLink";
 import ProjectCard from "../../components/projects/ProjectCard";
 
 export default function ProjectTypeSection({ type, projects }) {
@@ -12,9 +12,9 @@ export default function ProjectTypeSection({ type, projects }) {
             {
                 projects.map((project, i) =>
                     project.url ? 
-                    <AppAnchor key={i} className={'contents'} href={project.url}>
+                    <AppLink key={i} className={'contents'} href={project.url}>
                         <ProjectCard project={project} />
-                    </AppAnchor> :
+                    </AppLink> :
                     <ProjectCard key={i} project={project} />
             )}
             </div>
