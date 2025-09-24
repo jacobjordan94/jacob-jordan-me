@@ -1,6 +1,6 @@
-export default ({ className = '', size = 24,  ...props })  => {
+const EnvelopeIcon = ({ ...props })  => {
     return (
-        <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} className={ 'text-white ' + className }>
+        <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g>
                 <path d="m22.86 9.1425 0 -1.1400000000000001 -1.1475 0 0 -1.1475 -1.1400000000000001 0 0 -2.2800000000000002 -1.1400000000000001 0 0 9.1425 1.1400000000000001 0 0 -1.1475 1.1400000000000001 0 0 -1.1400000000000001 1.1475 0 0 10.2825 1.1400000000000001 0 0 -12.57 -1.1400000000000001 0z" fill="currentColor" strokeWidth="0.75"></path>
                 <path d="M21.7125 21.7125h1.1475v1.1475h-1.1475Z" fill="currentColor" strokeWidth="0.75"></path>
@@ -34,3 +34,5 @@ export default ({ className = '', size = 24,  ...props })  => {
         </svg>
     );
 }
+
+export default EnvelopeIcon;

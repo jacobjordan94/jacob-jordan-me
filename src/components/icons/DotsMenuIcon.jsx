@@ -1,5 +1,5 @@
-export default ({ className = '', size = 24,  ...props }) =>
-    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height={size} width={size} className={"text-white " + className}>
+const DotsMenuIcon = ({ ...props }) =>
+    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height={size} width={size}>
   <g>
     {/* <path d="M22.2825 2.8575h1.1475v18.285h-1.1475Z" fill="currentColor" strokeWidth="0.75"></path> */}
     {/* <path d="M21.142500000000002 21.142500000000002h1.1400000000000001v1.1400000000000001h-1.1400000000000001Z" fill="currentColor" strokeWidth="0.75"></path> */}
@@ -14,3 +14,5 @@ export default ({ className = '', size = 24,  ...props }) =>
     {/* <path d="M0.5700000000000001 2.8575h1.1475v18.285H0.5700000000000001Z" fill="currentColor" strokeWidth="0.75"></path> */}
   </g>
 </svg>
+
+export default DotsMenuIcon;

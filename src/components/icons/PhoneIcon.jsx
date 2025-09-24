@@ -1,5 +1,5 @@
-export default ({className = '', size = 24,  ...props}) =>
-    <svg  {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} className={ 'text-white ' + className }>
+const PhoneIcon = ({ ...props }) =>
+    <svg  {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g>
             <path d="M17.715 4.5675h1.1400000000000001v18.285h-1.1400000000000001Z" fill="currentColor" strokeWidth="0.75"></path>
             <path d="M6.285 22.8525h11.43V24H6.285Z" fill="currentColor" strokeWidth="0.75"></path>
@@ -19,3 +19,5 @@ export default ({className = '', size = 24,  ...props}) =>
             <path d="m6.285 4.5675 11.43 0 0 -1.1400000000000001 -9.1425 0 0 -2.2874999999999996 -1.1400000000000001 0 0 2.2874999999999996 -1.1475 0 0 -2.2874999999999996 -1.1400000000000001 0 0 21.7125 1.1400000000000001 0 0 -18.285z" fill="currentColor" strokeWidth="0.75"></path>
         </g>
     </svg>;
+
+export default PhoneIcon;

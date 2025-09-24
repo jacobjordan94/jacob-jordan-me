@@ -1,5 +1,5 @@
-export default ({ size = 24, className = '',  ...props }) =>
-    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} className={'text-white ' + className}>
+const DPadIcon = ({ ...props }) =>
+    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <g>
             <path d="M22.86 9.14V0H9.15v9.14H0v13.72h9.15V32h13.71v-9.14H32V9.14Zm7.62 12.19h-9.14v9.15H10.67v-9.15H1.53V10.67h9.14V1.52h10.67v9.15h9.14Z" fill="currentColor" strokeWidth="1"></path>
             <path d="m25.91 18.28 1.52 0 0 -1.52 1.52 0 0 -1.52 -1.52 0 0 -1.53 -1.52 0 0 -1.52 -1.53 0 0 7.62 1.53 0 0 -1.53z" fill="currentColor" strokeWidth="1"></path>
@@ -13,3 +13,5 @@ export default ({ size = 24, className = '',  ...props }) =>
             <path d="m6.1 13.71 -1.53 0 0 1.53 -1.52 0 0 1.52 1.52 0 0 1.52 1.53 0 0 1.53 1.52 0 0 -7.62 -1.52 0 0 1.52z" fill="currentColor" strokeWidth="1"></path>
         </g>
     </svg>
+
+export default DPadIcon;

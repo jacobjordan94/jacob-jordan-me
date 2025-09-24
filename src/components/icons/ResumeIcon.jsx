@@ -1,5 +1,5 @@
-export default ({size = 24, className = '',  ...props}) =>
-    <svg { ...props} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className}>
+const ResumeIcon = ({ ...props }) =>
+    <svg { ...props} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g>
             <rect fill="none" fillOpacity="null" height="23" stroke="currentColor" strokeOpacity="null" transform="matrix(1, 0, 0, 1, 0, 0)" width="17" x="3.5" y="0.5"/>
             <line fill="none" fillOpacity="null" stroke="currentColor" strokeDasharray="null" strokeLinecap="null" strokeLinejoin="null" strokeOpacity="null" x1="9.5" x2="14.5" y1="3" y2="3"/>
@@ -16,3 +16,5 @@ export default ({size = 24, className = '',  ...props}) =>
             <line fill="none" fillOpacity="null" stroke="currentColor" strokeOpacity="null" x1="5" x2="19" y1="22" y2="22"/>
         </g>
     </svg>
+
+export default ResumeIcon;

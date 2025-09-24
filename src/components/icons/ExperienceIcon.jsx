@@ -1,5 +1,5 @@
-export default ({ className = '', size = 24,  ...props }) => 
-    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} className={'textWhite ' + className}>
+const ExperienceIcon = ({ ...props }) => 
+    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <g>
             <path d="m30.48 6.1 -1.52 0 0 1.52 -1.53 0 0 1.53 1.53 0 0 1.52 1.52 0 0 -1.52 1.52 0 0 -1.53 -1.52 0 0 -1.52z" fill="currentColor" strokeWidth="1"></path>
             <path d="M30.48 18.29h-1.52v-1.52h-3.05v-6.1H15.24v6.1H4.57v1.52H3.05v1.52H1.53v1.53H0v1.52h4.57V32h22.86v-9.14H32v-3.05h-1.52Zm-13.72 -6.1h7.62v4.58h-7.62Zm1.53 18.29H6.1v-7.62h10.66v-1.52h1.53Zm7.62 0h-6.1V18.29h6.1Z" fill="currentColor" strokeWidth="1"></path>
@@ -16,3 +16,5 @@ export default ({ className = '', size = 24,  ...props }) =>
             <path d="M1.53 1.53h1.52v1.52H1.53Z" fill="currentColor" strokeWidth="1"></path>
         </g>
     </svg>
+
+export default ExperienceIcon;

@@ -1,5 +1,5 @@
-export default ({ className = '', size = 24,  ...props }) =>
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"width={size} height={size} className={"text-white " + className} >
+const SourceCodeMagnifyingGlassIcon = ({ ...props }) =>
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <g>
             <path d="M29.72 23.625h-1.53V22.1h-1.52v-1.52h-1.53v-3.05h-1.52v3.05H22.1v1.52h-1.53v1.53h-3.04v1.52h3.04v1.52h1.53v1.53h1.52v1.52h1.52v1.52h4.58v-1.52h1.52v-4.57h-1.52Zm0 4.57h-1.53v-1.53h-1.52v-1.52h-1.53v-1.52h1.53v1.52h1.52v1.52h1.53Z" fill="currentColor" strokeWidth="1"></path>
             <path d="M25.14 9.905h1.53v7.62h-1.53Z" fill="currentColor" strokeWidth="1"></path>
@@ -34,3 +34,4 @@ export default ({ className = '', size = 24,  ...props }) =>
         </g>
     </svg>
     
+export default SourceCodeMagnifyingGlassIcon;
