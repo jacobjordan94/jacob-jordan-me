@@ -1,15 +1,8 @@
 import { useLocation } from "react-router";
 import AppLink from "./AppLink";
 import { useEffect } from "react";
-import HomeIcon from "./icons/HomeIcon";
-import InfoIcon from "./icons/InfoIcon";
-import SkillsIcon from "./icons/SkillsIcon";
-import PaintingIcon from "./icons/PaintingIcon";
-import ExperienceIcon from "./icons/ExperienceIcon";
-import GithubIcon from './icons/GithubIcon';
-import SourceCodeMagnifyingGlassIcon from './icons/SourceCodeMagnifyingGlassIcon';
 import { HeaderIcons } from "./Header";
-import ResumeIcon from "./icons/ResumeIcon";
+import Icon from "./Icon";
 
 export default function SideNav({ open = false, setSideNavOpen }) {
     const loc = useLocation();
@@ -19,12 +12,12 @@ export default function SideNav({ open = false, setSideNavOpen }) {
     }, [loc]);
 
     const navItems = [
-        { to: '', icon: () => <HomeIcon />, text: 'home' },
-        { to: 'experience', icon: () => <ExperienceIcon />, text: 'experience' },
-        { to: 'projects', icon: () => <PaintingIcon />, text: 'projects' },
-        { to: 'skills', icon: () => <SkillsIcon />, text: 'skills' },
-        { to: 'about', icon: () => <InfoIcon />, text: 'about this website' },
-        { to: 'resume', icon: () => <ResumeIcon />, text: 'resume' },
+        { to: '', icon: () => <Icon.Home />, text: 'home' },
+        { to: 'experience', icon: () => <Icon.Experience />, text: 'experience' },
+        { to: 'projects', icon: () => <Icon.Painting />, text: 'projects' },
+        { to: 'skills', icon: () => <Icon.Skills />, text: 'skills' },
+        { to: 'about', icon: () => <Icon.Info />, text: 'about this website' },
+        { to: 'resume', icon: () => <Icon.Resume />, text: 'resume' },
     ];
 
     return (
@@ -78,13 +71,13 @@ export default function SideNav({ open = false, setSideNavOpen }) {
                                 <NavList currentPath={loc.pathname}>
                                     <NavItem
                                         href="https://github.com/jacobjordan94/jacob-jordan-me"
-                                        Icon={() => <SourceCodeMagnifyingGlassIcon />}
+                                        Icon={() => <Icon.SourceCodeMagnifyingGlass />}
                                     >
                                         source code
                                     </NavItem>
                                     <NavItem
                                         href="https://github.com/jacobjordan94"
-                                        Icon={() => <GithubIcon />}
+                                        Icon={() => <Icon.Github />}
                                     >
                                         github
                                     </NavItem>

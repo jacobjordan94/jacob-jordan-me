@@ -1,18 +1,12 @@
 import { useContext } from "react";
 import Page from "./Page";
-import OldPCIcon from '../../components/icons/OldPCIcon';
-import DPadIcon from '../../components/icons/DPadIcon';
-import HeathcliffIcon from '../../components/icons/HeathcliffIcon';
 import { GlobalContext } from "../../App";
-import PhoneIcon from "../../components/icons/PhoneIcon";
-import EnvelopeIcon from "../../components/icons/EnvelopeIcon";
-import GithubIcon from "../../components/icons/GithubIcon";
-import WorldWideWebIcon from "../../components/icons/WorldWideWebIcon";
 import ResumePDF from "./ResumePDF";
 import './Resume.css';
 import { useSearchParams } from "react-router";
 import Seo from "../../components/Seo";
 import clsx from "clsx";
+import Icon from "../../components/Icon";
 
 export default function ResumePage({}) {
     const [ searchParams ] = useSearchParams();
@@ -46,9 +40,9 @@ export default function ResumePage({}) {
                                     <div className="icons *:text-black flex *:size-[30px] 
                                                     group-data-[page-size=business]:w-full gap-2 group-data-[page-size=business]:gap-0 
                                                     group-data-[page-size=business]:justify-around group-data-[page-size=business]:*:size-[24px]">
-                                        <OldPCIcon />
-                                        <DPadIcon />
-                                        <HeathcliffIcon />
+                                        <Icon.OldPC />
+                                        <Icon.DPad />
+                                        <Icon.Heathcliff />
                                     </div>
                                     <ResumeDisclaimer className="business-card hidden group-data-[page-size=business]:block p-0 mt-2 py-1 text-[11px]">
                                         this business card was created using react + tailwind!
@@ -66,10 +60,10 @@ export default function ResumePage({}) {
                                 group-data-[page-size=business]:flex-grow group-data-[page-size=business]:[&_*]:text-[14px]
                                 "
                             >
-                            <ContactLink Icon={() => <WorldWideWebIcon size={18}/>}  text={'jacob-jordan.me'} />
-                            <ContactLink Icon={() => <PhoneIcon        size={18}/>}  text={contact.phone.text} />
-                            <ContactLink Icon={() => <EnvelopeIcon     size={18}/>}  text={contact.email.text} />
-                            <ContactLink Icon={() => <GithubIcon       size={18}/>}  text={'github.com/jacobjordan94'} />
+                            <ContactLink Icon={() => <Icon.WWW      size={18}/>} text={'jacob-jordan.me'} />
+                            <ContactLink Icon={() => <Icon.Phone    size={18}/>} text={contact.phone.text} />
+                            <ContactLink Icon={() => <Icon.Envelope size={18}/>} text={contact.email.text} />
+                            <ContactLink Icon={() => <Icon.Github   size={18}/>} text={'github.com/jacobjordan94'} />
                         </div>
                     </div>
                     <div className="resume-body px-3 pt-2 flex flex-col flex-grow justify-between font-[MisterPixel,monospace]">

@@ -1,6 +1,6 @@
 import { useId } from 'react';
-import LinkIcon from "./icons/LinkIcon";
 import AppLink from "./AppLink";
+import Icon from './Icon';
 
 /**
  * Renders a semantic, accessible `<section>` with a heading.
@@ -62,7 +62,7 @@ function LinkedHeading({ id, tag: Tag, link, children }) {
                 aria-label={`Go to ${children}`}
             >
                 <span className="inner-section-link flex items-center">
-                    <LinkIcon size={20} aria-hidden="true" />
+                    <Icon.Link size={20} aria-hidden="true" />
                     <span className="ms-2">{children}</span>
                 </span>
             </AppLink>

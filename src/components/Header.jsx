@@ -1,12 +1,7 @@
-import MenuIcon from './icons/MenuIcon';
 import DropdownButton from "./DropdownButton";
-import SourceCodeMagnifyingGlassIcon from "./icons/SourceCodeMagnifyingGlassIcon";
 import AppLink from "./AppLink";
-import GithubIcon from "./icons/GithubIcon";
 import { useLocation } from "react-router";
-import OldPCIcon from './icons/OldPCIcon';
-import DPadIcon from './icons/DPadIcon';
-import HeathcliffIcon from './icons/HeathcliffIcon';
+import Icon from './Icon';
 
 export function Header({ setSideNavOpen }) {
     return (
@@ -40,7 +35,7 @@ function MobileNavButton({ setSideNavOpen }) {
     return (
         <div className="nav-button-container">
             <HeaderButton onClick={() => setSideNavOpen(true)} ariaLabel="Open mobile navigation">
-                <MenuIcon size={30} />
+                <Icon.Menu size={30} />
             </HeaderButton>
         </div>
     );
@@ -69,12 +64,12 @@ function DesktopNav() {
     const externalLinks = [
         {
             href: 'https://github.com/jacobjordan94',
-            icon: () => <GithubIcon />,
+            icon: () => <Icon.Github />,
             text: 'github',
         },
         {
             href: 'https://github.com/jacobjordan94/jacob-jordan-me',
-            icon: () => <SourceCodeMagnifyingGlassIcon />,
+            icon: () => <Icon.SourceCodeMagnifyingGlass />,
             text: 'source'
         }
     ];
@@ -150,9 +145,9 @@ function HeaderButton({ className = '', children, onClick, ariaLabel }) {
 export function HeaderIcons({ className }) {
     return (
         <div className={`flex gap-4 *:text-neutral-200 *:size-[34px] ${className}`} aria-hidden="true">
-            <OldPCIcon />
-            <DPadIcon />
-            <HeathcliffIcon />
+            <Icon.OldPC />
+            <Icon.DPad />
+            <Icon.Heathcliff />
         </div>
     );
 }

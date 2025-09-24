@@ -1,12 +1,12 @@
 import AppLink from "../AppLink";
-import WorldWideWebIcon from "../icons/WorldWideWebIcon";
+import Icon from "../Icon";
 
 export default function JobBase({ job, children, className = '' }) {
     return (
         <div className={"job flex flex-col " + className}>
             <div className="information">
                 <AppLink href={job.href} className="inline-flex text-2xl gap-2 items-center">
-                    <WorldWideWebIcon size="20" />
+                    <Icon.WWW size="20" />
                     <span className="uppercase flex">{ job.name }</span>
                 </AppLink>
                 <div className="ms-8 *:before:content-['>'] *:before:me-2 *:before:text-xs *:before:h-full">

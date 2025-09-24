@@ -1,4 +1,4 @@
-import GithubIcon from "../icons/GithubIcon";
+import Icon from "../Icon";
 import UnderConstructionBanner from "../UnderConstructionBanner";
 
 export default function ProjectCard({ project, type, className = '' }) {
@@ -38,7 +38,7 @@ function SourceCodeButton({ href }) {
 
     return (
         <button className="cursor-pointer hover:scale-125" href={href} onClick={onClick}>
-            <GithubIcon />
+            <Icon.Github />
         </button>
     );
 }
