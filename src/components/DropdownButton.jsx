@@ -7,8 +7,9 @@ export default function DropdownButton({
     dropdownContentClassName = '',
     ButtonContent,
     align = 'left', // 'left' | 'right' | 'center'
-    dropdownWidth = null, // Optional: let user pass width manually
+    dropdownWidth = null,
     behavior = 'click', // 'click' | 'hover'
+    arrowPosition = null // 'left' | 'right'
 }) {
     const buttonRef = useRef(null);
     const dropdownRef = useRef(null);
@@ -19,13 +20,11 @@ export default function DropdownButton({
     const [measuredWidth, setMeasuredWidth] = useState(null);
     const [portalRoot, setPortalRoot] = useState(null);
 
-    // Get portal root
     useEffect(() => {
         const existing = document.getElementById('portal-root');
         if (existing) setPortalRoot(existing);
     }, []);
 
-    // Outside click close (click behavior only)
     useEffect(() => {
         if (behavior !== 'click') return;
 
@@ -52,7 +51,6 @@ export default function DropdownButton({
         };
     }, [behavior]);
 
-    // Measure dropdown width (only once it's visible)
     useLayoutEffect(() => {
         if (isOpen && dropdownRef.current && dropdownWidth == null) {
             const rect = dropdownRef.current.getBoundingClientRect();
@@ -60,7 +58,6 @@ export default function DropdownButton({
         }
     }, [isOpen, dropdownWidth]);
 
-    // Positioning
     useLayoutEffect(() => {
         if (!isOpen || !buttonRef.current) return;
 
@@ -69,14 +66,12 @@ export default function DropdownButton({
         if (!width) return;
 
         let left = rect.left;
-
         if (align === 'center') {
             left = rect.left + rect.width / 2 - width / 2;
         } else if (align === 'right') {
             left = rect.right - width;
         }
 
-        // Clamp to viewport
         const maxLeft = window.innerWidth - width - 10;
         if (left > maxLeft) left = maxLeft;
         if (left < 10) left = 10;
@@ -84,7 +79,6 @@ export default function DropdownButton({
         setPosition({ top: rect.bottom, left });
     }, [isOpen, dropdownWidth, measuredWidth, align]);
 
-    // Open state triggers
     const handleClickToggle = () => {
         if (behavior === 'click') {
             setIsOpen(!isOpen);
@@ -101,10 +95,35 @@ export default function DropdownButton({
         if (behavior !== 'hover') return;
         hoverTimeout.current = setTimeout(() => {
             setIsOpen(false);
-        }, 150); // Small buffer for cursor movement
+        }, 150);
     };
 
     const isReadyToShow = !!dropdownWidth || !!measuredWidth;
+
+    const arrowGlyph = arrowPosition === 'left' ? '›' : arrowPosition === 'right' ? '‹' : '';
+
+    const arrow = arrowPosition && (
+        <span
+            className={`
+                inline-flex w-4 h-4 items-center justify-center
+                transition-transform duration-300 transform-gpu origin-center
+                ${arrowPosition === 'left'
+                    ? isOpen
+                        ? 'rotate-90'
+                        : 'rotate-0'
+                    : isOpen
+                    ? '-rotate-90'
+                    : 'rotate-0'
+                }
+            `}
+        >
+            <span className="block text-sm leading-none">
+                {arrowGlyph}
+            </span>
+        </span>
+    );
+
+
 
     return (
         <div
@@ -115,9 +134,11 @@ export default function DropdownButton({
             <button
                 ref={buttonRef}
                 onClick={handleClickToggle}
-                className="cursor-pointer"
+                className="cursor-pointer flex items-center gap-1"
             >
+                {arrowPosition === 'left' && arrow}
                 {ButtonContent && <ButtonContent />}
+                {arrowPosition === 'right' && arrow}
             </button>
 
             {isOpen && portalRoot &&
@@ -135,6 +156,16 @@ export default function DropdownButton({
                             visibility: isReadyToShow ? 'visible' : 'hidden',
                         }}
                     >
+                        {/* Optional top arrow (CSS triangle) */}
+                        {arrowPosition && (
+                            <div className="relative">
+                                <div
+                                    className={`absolute -top-2 w-0 h-0 border-x-8 border-x-transparent border-b-8 border-b-neutral-600 ${
+                                        arrowPosition === 'left' ? 'left-4' : 'right-4'
+                                    }`}
+                                ></div>
+                            </div>
+                        )}
                         {children}
                     </div>,
                     portalRoot

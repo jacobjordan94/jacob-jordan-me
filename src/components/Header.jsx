@@ -101,29 +101,33 @@ function DesktopNav() {
             {/* External links dropdown */}
             <div className="external-links">
                 <DropdownButton
-                    ButtonContent={() => <span className="ps-4 hover:ps-12">more</span>}
-                    dropdownContentClassName="right-[10px]"
-                >
-                    <ul className="external-links-dropdown bg-neutral-700 shadow-black shadow-md rounded-md overflow-hidden" role="list">
-                        {externalLinks.map((el, i) => (
-                            <li
-                                key={i}
-                                className="external-link-container duration-700 transition-colors border-b-neutral-500 border-b-1 last-of-type:border-0 p-2 hover:bg-neutral-800 cursor-pointer"
-                            >
-                                <AppLink
-                                    href={el.href}
-                                    decoration={false}
-                                    animate={false}
-                                    className="w-full"
+                    align="right"
+                    ButtonContent={() => <span className="">more</span>}
+                    behavior="hover"
+                    arrowPosition="right"
+                >                
+                    <div className="font-[Workbench] text-white">
+                        <ul className="external-links-dropdown bg-neutral-700 shadow-black shadow-md rounded-md overflow-hidden" role="list">
+                            {externalLinks.map((el, i) => (
+                                <li
+                                    key={i}
+                                    className="external-link-container duration-700 transition-colors border-b-neutral-500 border-b-1 last-of-type:border-0 p-2 hover:bg-neutral-800 cursor-pointer"
                                 >
-                                    <div className="external-link-content flex w-full gap-2 items-center">
-                                        <div className="text flex-1 text-end">{el.text}</div>
-                                        <el.icon />
-                                    </div>
-                                </AppLink>
-                            </li>
-                        ))}
-                    </ul>
+                                    <AppLink
+                                        href={el.href}
+                                        decoration={false}
+                                        animate={false}
+                                        className="w-full"
+                                    >
+                                        <div className="external-link-content flex w-full gap-2 items-center">
+                                            <div className="text flex-1 text-end">{el.text}</div>
+                                            <el.icon />
+                                        </div>
+                                    </AppLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </DropdownButton>
             </div>
         </div>
