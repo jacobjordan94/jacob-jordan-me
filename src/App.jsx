@@ -15,6 +15,7 @@ import ResumePage from './pages/resume/Resume';
 import PrintLayout from './layouts/PrintLayout';
 import ContentPolicyPage from './pages/content-policy/ContentPolicyPage';
 import Icon from './components/Icon';
+import StickyHeadersLayout from './layouts/StickyHeaders';
 
 export const GlobalContext = createContext();
 
@@ -36,8 +37,11 @@ function App() {
                             {/* Responsive Layout */}
                             <Route element={<ResponsiveLayout />}>
                                 <Route index element={<HomePage />} />
-                                <Route path="projects" element={<ProjectsPage />} />
                                 <Route path='experience' element={<ExperiencePage />} />
+                            </Route>
+                            {/* Sticky Headers */}
+                            <Route element={ <StickyHeadersLayout /> }>
+                                <Route path="projects" element={<ProjectsPage />} />
                             </Route>
                             {/* Fixed Responsive Layout */}
                             <Route element={<FixedResponsiveLayout />}>

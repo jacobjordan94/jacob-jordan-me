@@ -4,7 +4,7 @@ export default function DropdownButton({ children, className, dropdownContentCla
             <button className="dropdown-button cursor-pointer">
                 { ButtonContent && <ButtonContent />}
             </button>
-            <div className={"dropdown-content hidden absolute group-hover:block z-50 " + dropdownContentClassName}>
+            <div className={"dropdown-content hidden absolute group-hover:block z-[100] " + dropdownContentClassName}>
                 { children }
             </div>
         </div>

@@ -5,7 +5,7 @@ import Icon from './Icon';
 
 export function Header({ setSideNavOpen }) {
     return (
-        <header className='z-10 print:hidden'>
+        <header className='z-30 print:hidden bg-neutral-900 relative'>
             <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-2">
                 
                 {/* Mobile menu button */}
