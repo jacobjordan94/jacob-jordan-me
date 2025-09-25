@@ -23,7 +23,7 @@ export default function ContentPolicy() {
                 }}
             />
 
-            <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-neutral-800 dark:text-neutral-100">
+            <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white dark:text-neutral-100">
                 <h1 className="text-3xl font-bold mb-2">Content Usage Policy</h1>
                 <p className="text-sm text-neutral-300 mb-8">Effective Date: September 22, 2025</p>
 
