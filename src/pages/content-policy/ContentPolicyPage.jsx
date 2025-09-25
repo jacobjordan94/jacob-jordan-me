@@ -23,7 +23,7 @@ export default function ContentPolicy() {
                 }}
             />
 
-            <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white dark:text-neutral-100">
+            <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
                 <h1 className="text-3xl font-bold mb-2">Content Usage Policy</h1>
                 <p className="text-sm text-neutral-300 mb-8">Effective Date: September 22, 2025</p>
 
@@ -49,7 +49,7 @@ export default function ContentPolicy() {
 
                 <PolicySection title="⭘ LLM & AI Policy">
                     <p className="mb-4">
-                        This site uses <code className="bg-neutral-100 text-sm px-1 py-0.5 rounded border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700">llm.txt</code> and <code className="bg-neutral-100 text-sm px-1 py-0.5 rounded border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700">robots.txt</code> to signal that all content is <strong>not authorized for AI training</strong>.
+                        This site uses <Code>llms.txt</Code> and <Code>robots.txt</Code> to signal that all content is <strong>not authorized for AI training</strong>.
                     </p>
                     <p>
                         If you are developing or operating an AI system and wish to use any content from this site, you must obtain explicit written permission.
@@ -80,7 +80,7 @@ export default function ContentPolicy() {
                     </p>
                 </PolicySection>
 
-                <footer className="mt-12 text-sm text-neutral-500 dark:text-neutral-400 text-center">
+                <footer className="mt-12 text-sm text-neutral-500 text-center">
                     <p>© { new Date().getFullYear() } Jacob A. Jordan. All rights reserved.</p>
                     <p>Last updated: September 22, 2025</p>
                 </footer>
@@ -88,3 +88,5 @@ export default function ContentPolicy() {
         </>
     );
 }
+
+const Code = ({ children }) => <code className="bg-neutral-700 text-white text-sm px-1 py-0.5 rounded border border-neutral-200 ">{ children }</code>
