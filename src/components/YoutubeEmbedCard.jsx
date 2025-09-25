@@ -1,7 +1,9 @@
 import { useId, useRef } from 'react';
+import { Card } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 /**
- * Responsive, accessible YouTube embed card with loading animation.
+ * Responsive, accessible YouTube embed card using shadcn Card.
  *
  * @component
  * @param {Object} props
@@ -20,32 +22,36 @@ export default function YoutubeEmbedCard({ src = '', title = '', ...props }) {
         allowFullScreen: true,
         loading: 'lazy',
         title,
-        'aria-labelledby': captionId,
+        'aria-labelledby': captionId
     };
 
     const handleIframeLoad = () => {
-        if(containerRef.current) {
+        if (containerRef.current) {
             containerRef.current.dataset.loaded = 'true';
         }
     };
 
     return (
-        <figure
+        <Card
             {...props}
             ref={containerRef}
             data-loaded="false"
-            className={
-                'youtube-card group/ytc aspect-video rounded-2xl overflow-hidden transition-all shadow-black shadow-md bg-neutral-500 animate-pulse data-[loaded=true]:animate-none ' + (props.className || '')}
+            className={cn(
+                `group/ytc aspect-video overflow-hidden rounded-2xl 
+                bg-neutral-500 shadow-md shadow-black transition-all 
+                animate-pulse data-[loaded=true]:animate-none`,
+                props.className
+            )}
         >
             <iframe
                 onLoad={handleIframeLoad}
                 src={src}
                 {...iframeProps}
-                className="size-full duration-1000 transition-[opacity] opacity-0 group-data-[loaded=true]/ytc:opacity-100"
+                className="size-full transition-opacity duration-1000 opacity-0 group-data-[loaded=true]/ytc:opacity-100"
             />
             <figcaption id={captionId} className="sr-only">
                 {title}
             </figcaption>
-        </figure>
+        </Card>
     );
 }
