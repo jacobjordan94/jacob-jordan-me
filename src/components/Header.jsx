@@ -3,7 +3,7 @@ import AppLink from "./AppLink";
 import { useLocation } from "react-router";
 import Icon from './Icon';
 
-export function Header({ setSideNavOpen }) {
+export default function Header({ setSideNavOpen }) {
     return (
         <header className='z-30 print:hidden bg-neutral-900 relative'>
             <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-2">
