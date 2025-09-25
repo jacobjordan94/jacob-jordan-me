@@ -1,5 +1,5 @@
-export default ({ className = '', size = 24,  ...props }) => 
-    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} className={ 'textWhite ' + className }>
+const SkillsIcon = ({ ...props }) => 
+    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <g>
             <path d="m30.48 23.62 -1.53 0 0 1.52 3.05 0 0 -6.09 -1.52 0 0 4.57z" fill="currentColor" strokeWidth="1"></path>
             <path d="M30.48 14.47H32V16h-1.52Z" fill="currentColor" strokeWidth="1"></path>
@@ -30,3 +30,5 @@ export default ({ className = '', size = 24,  ...props }) =>
             <path d="M6.1 16h4.57v1.52H6.1Z" fill="currentColor" strokeWidth="1"></path>
         </g>
     </svg>
+
+export default SkillsIcon;

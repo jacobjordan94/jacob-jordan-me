@@ -1,7 +1,7 @@
-import SourceCodeHandsIcon from '../../components/icons/SourceCodeHandsIcon';
 import AppLink from '../../components/AppLink';
 import SiteBadge from '../../components/SiteBadge';
 import Seo from '../../components/Seo';
+import Icon from '../../components/Icon';
 
 export default function AboutPage() {
     return (
@@ -34,7 +34,7 @@ export default function AboutPage() {
                     </h2>
 
                     <div className="flex justify-center my-6">
-                        <SourceCodeHandsIcon className="size-24 opacity-80 hover:opacity-100 transition-opacity" />
+                        <Icon.SourceCodeHands className="size-24 opacity-80 hover:opacity-100 transition-opacity" />
                     </div>
 
                     <div className="text-md text-neutral-400 text-center space-y-2 font-[MisterPixel]">

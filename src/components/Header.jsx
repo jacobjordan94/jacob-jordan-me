@@ -1,16 +1,11 @@
-import MenuIcon from './icons/MenuIcon';
 import DropdownButton from "./DropdownButton";
-import SourceCodeMagnifyingGlassIcon from "./icons/SourceCodeMagnifyingGlassIcon";
 import AppLink from "./AppLink";
-import GithubIcon from "./icons/GithubIcon";
 import { useLocation } from "react-router";
-import OldPCIcon from './icons/OldPCIcon';
-import DPadIcon from './icons/DPadIcon';
-import HeathcliffIcon from './icons/HeathcliffIcon';
+import Icon from './Icon';
 
 export function Header({ setSideNavOpen }) {
     return (
-        <header className='z-10 print:hidden'>
+        <header className='z-30 print:hidden bg-neutral-900 relative'>
             <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-2">
                 
                 {/* Mobile menu button */}
@@ -40,7 +35,7 @@ function MobileNavButton({ setSideNavOpen }) {
     return (
         <div className="nav-button-container">
             <HeaderButton onClick={() => setSideNavOpen(true)} ariaLabel="Open mobile navigation">
-                <MenuIcon size={30} />
+                <Icon.Menu size={30} />
             </HeaderButton>
         </div>
     );
@@ -69,12 +64,12 @@ function DesktopNav() {
     const externalLinks = [
         {
             href: 'https://github.com/jacobjordan94',
-            icon: () => <GithubIcon />,
+            icon: () => <Icon.Github />,
             text: 'github',
         },
         {
             href: 'https://github.com/jacobjordan94/jacob-jordan-me',
-            icon: () => <SourceCodeMagnifyingGlassIcon />,
+            icon: () => <Icon.SourceCodeMagnifyingGlass />,
             text: 'source'
         }
     ];
@@ -106,29 +101,33 @@ function DesktopNav() {
             {/* External links dropdown */}
             <div className="external-links">
                 <DropdownButton
-                    ButtonContent={() => <span className="ps-4 hover:ps-12">more</span>}
-                    dropdownContentClassName="right-[10px]"
-                >
-                    <ul className="external-links-dropdown bg-neutral-700 shadow-black shadow-md rounded-md overflow-hidden" role="list">
-                        {externalLinks.map((el, i) => (
-                            <li
-                                key={i}
-                                className="external-link-container duration-700 transition-colors border-b-neutral-500 border-b-1 last-of-type:border-0 p-2 hover:bg-neutral-800 cursor-pointer"
-                            >
-                                <AppLink
-                                    href={el.href}
-                                    decoration={false}
-                                    animate={false}
-                                    className="w-full"
+                    align="right"
+                    ButtonContent={() => <span className="">more</span>}
+                    behavior="hover"
+                    arrowPosition="right"
+                >                
+                    <div className="font-[Workbench] text-white">
+                        <ul className="external-links-dropdown bg-neutral-700 shadow-black shadow-md rounded-md overflow-hidden" role="list">
+                            {externalLinks.map((el, i) => (
+                                <li
+                                    key={i}
+                                    className="external-link-container duration-700 transition-colors border-b-neutral-500 border-b-1 last-of-type:border-0 p-2 hover:bg-neutral-800 cursor-pointer"
                                 >
-                                    <div className="external-link-content flex w-full gap-2 items-center">
-                                        <div className="text flex-1 text-end">{el.text}</div>
-                                        <el.icon />
-                                    </div>
-                                </AppLink>
-                            </li>
-                        ))}
-                    </ul>
+                                    <AppLink
+                                        href={el.href}
+                                        decoration={false}
+                                        animate={false}
+                                        className="w-full"
+                                    >
+                                        <div className="external-link-content flex w-full gap-2 items-center">
+                                            <div className="text flex-1 text-end">{el.text}</div>
+                                            <el.icon />
+                                        </div>
+                                    </AppLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </DropdownButton>
             </div>
         </div>
@@ -150,9 +149,9 @@ function HeaderButton({ className = '', children, onClick, ariaLabel }) {
 export function HeaderIcons({ className }) {
     return (
         <div className={`flex gap-4 *:text-neutral-200 *:size-[34px] ${className}`} aria-hidden="true">
-            <OldPCIcon />
-            <DPadIcon />
-            <HeathcliffIcon />
+            <Icon.OldPC />
+            <Icon.DPad />
+            <Icon.Heathcliff />
         </div>
     );
 }

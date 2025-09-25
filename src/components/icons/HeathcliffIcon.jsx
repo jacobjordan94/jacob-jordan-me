@@ -1,5 +1,5 @@
-export default ({ size = 24, className = '',  ...props }) =>
-    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} className={"text-white " + className}>
+const HeathcliffIcon = ({ ...props }) =>
+    <svg { ...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <g>
             <path d="m30.48 12.955 -1.53 0 0 4.57 -3.04 0 0 1.53 3.04 0 0 1.52 -3.04 0 0 1.52 3.04 0 0 1.53 1.53 0 0 -1.53 1.52 0 0 -1.52 -1.52 0 0 -1.52 1.52 0 0 -1.53 -1.52 0 0 -4.57z" fill="currentColor" strokeWidth="1"></path>
             <path d="M27.43 23.625h1.52v1.52h-1.52Z" fill="currentColor" strokeWidth="1"></path>
@@ -36,3 +36,5 @@ export default ({ size = 24, className = '',  ...props }) =>
             <path d="M3.05 9.905h1.52v3.05H3.05Z" fill="currentColor" strokeWidth="1"></path>
         </g>
     </svg>
+
+export default HeathcliffIcon;

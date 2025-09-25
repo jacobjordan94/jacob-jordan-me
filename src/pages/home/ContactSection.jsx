@@ -1,12 +1,8 @@
 import { useContext, useState } from "react";
 import { GlobalContext } from "../../App";
 import Section from "../../components/Section";
-import EnvelopeIcon from "../../components/icons/EnvelopeIcon";
-import PhoneIcon from "../../components/icons/PhoneIcon";
-import PaperAirplaneIcon from "../../components/icons/PaperAirplaneIcon";
-import DiscordIcon from "../../components/icons/DiscordIcon";
-import LinkedInIcon from "../../components/icons/LinkedInIcon";
 import AppLink from "../../components/AppLink";
+import Icon from "../../components/Icon";
 
 export default function Contact() {
     const { contact } = useContext(GlobalContext);
@@ -44,10 +40,10 @@ function ContactSection({ title, href, linkText, Icon, children }) {
     );
 }
 
-const DiscordContact = ({href, linkText}) => <ContactSection title="discord" href={href} linkText={linkText} Icon={() => <DiscordIcon /> } />;
-const PhoneContact = ({ href, linkText }) => <ContactSection title="phone" href={href} linkText={linkText} Icon={() => <PhoneIcon /> } />;
-const EmailContact = ({href, linkText}) => <ContactSection title="email" href={href} linkText={linkText} Icon={() => <EnvelopeIcon size={20} /> } />;
-const LinkedInContact = ({ href, linkText }) => <ContactSection title="linkedin" href={href} linkText={linkText} Icon={() => <LinkedInIcon />} />;
+const DiscordContact = ({href, linkText}) => <ContactSection title="discord" href={href} linkText={linkText} Icon={() => <Icon.Discord /> } />;
+const PhoneContact = ({ href, linkText }) => <ContactSection title="phone" href={href} linkText={linkText} Icon={() => <Icon.Phone /> } />;
+const EmailContact = ({href, linkText}) => <ContactSection title="email" href={href} linkText={linkText} Icon={() => <Icon.Envelope size={20} /> } />;
+const LinkedInContact = ({ href, linkText }) => <ContactSection title="linkedin" href={href} linkText={linkText} Icon={() => <Icon.LinkedIn />} />;
 function EmailForm({ href }) {
     const [ emailBody, setEmailBody ]  = useState();
 
@@ -67,7 +63,7 @@ function EmailForm({ href }) {
                 <div className="inline float-end aria-disabled:pointer-events-none aria-disabled:opacity-50" aria-disabled={!emailBody}>
                     <AppLink href={href + ((emailBody && emailBody !== '') ? `?body=${emailBody}` : '')} className="inline-flex">
                         <span className="me-2">Send</span>
-                        <PaperAirplaneIcon size={24} className="scale-x-[-1]" />
+                        <Icon.PaperAirplane size={24} className="scale-x-[-1]" />
                     </AppLink>
                 </div>
             </div>

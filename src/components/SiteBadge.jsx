@@ -1,4 +1,4 @@
-import StarIcon from "./icons/StarIcon";
+import Icon from "./Icon";
 
 export default function SiteBadge({ className = '' }) {
     return (
@@ -11,9 +11,9 @@ export default function SiteBadge({ className = '' }) {
                 font-[MisterPixel] text-neutral-300
             `}
         >
-            <StarIcon size={16} />
+            <Icon.Star size={16} />
             <span>made in u.s.a.</span>
-            <StarIcon size={16} />
+            <Icon.Star size={16} />
         </div>
     );
 }
