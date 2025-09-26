@@ -5,6 +5,7 @@ import {
     DropdownMenuItem
 } from '@/components/ui/dropdown-menu';
 import AppLink from '@/components/AppLink';
+import { Separator } from "./ui/separator";
 
 export default function Header({ setSideNavOpen }) {
     return (
@@ -139,23 +140,27 @@ function ExternalLinksDropdown({ externalLinks = [] }) {
             dropdownWidth={200}
         >
             {externalLinks.map((el, i) => (
-                <DropdownMenuItem
-                    key={i}
-                    asChild
-                    className="external-link-container p-2 border-b border-b-neutral-500 last-of-type:border-0 hover:bg-neutral-800 cursor-pointer transition-colors duration-700"
-                >
-                    <AppLink
-                        href={el.href}
-                        decoration={false}
-                        animate={false}
-                        className="w-full"
+                <>
+                    <DropdownMenuItem
+                        key={i}
+                        asChild
+                        className="external-link-container p-2 hover:bg-neutral-800 cursor-pointer transition-colors duration-700"
                     >
-                        <div className="external-link-content flex w-full gap-2 items-center">
-                            <div className="text flex-1 text-end">{el.text}</div>
-                            <el.icon />
-                        </div>
-                    </AppLink>
-                </DropdownMenuItem>
+                        <AppLink
+                            href={el.href}
+                            decoration={false}
+                            animate={false}
+                            className="w-full"
+                        >
+                            <div className="external-link-content flex w-full gap-2 items-center">
+                                <div className="text flex-1 text-end">{el.text}</div>
+                                <el.icon />
+                            </div>
+                        </AppLink>
+                    </DropdownMenuItem>
+                    <Separator className="bg-neutral-600 last-of-type:hidden" />
+                </>
+
             ))}
         </DropdownButton>
     );
