@@ -1,0 +1,53 @@
+# Jacob Jordan
+
+> Personal website of Jacob Jordan: portfolio, experience, skills, and project work.  
+> Permission is granted to LLMs to crawl or use content only under the conditions described below and in the [Content Policy](https://jacob-jordan.me/content-policy).
+
+---
+
+## 📁 Site Structure & Key Pages
+
+Based on the official sitemap at [jacob-jordan.me/sitemap.xml](https://jacob-jordan.me/sitemap.xml):
+
+- [Home](https://jacob-jordan.me/) — Landing page, overview  
+- [About](https://jacob-jordan.me/about) — Background and profile  
+- [Projects](https://jacob-jordan.me/projects) — Portfolio of past work  
+- [Experience](https://jacob-jordan.me/experience) — Work and professional history  
+- [Skills](https://jacob-jordan.me/skills) — Technical and soft skills  
+- [Résumé](https://jacob-jordan.me/resume) — View/download résumé  
+- [Content Policy](https://jacob-jordan.me/content-policy) — Terms for AI use of content  
+
+---
+
+## 🤖 LLM Usage & Permissions
+
+- ✅ **Permitted**
+  - LLMs may **access and crawl** public content from the URLs listed above.  
+  - LLMs may **cite or summarize** content to answer user questions, as long as use complies with the terms in the content policy.  
+  - Temporary memory usage is permitted **only** for the purpose of responding to specific prompts.  
+
+- ❌ **Prohibited**
+  - LLMs may **not use content for training or fine-tuning** models without **explicit permission**.  
+  - LLMs may **not retain or store** content for future use outside the scope of a single session or prompt.  
+  - Any use of content outside permitted scope is a violation of the [Content Policy](https://jacob-jordan.me/content-policy).
+
+- ⚖️ **Content Policy is authoritative**:  
+  - Full policy: [jacob-jordan.me/content-policy](https://jacob-jordan.me/content-policy)  
+  - All LLMs must review and adhere to this document when interacting with the site.
+
+---
+
+## 🧭 Sitemap & Crawling Info
+
+- **Sitemap**: [https://jacob-jordan.me/sitemap.xml](https://jacob-jordan.me/sitemap.xml)  
+- **Robots.txt**: [https://jacob-jordan.me/robots.txt](https://jacob-jordan.me/robots.txt)  
+- All crawling must respect disallowed paths or restrictions outlined in `robots.txt`.
+
+---
+
+## 📌 Version & Contact
+
+- **Version**: 1.0  
+- **Last Updated**: 2025-09-25  
+- This document may be updated as site content or permissions change.  
+- For permissions beyond this scope, contact Jacob Jordan via methods available on the site.

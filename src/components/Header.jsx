@@ -1,9 +1,13 @@
-import DropdownButton from "./DropdownButton";
-import AppLink from "./AppLink";
 import { useLocation } from "react-router";
-import Icon from './Icon';
+import Icon from '@/components/Icon';
+import DropdownButton from '@/components/DropdownButton';
+import {
+    DropdownMenuItem
+} from '@/components/ui/dropdown-menu';
+import AppLink from '@/components/AppLink';
+import { Separator } from "./ui/separator";
 
-export function Header({ setSideNavOpen }) {
+export default function Header({ setSideNavOpen }) {
     return (
         <header className='z-30 print:hidden bg-neutral-900 relative'>
             <div className="inner-content p-4 shadow-[rgba(0,0,0,0.5)] shadow-xl pointer-fine:pb-2">
@@ -100,35 +104,7 @@ function DesktopNav() {
 
             {/* External links dropdown */}
             <div className="external-links">
-                <DropdownButton
-                    align="right"
-                    ButtonContent={() => <span className="">more</span>}
-                    behavior="hover"
-                    arrowPosition="right"
-                >                
-                    <div className="font-[Workbench] text-white">
-                        <ul className="external-links-dropdown bg-neutral-700 shadow-black shadow-md rounded-md overflow-hidden" role="list">
-                            {externalLinks.map((el, i) => (
-                                <li
-                                    key={i}
-                                    className="external-link-container duration-700 transition-colors border-b-neutral-500 border-b-1 last-of-type:border-0 p-2 hover:bg-neutral-800 cursor-pointer"
-                                >
-                                    <AppLink
-                                        href={el.href}
-                                        decoration={false}
-                                        animate={false}
-                                        className="w-full"
-                                    >
-                                        <div className="external-link-content flex w-full gap-2 items-center">
-                                            <div className="text flex-1 text-end">{el.text}</div>
-                                            <el.icon />
-                                        </div>
-                                    </AppLink>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </DropdownButton>
+                <ExternalLinksDropdown externalLinks={externalLinks} />
             </div>
         </div>
     );
@@ -155,3 +131,38 @@ export function HeaderIcons({ className }) {
         </div>
     );
 }
+function ExternalLinksDropdown({ externalLinks = [] }) {
+    return (
+        <DropdownButton
+            align="end"
+            ButtonContent={() => <span className="px-2 cursor-pointer">more</span>}
+            dropdownContentClassName="bg-neutral-700 shadow-black shadow-md rounded-md overflow-hidden font-[Workbench] text-white"
+            dropdownWidth={200}
+        >
+            {externalLinks.map((el, i) => (
+                <>
+                    <DropdownMenuItem
+                        key={i}
+                        asChild
+                        className="external-link-container p-2 hover:bg-neutral-800 cursor-pointer transition-colors duration-700"
+                    >
+                        <AppLink
+                            href={el.href}
+                            decoration={false}
+                            animate={false}
+                            className="w-full"
+                        >
+                            <div className="external-link-content flex w-full gap-2 items-center">
+                                <div className="text flex-1 text-end">{el.text}</div>
+                                <el.icon />
+                            </div>
+                        </AppLink>
+                    </DropdownMenuItem>
+                    <Separator className="bg-neutral-600 last-of-type:hidden" />
+                </>
+
+            ))}
+        </DropdownButton>
+    );
+}
+

@@ -25,7 +25,7 @@ export default function SideNav({ open = false, setSideNavOpen }) {
             data-open={open}
             aria-label="Mobile navigation"
             className={
-                "side-nav h-full w-full fixed z-10 top-0 left-0 flex transition-[background-color] overflow-x-hidden " +
+                "side-nav h-full w-full fixed z-[999] top-0 left-0 flex transition-[background-color] overflow-x-hidden " +
                 (open ? 'bg-[rgba(0,0,0,0.5)]' : 'bg-transparent pointer-events-none')
             }
         >
