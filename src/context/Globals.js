@@ -28,7 +28,7 @@ const Globals = {
     projects: [
         {
             title: 'jacob-jordan.me',
-            image: './screenshots/jacob-jordan-me.png',
+            image: './screenshots/jacob-jordan-me.webp',
             description: 'does this website count? i sure hope so.',
             url: 'https://github.com/jacobjordan94/jacob-jordan-me',
             source: 'https://github.com/jacobjordan94/jacob-jordan-me',
@@ -41,7 +41,7 @@ const Globals = {
         {
             title: 'yts-react',
             image: './screenshots/yts-react.webp',
-            description: 'modern, responsive movie browsing application built with react 19, typescript, and tailwind css. features pwa support, offline capability, and advanced search/filtering',
+            description: 'modern, responsive movie browsing application built with react 19, typescript, and tailwind css. browse and search the yts catalog',
             url: 'https://yts-react.jacob-jordan.me',
             source: 'https://github.com/jacobjordan94/yts-react',
             displayUrl: 'yts-react.jacob-jordan.me',
@@ -51,7 +51,7 @@ const Globals = {
         },
         {
             title: 'kexp-react',
-            image: './screenshots/kexp-react.png',
+            image: './screenshots/kexp-react.webp',
             description: 'fan project for kexp-fm, a non-commercial radio station based in seattle, wa. developed using react + tailwind',
             url: 'https://kexp-react.jacob-jordan.me',
             source: 'https://github.com/jacobjordan94/kexp-react',
@@ -63,7 +63,7 @@ const Globals = {
         },
         {
             title: 'rxwell - upmc',
-            image: './screenshots/rxwell.png',
+            image: './screenshots/rxwell.webp',
             description: 'health tool used to manage weight loss, anxiety, depression, nicotine cessation, and much more. rxwell matches you with a health specialist to help you in your journey. as seen on the today show!',
             url: 'https://youtu.be/ZaaYOwyecPA',
             youtube: 'https://youtu.be/ZaaYOwyecPA',
@@ -102,7 +102,7 @@ const Globals = {
         },
         {
             title: 'utpb ar',
-            image: './screenshots/utpb-ar.png',
+            image: './screenshots/utpb-ar.webp',
             description: 'senior research project done to complete graduation at utpb. can be used to find locations around campus, contact faculty members, and more!',
             url: 'https://youtu.be/wC6-QRTrvJI',
             youtube: 'https://youtu.be/wC6-QRTrvJI',
@@ -115,7 +115,7 @@ const Globals = {
         },
         {
             title: 'ar mobile app - vertical life llc',
-            image: './screenshots/remake.png',
+            image: './screenshots/remake.webp',
             description: 'augmented-reality based android and ios social media application. developed using cordova/ionic and wikitude',
             url: '',
             youtube: '',
@@ -128,7 +128,7 @@ const Globals = {
         },
         {
             title: 'ar web app - vertical life llc',
-            image: './screenshots/remake.png',
+            image: './screenshots/remake.webp',
             description: 'basically a stripped down version of the mobile application. uses ar.js instead of wikitude',
             url: '',
             youtube: null,
@@ -141,7 +141,7 @@ const Globals = {
         },
         {
             title: 'the quaking floor',
-            image: './screenshots/tqf.png',
+            image: './screenshots/tqf.webp',
             description: 'portmanteau of \'quake\' and \'killing floor\'; in this game you (princess peach, naturally) shoot wolves & ponies while collecting chocolate and coins!',
             url: 'https://youtu.be/Icrw35PHQxg',
             youtube: 'https://youtu.be/Icrw35PHQxg',

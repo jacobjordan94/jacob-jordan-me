@@ -178,8 +178,8 @@ function ResumeProjects({ projects }) {
         <ResumeSection title="projects" showDivider>
             <div className="resume-projects-content flex *:flex-1/3 gap-3">
                 <ResumeProject project={projects[1]} />
-                <ResumeProject project={projects[4]} />
-                <ResumeProject project={projects[6]} />
+                <ResumeProject project={projects[2]} />
+                <ResumeProject project={projects[5]} />
             </div>
         </ResumeSection>
     );
