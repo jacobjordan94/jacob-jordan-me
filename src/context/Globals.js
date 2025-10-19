@@ -23,7 +23,7 @@ const Globals = {
         'ubuntu', 'macOS', 'windows', 'arch linux', 'portainer', 'docker', 'adobe photoshop', 
         'adobe premiere', 'gimp', 'paint.net', 'scss', 'vscode', 'sql', 'ionic', 'cordova', 'android studio',
         'xcode', 'node', 'nvm', 'ms teams', 'slack', 'davinci resolve', 'zsh', 'java', 'cloudflare', 'nginx-proxy-manager',
-        'ffmpeg', 'c#', 'git', 'ci/cd',
+        'ffmpeg', 'c#', 'git', 'ci/cd', 'zustand', 'shadcn',
     ],
     projects: [
         {
@@ -37,6 +37,17 @@ const Globals = {
             type: 'react',
             tags: ['react', 'tailwind', 'cloudflare'],
             doNotLink: true,
+        },
+        {
+            title: 'yts-react',
+            image: './screenshots/yts-react.webp',
+            description: 'modern, responsive movie browsing application built with react 19, typescript, and tailwind css. features pwa support, offline capability, and advanced search/filtering',
+            url: 'https://yts-react.jacob-jordan.me',
+            source: 'https://github.com/jacobjordan94/yts-react',
+            displayUrl: 'yts-react.jacob-jordan.me',
+            displaySource: 'github.com/jacobjordan94/yts-react',
+            type: 'react',
+            tags: ['react', 'typescript', 'tailwind', 'pwa', 'vite', 'radix ui'],
         },
         {
             title: 'kexp-react',
@@ -140,7 +151,7 @@ const Globals = {
             displaySource: 'github.com/jacobjordan94/the-quaking-floor',
             type: 'games',
             tags: ['pc', 'java'],
-        }
+        },
     ],
     education: {
         name: 'the university of texas permian basin',
