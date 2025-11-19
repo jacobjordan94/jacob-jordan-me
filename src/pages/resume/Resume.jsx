@@ -166,7 +166,7 @@ function ResumeProjects({ projects }) {
         return (
             <div className="resume-project flex flex-col">
                 <div className="resume-project-name before:content-['>'] before:pe-2">{project.title}</div>
-                <div className="resume-project-description text-[13px]">{project.description}</div>
+                <div className="resume-project-description text-[13px]">{ project.resumeDescription || project.description}</div>
                 <div className="external text-xs flex-grow flex flex-col justify-end  text-center opacity-50 pb-1.5">
                     <div className="url">{ project.displayUrl }</div>
                     <div className="github">{ project.displaySource }</div>
@@ -179,7 +179,7 @@ function ResumeProjects({ projects }) {
             <div className="resume-projects-content flex *:flex-1/3 gap-3">
                 <ResumeProject project={projects[1]} />
                 <ResumeProject project={projects[2]} />
-                <ResumeProject project={projects[5]} />
+                <ResumeProject project={projects[10]} />
             </div>
         </ResumeSection>
     );

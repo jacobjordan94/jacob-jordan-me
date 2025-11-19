@@ -152,6 +152,18 @@ const Globals = {
             type: 'games',
             tags: ['pc', 'java'],
         },
+        {
+            title: 'react-games',
+            image: './screenshots/nonograms.webp',
+            description: 'modern nonogram (picross) puzzle game with 160+ unique puzzles across 10 themed levels. features animated backgrounds, progress tracking, and ai-generated puzzles',
+            resumeDescription: 'nonogram puzzle game with 160+ puzzles built with react 19 and typescript',
+            url: 'https://react-games.jacob-jordan.me',
+            source: 'https://github.com/jacobjordan94/react-games',
+            displayUrl: 'react-games.jacob-jordan.me',
+            displaySource: 'github.com/jacobjordan94/react-games',
+            type: 'react',
+            tags: ['react', 'typescript', 'tailwind', 'zustand', 'vite'],
+        }
     ],
     education: {
         name: 'the university of texas permian basin',
