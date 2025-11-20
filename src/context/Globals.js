@@ -163,6 +163,17 @@ const Globals = {
             displaySource: 'github.com/jacobjordan94/react-games',
             type: 'react',
             tags: ['react', 'typescript', 'tailwind', 'zustand', 'vite'],
+        },
+        {
+            title: 'seele conference room',
+            image: './screenshots/seele.webp',
+            description: 'recreation of the iconic seele conference room from neon genesis evangelion. features 12 monoliths arranged in a circle, dark atmospheric lighting, and custom first-person fly controls',
+            url: 'https://r3f-scenes.jacob-jordan.me/seele',
+            source: 'https://github.com/jacobjordan94/r3f-scenes',
+            displayUrl: 'r3f-scenes.jacob-jordan.me/seele',
+            displaySource: 'github.com/jacobjordan94/r3f-scenes',
+            type: 'three.js',
+            tags: ['react', 'typescript', 'three.js', 'react three fiber', 'vite'],
         }
     ],
     education: {
