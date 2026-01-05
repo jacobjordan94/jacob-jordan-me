@@ -174,7 +174,19 @@ const Globals = {
             displaySource: 'github.com/jacobjordan94/r3f-scenes',
             type: 'three.js',
             tags: ['react', 'typescript', 'three.js', 'react three fiber', 'vite'],
-        }
+        },
+        {
+            title: 'youtube-to-ersatztv',
+            image: './screenshots/yt-to-ersatz.webp',
+            description: 'monorepo application that converts youtube videos and playlists into yaml configuration files for ersatztv. features real-time preview, multiple export formats, and flexible duration/filename modes',
+            resumeDescription: 'youtube to ersatztv yaml converter built with react, typescript, and cloudflare workers',
+            url: 'https://youtube-to-ersatztv.jacob-jordan.me',
+            source: 'https://github.com/jacobjordan94/youtube-to-ersatztv-remote-stream',
+            displayUrl: 'youtube-to-ersatztv.jacob-jordan.me',
+            displaySource: 'github.com/jacobjordan94/youtube-to-ersatztv-remote-stream',
+            type: 'react',
+            tags: ['react', 'typescript', 'tailwind', 'shadcn', 'vite', 'hono', 'cloudflare'],
+        },
     ],
     education: {
         name: 'the university of texas permian basin',
