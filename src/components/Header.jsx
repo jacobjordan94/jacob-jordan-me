@@ -6,6 +6,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import AppLink from '@/components/AppLink';
 import { Separator } from "./ui/separator";
+import { motion } from 'motion/react';
 
 export default function Header({ setSideNavOpen }) {
     return (
@@ -25,7 +26,7 @@ export default function Header({ setSideNavOpen }) {
 
                 {/* Desktop Navigation */}
                 <nav
-                    className="desktop-nav-container pointer-coarse:hidden mt-4"
+                    className="desktop-nav-container pointer-coarse:hidden mt-4 font-[MisterPixel]"
                     aria-label="Primary navigation"
                 >
                     <DesktopNav />
@@ -88,15 +89,27 @@ function DesktopNav() {
                         <li
                             key={i}
                             data-active={isActive}
-                            className="group data-[active=false]:opacity-40 data-[active=false]:hover:opacity-100"
+                            className="relative group data-[active=false]:opacity-40 data-[active=false]:hover:opacity-100"
                         >
                             <AppLink decoration={false} to={link.to}>
                                 <span className="desktop-nav-link-inner-content flex items-center gap-1.5 group-data-[active=false]:text-transparent group-data-[active=false]:hover:text-white duration-300 transition-colors">
-                                    <span className="text-xs mt-1">{'>'}</span>
+                                    <span className="text-xs mt-1 invisible">{'>'}</span>
                                     <span className="text-white">{link.text}</span>
-                                    <span className="text-xs mt-1">{'<'}</span>
+                                    <span className="text-xs mt-1 invisible">{'<'}</span>
                                 </span>
                             </AppLink>
+                            {
+                                isActive && (
+                                    <motion.div 
+                                        layoutId="active-desktop-tab"
+                                        className="absolute inset-0 flex items-stretch justify-center"
+                                    >
+                                        <div className="inline-flex items-center text-xs">{'>'}</div>
+                                        <div className="flex-1" />
+                                        <div className="inline-flex items-center text-xs">{'<'}</div>
+                                    </motion.div>
+                                )
+                            }
                         </li>
                     );
                 })}
@@ -144,7 +157,7 @@ function ExternalLinksDropdown({ externalLinks = [] }) {
                     <DropdownMenuItem
                         key={i}
                         asChild
-                        className="external-link-container p-2 hover:bg-neutral-800 cursor-pointer transition-colors duration-700"
+                        className="font-[MisterPixel] external-link-container p-2 hover:bg-neutral-800 cursor-pointer transition-colors duration-700"
                     >
                         <AppLink
                             href={el.href}

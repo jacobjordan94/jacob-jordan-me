@@ -2,6 +2,7 @@ import Icon from "../Icon";
 import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from "../ui/card";
 import UnderConstructionBanner from "../UnderConstructionBanner";
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
 export default function ProjectCard({ project, type, className = '' }) {
     return (
@@ -27,17 +28,25 @@ export default function ProjectCard({ project, type, className = '' }) {
 
             <CardHeader className="px-4 pt-3 pb-1">
                 <div className="flex justify-between items-center">
-                    <CardTitle className="text-white text-lg sm:text-xl font-semibold tracking-normal">
-                        {project.title}
-                    </CardTitle>
+                    <motion.div
+                        layoutId={`title-${project.title}`}
+                    >
+                        <CardTitle className="text-white text-lg sm:text-xl font-semibold tracking-normal">
+                            {project.title}
+                        </CardTitle>
+                    </motion.div>
                     {project.source && <SourceCodeButton href={project.source} />}
                 </div>
             </CardHeader>
 
             <CardContent className="px-4 pb-4">
-                <CardDescription className="text-sm text-neutral-400 font-[MisterPixel,monospace]">
-                    {project.description}
-                </CardDescription>
+                <motion.div
+                    layoutId={`description-${project.title}`}
+                >
+                    <CardDescription className="text-sm text-neutral-400 font-[MisterPixel,monospace]">
+                        {project.description}
+                    </CardDescription>
+                </motion.div>
             </CardContent>
 
             {type && (

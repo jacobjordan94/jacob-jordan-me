@@ -9,7 +9,7 @@ export default function JobBase({ job, children, className = '' }) {
                     <Icon.WWW size="20" />
                     <span className="uppercase flex">{ job.name }</span>
                 </AppLink>
-                <div className="ms-8 *:before:content-['>'] *:before:me-2 *:before:text-xs *:before:h-full">
+                <div className="font-[MisterPixel] ms-8 *:before:content-['>'] *:before:me-2 *:before:text-xs *:before:h-full">
                     <div className="position text-neutral-400 text-xl">
                         <span>{ job.position }</span>
                     </div>
