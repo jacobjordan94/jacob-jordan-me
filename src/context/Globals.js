@@ -176,6 +176,18 @@ const Globals = {
             tags: ['react', 'typescript', 'three.js', 'react three fiber', 'vite'],
         },
         {
+            title: 'alice-fix',
+            image: './screenshots/alice-fix.webp',
+            description: 'setup automation tool that configures the steam version of alice: madness returns on linux and windows. restores the bundled american mcgee\'s alice launcher, applies community patches (madnesspatch, vorpalfix), and configures game/steam launch settings',
+            resumeDescription: 'bash/powershell tool that automates patching and setup for alice: madness returns on steam',
+            url: 'https://github.com/jacobjordan94/alice-fix',
+            source: 'https://github.com/jacobjordan94/alice-fix',
+            displayUrl: 'github.com/jacobjordan94/alice-fix',
+            displaySource: 'github.com/jacobjordan94/alice-fix',
+            type: 'tools',
+            tags: ['bash', 'powershell', 'linux', 'windows'],
+        },
+        {
             title: 'youtube-to-ersatztv',
             image: './screenshots/yt-to-ersatz.webp',
             description: 'monorepo application that converts youtube videos and playlists into yaml configuration files for ersatztv. features real-time preview, multiple export formats, and flexible duration/filename modes',
