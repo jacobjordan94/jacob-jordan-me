@@ -199,6 +199,18 @@ const Globals = {
             type: 'react',
             tags: ['react', 'typescript', 'tailwind', 'shadcn', 'vite', 'hono', 'cloudflare'],
         },
+        {
+            title: 'cookie-clicker-gift-code-generator',
+            image: './screenshots/cookie-clicker-gift.webp',
+            description: 'fan-made replica of cookie clicker\'s "send a gift" window. choose how many cookies to send, write a note, pick a box design, and copy the generated gift code',
+            resumeDescription: 'cookie clicker gift code generator built with react 19 and typescript',
+            url: 'https://cookie-clicker-gift-code-generator.jacob-jordan.me',
+            source: 'https://github.com/jacobjordan94/cookie-clicker-gift-code-generator',
+            displayUrl: 'cookie-clicker-gift-code-generator.jacob-jordan.me',
+            displaySource: 'github.com/jacobjordan94/cookie-clicker-gift-code-generator',
+            type: 'react',
+            tags: ['react', 'typescript', 'tailwind', 'vite', 'vitest', 'cloudflare'],
+        },
     ],
     education: {
         name: 'the university of texas permian basin',
